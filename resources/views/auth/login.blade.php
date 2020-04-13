@@ -13,27 +13,22 @@
             <div class="relative">
                 <label for="email" class="uppercase text-gray-200 text-xs font-bold absolute pl-3 pt-2">E-mail</label>
 
-                <div>
-                    <input id="email" type="email" class="pt-8 w-full rounded p-3 bg-gray-700 text-gray-100 outline-none focus:bg-gray-800" 
-                    name="email" autocomplete="email" autofocus placeholder="your@email.com">
+                <input id="email" type="email" class="pt-8 w-full rounded p-3 bg-gray-700 text-gray-100 outline-none focus:bg-gray-800" 
+                name="email" autocomplete="email" autofocus placeholder="your@email.com">
 
-                    @error('email')
-                        <span class="text-red-600 font-sm pt-1" role="alert"><strong>{{ $message }}</strong></span>
-                    @enderror
-                </div>
+                @error('email')
+                    <span class="text-red-600 font-sm pt-1" role="alert"><strong>{{ $message }}</strong></span>
+                @enderror
             </div>
 
             <div class="relative pt-3">
                 <label for="password" class="uppercase text-gray-200 text-xs font-bold absolute pl-3 pt-2">Password</label>
+                <input id="password" type="password" class="pt-8 w-full rounded p-3 bg-gray-700 text-gray-100 outline-none focus:bg-gray-800" 
+                name="password" autocomplete="current-password" placeholder="Password">
 
-                <div class="">
-                    <input id="password" type="password" class="pt-8 w-full rounded p-3 bg-gray-700 text-gray-100 outline-none focus:bg-gray-800" 
-                    name="password" autocomplete="current-password" placeholder="Password">
-
-                    @error('password')
-                        <span class="text-red-600 font-sm pt-1" role="alert"><strong>{{ $message }}</strong></span>
-                    @enderror
-                </div>
+                @error('password')
+                    <span class="text-red-600 font-sm pt-1" role="alert"><strong>{{ $message }}</strong></span>
+                @enderror
             </div>
 
             <div class="pt-2">

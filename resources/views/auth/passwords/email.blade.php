@@ -16,19 +16,16 @@
 
             <form method="POST" action="{{ route('password.email') }}" class="pt-8">
                 @csrf
+                <label for="email" class="uppercase text-gray-200 text-xs font-bold absolute pl-3 pt-2">Email Address</label>
 
-                <div class="">
-                    <label for="email" class="uppercase text-gray-200 text-xs font-bold absolute pl-3 pt-2">Email Address</label>
+                <div class="col-md-6">
+                    <input id="email" type="email" class="pt-8 w-full rounded p-3 bg-gray-700 text-gray-100 outline-none focus:bg-gray-800" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
-                    <div class="col-md-6">
-                        <input id="email" type="email" class="pt-8 w-full rounded p-3 bg-gray-700 text-gray-100 outline-none focus:bg-gray-800" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                        @error('email')
-                            <span class="text-red-600 font-sm pt-1" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
+                    @error('email')
+                        <span class="text-red-600 font-sm pt-1" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
 
                 <div class="pt-8">

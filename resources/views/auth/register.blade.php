@@ -11,51 +11,44 @@
                 <div class="relative">
                     <label for="name" class="uppercase text-gray-200 text-xs font-bold absolute pl-3 pt-2">Name</label>
 
-                    <div class="">
-                        <input id="name" type="text" class="pt-8 w-full rounded p-3 bg-gray-700 text-gray-100 outline-none focus:bg-gray-800" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                    <input id="name" type="text" class="pt-8 w-full rounded p-3 bg-gray-700 text-gray-100 outline-none focus:bg-gray-800" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
-                        @error('name')
-                            <span class="text-red-600 font-sm pt-1" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
+                    @error('name')
+                        <span class="text-red-600 font-sm pt-1" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror  
                 </div>
 
                 <div class="relative pt-3">
                     <label for="email" class="uppercase text-gray-200 text-xs font-bold absolute pl-3 pt-2">Email Address</label>
+                    
+                    <input id="email" type="email" class="pt-8 w-full rounded p-3 bg-gray-700 text-gray-100 outline-none focus:bg-gray-800" name="email" value="{{ old('email') }}" required autocomplete="email">
 
-                    <div class="">
-                        <input id="email" type="email" class="pt-8 w-full rounded p-3 bg-gray-700 text-gray-100 outline-none focus:bg-gray-800" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                        @error('email')
-                            <span class="text-red-600 font-sm pt-1" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
+                    @error('email')
+                        <span class="text-red-600 font-sm pt-1" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                    
                 </div>
 
                 <div class="relative pt-3">
                     <label for="password" class="uppercase text-gray-200 text-xs font-bold absolute pl-3 pt-2">Password</label>
 
-                    <div class="">
-                        <input id="password" type="password" class="pt-8 w-full rounded p-3 bg-gray-700 text-gray-100 outline-none focus:bg-gray-800" name="password" required autocomplete="new-password">
+                    <input id="password" type="password" class="pt-8 w-full rounded p-3 bg-gray-700 text-gray-100 outline-none focus:bg-gray-800" name="password" required autocomplete="new-password">
 
-                        @error('password')
-                            <span class="text-red-600 font-sm pt-1" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
+                    @error('password')
+                        <span class="text-red-600 font-sm pt-1" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
 
                 <div class="relative pt-3">
                     <label for="password-confirm" class="uppercase text-gray-200 text-xs font-bold absolute pl-3 pt-2">Confirm Password</label>
 
-                    <div class="">
-                        <input id="password-confirm" type="password" class="pt-8 w-full rounded p-3 bg-gray-700 text-gray-100 outline-none focus:bg-gray-800" name="password_confirmation" required autocomplete="new-password">
-                    </div>
+                    <input id="password-confirm" type="password" class="pt-8 w-full rounded p-3 bg-gray-700 text-gray-100 outline-none focus:bg-gray-800" name="password_confirmation" required autocomplete="new-password">
                 </div>
 
 
