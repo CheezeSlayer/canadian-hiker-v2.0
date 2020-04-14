@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <App></App>
+    @if( $userStatus )
+        <App :user="{{ auth()->user() || false }}"></App>
+    @else
+        <App></App>
+    @endif
 @endsection
