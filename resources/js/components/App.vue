@@ -9,7 +9,7 @@
                             <h1 class="pb-6 text-center text-xl text-gray-600 border-dotted border-b-2 border-gray-600">Henry Chang</h1>
                         </router-link>
 
-                        <router-link to="/" class="flex items-center py-12 text-gray-600 hover:text-gray-900">
+                        <router-link to="/about" class="flex items-center py-12 text-gray-600 hover:text-gray-900">
                             <svg data-v-8892b924="" viewBox="0 0 16 16" focusable="false" role="img" alt="icon" 
                             xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-person b-icon bi h-8 w-8"><g data-v-8892b924="">
                                 <path fill-rule="evenodd" d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 
@@ -19,7 +19,7 @@
 
                             <h1 class="uppercase font-bold mx-auto">About Me</h1>
                         </router-link>
-
+                    
                         <router-link to="/" class="flex items-center py-12 text-gray-600 hover:text-gray-900">
                             <svg data-v-8892b924="" viewBox="0 0 16 16" focusable="false" role="img" alt="icon" 
                             xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-book b-icon bi h-8 w-8"><g data-v-8892b924="">
@@ -36,7 +36,7 @@
 
                             <h1 class="uppercase font-bold mx-auto">Education</h1>
                         </router-link>
-
+                       
                         <router-link to="/" class="flex items-center py-12 text-gray-600 hover:text-gray-900">
                             <svg data-v-8892b924="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon" 
                             xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-envelope b-icon bi h-8 w-8"><g data-v-8892b924="">
@@ -48,7 +48,7 @@
 
                             <h1 class="uppercase font-bold mx-auto">Let's Talk</h1>
                         </router-link>
-
+                    
                         <router-link to="/" class="flex items-center py-12 text-gray-600 hover:text-gray-900">
                             <svg data-v-8892b924="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon" 
                             xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-image b-icon bi h-8 w-8"><g data-v-8892b924="">
@@ -99,9 +99,9 @@
                 </div>
 
                 <div class="flex flex-col flex-1 h-screen overflow-y-hidden">
-                    <div class="h-24 p-6 border-b border-gray-400 flex flex-col items-center">
-                        {{ this.title }}
-                    </div>
+                    <!-- <div class="h-24 p-6 border-b border-gray-400 flex flex-col items-center">
+                        <h1 class="text-4xl">{{ this.title }}</h1>
+                    </div> -->
                     <div class="flex flex-col overflow-y-hidden flex-1">
                         <router-view class="p-6 overflow-x-hidden"></router-view>
                     </div>
@@ -114,12 +114,6 @@
 <script>
 export default {
     name: "App",
-
-    data: function() {
-        return {
-            title: '',
-        }
-    },
 
     props: [
         'user'

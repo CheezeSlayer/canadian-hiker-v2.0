@@ -5,6 +5,8 @@ import Logout from "./Actions/Logout";
 import Login from "./Actions/Login";
 import Signup from "./Actions/Signup";
 
+import AboutMe from "./Views/AboutMe";
+
 Vue.use(VueRouter);
 
 export default new VueRouter({
@@ -12,6 +14,10 @@ export default new VueRouter({
         {
             path: '/', component: ExampleComponent,
             meta: { title: "Welcome"}
+        },
+        {
+            path: '/about', component: AboutMe,
+            meta: { title: "About Me"}
         },
         {
             path: '/logout', component: Logout
