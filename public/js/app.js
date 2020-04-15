@@ -1992,9 +1992,104 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "AboutMe",
+  name: 'AboutMe',
+  data: function data() {
+    return {
+      links: {
+        'laravel': 'https://laravel.com/',
+        'vue': 'https://vuejs.org/',
+        'tailwind': 'https://tailwindcss.com/'
+      }
+    };
+  },
+  components: {
+    TopNav: _components_TopNav__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Views/Contact.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Views/Contact.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_TopNav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/TopNav */ "./resources/js/components/TopNav.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'Contact',
+  data: function data() {
+    return {
+      profile: {
+        'linkedin': 'https://www.linkedin.com/in/henry-chang-1732bb19a/',
+        'github': 'https://github.com/CheezeSlayer',
+        'instagram': 'https://www.instagram.com/canadian.hiker/?hl=en'
+      }
+    };
+  },
   components: {
     TopNav: _components_TopNav__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
@@ -19857,7 +19952,167 @@ var render = function() {
     [
       _c("TopNav", { attrs: { navHeader: "About Me" } }),
       _vm._v(" "),
-      _vm._m(0)
+      _c("div", { staticClass: "flex flex-col items-center" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "m-6 p-6 w-2/3 flex content-center bg-gray-300 rounded-lg items-center"
+          },
+          [
+            _c("img", {
+              staticClass: "m-2 object-contain h-64 rounded-lg",
+              attrs: { src: "../storage/img/about-me.jpg" }
+            }),
+            _vm._v(" "),
+            _c("p", { staticClass: "text-lg m-2" }, [
+              _vm._v(
+                "My name is Henry Chang and I am a computer programmer with experience in web development and testing.  \n                I am based in Vancouver, British Columbia and have lived in Canada all my life.\n                 When I am not sitting infront of a computer, I can hopefully be trekking the outback, hiking ontop one \n                 of British Columbia's many glorious mountains \n                 "
+              ),
+              _c("br"),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(
+                "\n                 This simple web app is created and maintained by me using \n                 "
+              ),
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "font-medium text-blue-500 hover:underline hover:text-blue-800",
+                  attrs: { href: _vm.links.laravel }
+                },
+                [_vm._v("Laravel")]
+              ),
+              _vm._v(" with \n                 "),
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "font-medium text-blue-500 hover:underline hover:text-blue-800",
+                  attrs: { href: _vm.links.vue }
+                },
+                [_vm._v("Vue.js")]
+              ),
+              _vm._v(" and \n                 "),
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "font-medium text-blue-500 hover:underline hover:text-blue-800",
+                  attrs: { href: _vm.links.tailwind }
+                },
+                [_vm._v("Tailwind")]
+              ),
+              _vm._v(
+                ".  \n                 Here, you can find more about me and links to other projects I've been working on.  \n            "
+              )
+            ])
+          ]
+        )
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Views/Contact.vue?vue&type=template&id=0855e831&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Views/Contact.vue?vue&type=template&id=0855e831&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("TopNav", { attrs: { navHeader: "Where to Find Me" } }),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex flex-col items-center" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "flex m-6 p-6 w-2/3 content-center bg-gray-300 rounded-lg justify-between"
+          },
+          [
+            _c("div", { staticClass: "flex flex-col items-center m-2" }, [
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "border rounded-lg hover:border-2 hover:border-black",
+                  attrs: { href: _vm.profile.linkedin }
+                },
+                [
+                  _c("img", {
+                    staticClass: "m-2 object-contain h-48 rounded-lg",
+                    attrs: { src: "../storage/img/icons/linkedin.png" }
+                  }),
+                  _vm._v(" "),
+                  _vm._m(1)
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex flex-col items-center m-2" }, [
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "border rounded-lg hover:border-2 hover:border-black",
+                  attrs: { href: _vm.profile.github }
+                },
+                [
+                  _c("img", {
+                    staticClass: "m-2 object-contain h-48 rounded-lg",
+                    attrs: { src: "../storage/img/icons/github-image.png" }
+                  }),
+                  _vm._v(" "),
+                  _vm._m(2)
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex flex-col items-center m-2" }, [
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "border rounded-lg hover:border-2 hover:border-black",
+                  attrs: { href: _vm.profile.instagram }
+                },
+                [
+                  _c("img", {
+                    staticClass: "m-2 object-contain h-48 rounded-lg",
+                    attrs: { src: "../storage/img/icons/instagram.png" }
+                  }),
+                  _vm._v(" "),
+                  _vm._m(3)
+                ]
+              )
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _vm._m(4)
+      ])
     ],
     1
   )
@@ -19867,11 +20122,63 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "mx-6 mt-6 p-6 w-1/3 bg-gray-300 rounded-lg" },
+      [
+        _c("p", [
+          _vm._v(
+            "\n                Feel free to contact me through LinkedIn.  My personal projects are on Github.  To follow my hiking adventures, visit my Instagram page.  \n            "
+          )
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "flex flex-col items-center" }, [
+      _c("h2", { staticClass: "text-lg font-bold" }, [_vm._v("LinkedIn")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex flex-col items-center" }, [
+      _c("h2", { staticClass: "text-lg font-bold" }, [_vm._v("Github")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex flex-col items-center" }, [
+      _c("h2", { staticClass: "text-lg font-bold" }, [_vm._v("Instagram")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-xs" }, [
+      _vm._v("\n            Icons made by "),
       _c(
-        "div",
-        { staticClass: "m-6 p-6 flex content-center bg-gray-400 rounded-lg" },
-        [_c("p", [_vm._v("Hello World")])]
+        "a",
+        {
+          attrs: {
+            href: "https://www.flaticon.com/authors/freepik",
+            title: "Freepik"
+          }
+        },
+        [_vm._v("Freepik")]
+      ),
+      _vm._v(" from \n            "),
+      _c(
+        "a",
+        { attrs: { href: "https://www.flaticon.com/", title: "Flaticon" } },
+        [_vm._v(" www.flaticon.com")]
       )
     ])
   }
@@ -19898,14 +20205,11 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "h-screen bg-gray-500" }, [
+    _c("div", { staticClass: "h-screen bg-gray-400" }, [
       _c("div", { staticClass: "flex" }, [
         _c(
           "div",
-          {
-            staticClass:
-              "px-6 bg-gray-200 w-56 h-screen border-r-2 border-gray-400"
-          },
+          { staticClass: "px-6 bg-gray-200 w-56 h-screen border-r-2" },
           [
             _c(
               "nav",
@@ -20026,7 +20330,7 @@ var render = function() {
                   {
                     staticClass:
                       "flex items-center py-12 text-gray-600 hover:text-gray-900",
-                    attrs: { to: "/" }
+                    attrs: { to: "/contact" }
                   },
                   [
                     _c(
@@ -20074,7 +20378,7 @@ var render = function() {
                     ),
                     _vm._v(" "),
                     _c("h1", { staticClass: "uppercase font-bold mx-auto" }, [
-                      _vm._v("Let's Talk")
+                      _vm._v("Contact")
                     ])
                   ]
                 ),
@@ -20403,7 +20707,7 @@ var render = function() {
     "div",
     {
       staticClass:
-        "h-24 p-2 border-b border-gray-400 flex flex-col items-center"
+        "h-24 p-2 border-b-2 border-dotted border-gray-500 flex flex-col items-center"
     },
     [_c("h1", { staticClass: "text-4xl" }, [_vm._v(_vm._s(_vm.navHeader))])]
   )
@@ -35779,6 +36083,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/Views/Contact.vue":
+/*!****************************************!*\
+  !*** ./resources/js/Views/Contact.vue ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Contact_vue_vue_type_template_id_0855e831_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Contact.vue?vue&type=template&id=0855e831&scoped=true& */ "./resources/js/Views/Contact.vue?vue&type=template&id=0855e831&scoped=true&");
+/* harmony import */ var _Contact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Contact.vue?vue&type=script&lang=js& */ "./resources/js/Views/Contact.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Contact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Contact_vue_vue_type_template_id_0855e831_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Contact_vue_vue_type_template_id_0855e831_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "0855e831",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Views/Contact.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Views/Contact.vue?vue&type=script&lang=js&":
+/*!*****************************************************************!*\
+  !*** ./resources/js/Views/Contact.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Contact.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Views/Contact.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Views/Contact.vue?vue&type=template&id=0855e831&scoped=true&":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/Views/Contact.vue?vue&type=template&id=0855e831&scoped=true& ***!
+  \***********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_template_id_0855e831_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Contact.vue?vue&type=template&id=0855e831&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Views/Contact.vue?vue&type=template&id=0855e831&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_template_id_0855e831_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_template_id_0855e831_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -36064,6 +36437,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Actions_Login__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Actions/Login */ "./resources/js/Actions/Login.vue");
 /* harmony import */ var _Actions_Signup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Actions/Signup */ "./resources/js/Actions/Signup.vue");
 /* harmony import */ var _Views_AboutMe__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Views/AboutMe */ "./resources/js/Views/AboutMe.vue");
+/* harmony import */ var _Views_Contact__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Views/Contact */ "./resources/js/Views/Contact.vue");
+
 
 
 
@@ -36084,6 +36459,12 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     component: _Views_AboutMe__WEBPACK_IMPORTED_MODULE_6__["default"],
     meta: {
       title: "About Me"
+    }
+  }, {
+    path: '/contact',
+    component: _Views_Contact__WEBPACK_IMPORTED_MODULE_7__["default"],
+    meta: {
+      title: "Let's Keep in Touch"
     }
   }, {
     path: '/logout',

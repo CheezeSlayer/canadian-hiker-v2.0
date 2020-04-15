@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div class="h-screen bg-gray-500">
+        <div class="h-screen bg-gray-400">
             <div class="flex">
-                <div class="px-6 bg-gray-200 w-56 h-screen border-r-2 border-gray-400">
+                <div class="px-6 bg-gray-200 w-56 h-screen border-r-2">
                     <nav class="pt-4">
                         <router-link to="/">
                             <img :src="'../storage/img/profile.jpg'" class="rounded-full border-solid border-2 border-gray-400">
@@ -37,7 +37,7 @@
                             <h1 class="uppercase font-bold mx-auto">Education</h1>
                         </router-link>
                        
-                        <router-link to="/" class="flex items-center py-12 text-gray-600 hover:text-gray-900">
+                        <router-link to="/contact" class="flex items-center py-12 text-gray-600 hover:text-gray-900">
                             <svg data-v-8892b924="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon" 
                             xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-envelope b-icon bi h-8 w-8"><g data-v-8892b924="">
                                 <path fill-rule="evenodd" d="M14 3H2a1 1 0 00-1 1v8a1 1 0 001 1h12a1 1 0 001-1V4a1 1 0 00-1-1zM2 2a2 2 0 00-2 
@@ -46,7 +46,7 @@
                                 </path><path d="M6.752 8.932l.432-.252-.504-.864-.432.252.504.864zm-6 3.5l6-3.5-.504-.864-6 
                                 3.5.504.864zm8.496-3.5l-.432-.252.504-.864.432.252-.504.864zm6 3.5l-6-3.5.504-.864 6 3.5-.504.864z"></path></g></svg>
 
-                            <h1 class="uppercase font-bold mx-auto">Let's Talk</h1>
+                            <h1 class="uppercase font-bold mx-auto">Contact</h1>
                         </router-link>
                     
                         <router-link to="/" class="flex items-center py-12 text-gray-600 hover:text-gray-900">

@@ -1,5 +1,5 @@
 <template>
-    <div class="h-24 p-2 border-b border-gray-400 flex flex-col items-center">
+    <div class="h-24 p-2 border-b-2 border-dotted border-gray-500 flex flex-col items-center">
         <h1 class="text-4xl">{{ navHeader }}</h1>
     </div>
 </template>
