@@ -20,7 +20,7 @@
                             <h1 class="uppercase font-bold mx-auto">About Me</h1>
                         </router-link>
                     
-                        <router-link to="/" class="flex items-center py-12 text-gray-600 hover:text-gray-900">
+                        <!-- <router-link to="/" class="flex items-center py-12 text-gray-600 hover:text-gray-900">
                             <svg data-v-8892b924="" viewBox="0 0 16 16" focusable="false" role="img" alt="icon" 
                             xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-book b-icon bi h-8 w-8"><g data-v-8892b924="">
                                 <path fill-rule="evenodd" d="M3.214 1.072C4.813.752 6.916.71 8.354 2.146A.5.5 0 018.5 2.5v11a.5.5 0 
@@ -35,7 +35,7 @@
                                 2.631-.956 4.09-.664A11.956 11.956 0 0115 2.82z" clip-rule="evenodd"></path></g></svg>
 
                             <h1 class="uppercase font-bold mx-auto">Education</h1>
-                        </router-link>
+                        </router-link> -->
                        
                         <router-link to="/contact" class="flex items-center py-12 text-gray-600 hover:text-gray-900">
                             <svg data-v-8892b924="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon" 
@@ -49,7 +49,7 @@
                             <h1 class="uppercase font-bold mx-auto">Contact</h1>
                         </router-link>
                     
-                        <router-link to="/" class="flex items-center py-12 text-gray-600 hover:text-gray-900">
+                        <router-link to="/Blog" class="flex items-center py-12 text-gray-600 hover:text-gray-900">
                             <svg data-v-8892b924="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon" 
                             xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-image b-icon bi h-8 w-8"><g data-v-8892b924="">
                                 <path fill-rule="evenodd" d="M14.002 2h-12a1 1 0 00-1 1v10a1 1 0 001 1h12a1 1 0 001-1V3a1 1 0 00-1-1zm-12-1a2 
@@ -57,7 +57,7 @@
                                 7.646a.5.5 0 01.577-.093L15.002 9.5V14h-14v-2l2.646-2.354a.5.5 0 01.63-.062l2.66 1.773 3.71-3.71z"></path>
                                 <path fill-rule="evenodd" d="M4.502 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clip-rule="evenodd"></path></g></svg>
 
-                            <h1 class="uppercase font-bold mx-auto">Photography</h1>
+                            <h1 class="uppercase font-bold mx-auto">Blog</h1>
                         </router-link>
 
                         <router-link v-if="this.user" to="/logout" class="flex items-center py-12 text-gray-600 hover:text-gray-900">
@@ -103,7 +103,9 @@
                         <h1 class="text-4xl">{{ this.title }}</h1>
                     </div> -->
                     <div class="flex flex-col overflow-y-hidden flex-1">
-                        <router-view class="p-6 overflow-x-hidden"></router-view>
+                        <transition name="fade">
+                            <router-view class="p-6 overflow-x-hidden"></router-view>
+                        </transition>
                     </div>
                 </div>
             </div>  
@@ -125,5 +127,11 @@ export default {
 </script>
 
 <style scoped>
+    .fade-enter-active {
+        transition: opacity 0.5s;
+    }
 
+    .fade-enter, .fade-leave-to {
+        opacity: 0;
+    }
 </style>

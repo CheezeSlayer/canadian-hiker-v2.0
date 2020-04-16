@@ -4,7 +4,7 @@
         <div class="flex flex-col items-center">
             <div class="mx-6 mt-6 p-6 w-1/3 bg-gray-300 rounded-lg">
                 <p>
-                    Feel free to contact me through LinkedIn.  My personal projects are on Github.  To follow my hiking adventures, visit my Instagram page.  
+                    For professional inquiries, contact me through LinkedIn.  My personal projects are on Github.  To follow my hiking adventures, visit my Instagram page.  
                 </p>
             </div>
             <div class="flex m-6 p-6 w-2/3 content-center bg-gray-300 rounded-lg justify-between">

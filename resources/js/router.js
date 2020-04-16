@@ -5,15 +5,17 @@ import Logout from "./Actions/Logout";
 import Login from "./Actions/Login";
 import Signup from "./Actions/Signup";
 
+import Welcome from "./Views/Welcome";
 import AboutMe from "./Views/AboutMe";
 import Contact from "./Views/Contact";
+import Blog from "./Views/Blog";
 
 Vue.use(VueRouter);
 
 export default new VueRouter({
     routes: [
         {
-            path: '/', component: ExampleComponent,
+            path: '/', component: Welcome,
             meta: { title: "Welcome"}
         },
         {
@@ -22,7 +24,11 @@ export default new VueRouter({
         },
         {
             path: '/contact', component: Contact,
-            meta: { title: "Let's Keep in Touch"}
+            meta: { title: "Contact"}
+        },
+        {
+            path: '/Blog', component: Blog,
+            meta: { title: "Blog"}
         },
         {
             path: '/logout', component: Logout

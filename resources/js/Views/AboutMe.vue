@@ -13,7 +13,7 @@
                      This simple web app is created and maintained by me using 
                      <a :href="links.laravel" class="font-medium text-blue-500 hover:underline hover:text-blue-800">Laravel</a> with 
                      <a :href="links.vue" class="font-medium text-blue-500 hover:underline hover:text-blue-800">Vue.js</a> and 
-                     <a :href="links.tailwind" class="font-medium text-blue-500 hover:underline hover:text-blue-800">Tailwind</a>.  
+                     <a :href="links.tailwind" class="font-medium text-blue-500 hover:underline hover:text-blue-800">Tailwind CSS</a>.  
                      Here, you can find more about me and links to other projects I've been working on.  
                 </p>
             </div>
