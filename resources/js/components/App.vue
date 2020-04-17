@@ -99,9 +99,6 @@
                 </div>
 
                 <div class="flex flex-col flex-1 h-screen overflow-y-hidden">
-                    <!-- <div class="h-24 p-6 border-b border-gray-400 flex flex-col items-center">
-                        <h1 class="text-4xl">{{ this.title }}</h1>
-                    </div> -->
                     <div class="flex flex-col overflow-y-hidden flex-1">
                         <transition name="fade">
                             <router-view class="p-6 overflow-x-hidden"></router-view>
