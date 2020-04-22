@@ -49,7 +49,7 @@
                             <h1 class="uppercase font-bold mx-auto">Contact</h1>
                         </router-link>
                     
-                        <router-link to="/Blog" class="flex items-center py-12 text-gray-600 hover:text-gray-900">
+                        <router-link to="/blog" class="flex items-center py-12 text-gray-600 hover:text-gray-900">
                             <svg data-v-8892b924="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon" 
                             xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-image b-icon bi h-8 w-8"><g data-v-8892b924="">
                                 <path fill-rule="evenodd" d="M14.002 2h-12a1 1 0 00-1 1v10a1 1 0 001 1h12a1 1 0 001-1V3a1 1 0 00-1-1zm-12-1a2 

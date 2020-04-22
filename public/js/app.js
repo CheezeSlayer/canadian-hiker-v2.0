@@ -2055,6 +2055,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2062,6 +2063,92 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     TopNav: _components_TopNav__WEBPACK_IMPORTED_MODULE_0__["default"],
     Card: _components_Card__WEBPACK_IMPORTED_MODULE_1__["default"]
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_TopNav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/TopNav */ "./resources/js/components/TopNav.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'DeeksLake2018',
+  components: {
+    TopNav: _components_TopNav__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
 });
 
@@ -20798,14 +20885,21 @@ var render = function() {
           "div",
           { staticClass: "flex" },
           [
-            _c("Card", {
-              attrs: {
-                cardImg: "9-2018/20180903_082248.jpg",
-                cardTitle:
-                  "Howe Sound Adventures: Camping and Fishing at Deeks Lake.",
-                cardDate: "September 2-3, 2018"
-              }
-            }),
+            _c(
+              "router-link",
+              { attrs: { to: "/blog/deeks_lake_2018" } },
+              [
+                _c("Card", {
+                  attrs: {
+                    cardImg: "9-2018/20180903_082248.jpg",
+                    cardTitle:
+                      "Howe Sound Adventures: Camping and Fishing at Deeks Lake.",
+                    cardDate: "September 2-3, 2018"
+                  }
+                })
+              ],
+              1
+            ),
             _vm._v(" "),
             _c("Card", {
               attrs: {
@@ -20824,6 +20918,162 @@ var render = function() {
   )
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=template&id=0b92271a&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=template&id=0b92271a&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("TopNav", {
+        attrs: {
+          navHeader: "How Sound Adventures:  Camping and Fishing at Deeks Lake"
+        }
+      }),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex justify-center" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "flex flex-col p-6 w-full text-lg tracking-wide leading-10"
+          },
+          [
+            _c("p", [
+              _vm._v(
+                "\n                The North Shore Mountains has always been a marvel of beauty.  \n                During my lunch breaks I would frequent the waterfront of Coal Harbour \n                and gaze upon the humbling majesty of those rocky giants overlooking Greater Vancouver; \n                an experience surpassed only by exploring every trail, summit,\n                nook and cranny that these mountains offered to folks of adventurous spirit.  \n                For within the glorious outback hides a sprawl of trails old and new, leading to treasures of \n                lakes, creeks, waterfalls, and peaks of unparalleled beauty.  A sanctuary diverse in various \n                forms fish, birds, animals, insects and plants alike, hidden away from the noise and fumes of industry.  \n            "
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex flex-col my-6" }, [
+              _c("img", {
+                staticClass: "object-cover h-112 w-full",
+                attrs: { src: "../storage/img/blog/9-2018/coal_harbour.jpg" }
+              }),
+              _vm._v(" "),
+              _vm._m(0)
+            ]),
+            _vm._v(" "),
+            _vm._m(1),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex flex-col my-6" }, [
+              _c("img", {
+                staticClass: "object-cover h-112 w-full",
+                attrs: {
+                  src: "../storage/img/blog/9-2018/trailblazer_lookout.jpg"
+                }
+              }),
+              _vm._v(" "),
+              _vm._m(2)
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                The lake itself is a small but charming area surrounded by mountains and tall trees of pine and evergreen, \n                some of which had long since fallen and their dry sunbaked trunks lay floating along the banks forming \n                a natural pier of sorts.  By now it was roughly 1 PM and the sun at its zenith.  It's rays shining bright upon the \n                lake's glistening surface emitting dancing sparkles of light, completing the magnificent scenery of the area.  Drenched \n                in sweat, we threw off our heavy packs and proceeded along the pier to dip our weary feet into its refreshing cold.    \n            "
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex flex-col my-6" }, [
+              _c("img", {
+                staticClass: "object-cover h-112 w-full",
+                attrs: { src: "../storage/img/blog/9-2018/deeks_lake_1.jpg" }
+              }),
+              _vm._v(" "),
+              _vm._m(3)
+            ])
+          ]
+        )
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "flex justify-between text-sm font-semibold" },
+      [
+        _c("p", [
+          _vm._v("The North Shore Mountains as seen from Coal Harbour")
+        ]),
+        _vm._v(" "),
+        _c("p", [_vm._v("May 7, 2019")])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _vm._v(
+        "\n                One of these trails is the Howe Sound Crest Trail.  Boasting a length of roughly 29 km, \n                this trail stretches northwards from Cypress Bowl to Porteau Cove along the Sea-to-Sky \n                Highway and passes through various notable landmarks such as The Lions and Brunswick Mountain.  \n                Just a little due south of the Porteau Cove trailhead is Deeks Lake, the site of my first \n                backpacking trip ever in British Columbia among the North Shore Mountains.  \n            "
+      ),
+      _c("br"),
+      _c("br"),
+      _vm._v(
+        "\n                I set off with my fellow friends and adventurers Jamie and Derek on September 2, the start of \n                the Labour Day long weekend and arrived at the Porteau Cove trailhead sometime around 8 AM.  \n                By then the sun was already shining up high giving off a warmth that would soon boil into a \n                sweltering heat as the day went on.  Our cohort headed south following the Deeks Creek Trail; a gradual uphill for about 2 hours.  \n                The path eventually came across a turnoff marked by a sign connecting eastwards to the \n                Howe Sound Crest Trail (HSCT). The path became significantly steeper on the HSCT with a lot of loose \n                rocks which impeded our progress, in an ordeal that was exacerbated by our heavy backpacks and equipment.  \n                Despite the grueling trial, we encountered various viewpoints for a worthwhile stop and breather \n                offering magnificent views of the Howe Sound.  It would be another 3 hours before we finally reached the banks of Deeks Lake. \n            "
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "flex justify-between text-sm font-semibold" },
+      [
+        _c("p", [
+          _vm._v(
+            "Trailblazer Lookout.  Located on the Howe Sound Crest Trail just a short ways down from the Deeks Creek Trail turn off"
+          )
+        ]),
+        _vm._v(" "),
+        _c("p", [_vm._v("September 2, 2018")])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "flex justify-between text-sm font-semibold" },
+      [
+        _c("p", [
+          _vm._v(
+            "Deeks Lake.  This photo was taken in the evening at around 6 PM.  \n                        By then the sunlight had all but left with only the peaks and mountains catching its last rays"
+          )
+        ]),
+        _vm._v(" "),
+        _c("p", [_vm._v("September 2, 2018")])
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -21212,7 +21462,7 @@ var render = function() {
                   {
                     staticClass:
                       "flex items-center py-12 text-gray-600 hover:text-gray-900",
-                    attrs: { to: "/Blog" }
+                    attrs: { to: "/blog" }
                   },
                   [
                     _c(
@@ -37022,6 +37272,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/Views/Blogs/DeeksLake2018.vue":
+/*!****************************************************!*\
+  !*** ./resources/js/Views/Blogs/DeeksLake2018.vue ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _DeeksLake2018_vue_vue_type_template_id_0b92271a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DeeksLake2018.vue?vue&type=template&id=0b92271a&scoped=true& */ "./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=template&id=0b92271a&scoped=true&");
+/* harmony import */ var _DeeksLake2018_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DeeksLake2018.vue?vue&type=script&lang=js& */ "./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _DeeksLake2018_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _DeeksLake2018_vue_vue_type_template_id_0b92271a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _DeeksLake2018_vue_vue_type_template_id_0b92271a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "0b92271a",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Views/Blogs/DeeksLake2018.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DeeksLake2018_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./DeeksLake2018.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DeeksLake2018_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=template&id=0b92271a&scoped=true&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=template&id=0b92271a&scoped=true& ***!
+  \***********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DeeksLake2018_vue_vue_type_template_id_0b92271a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./DeeksLake2018.vue?vue&type=template&id=0b92271a&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=template&id=0b92271a&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DeeksLake2018_vue_vue_type_template_id_0b92271a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DeeksLake2018_vue_vue_type_template_id_0b92271a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/Views/Contact.vue":
 /*!****************************************!*\
   !*** ./resources/js/Views/Contact.vue ***!
@@ -37535,6 +37854,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Views_AboutMe__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Views/AboutMe */ "./resources/js/Views/AboutMe.vue");
 /* harmony import */ var _Views_Contact__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Views/Contact */ "./resources/js/Views/Contact.vue");
 /* harmony import */ var _Views_Blog__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Views/Blog */ "./resources/js/Views/Blog.vue");
+/* harmony import */ var _Views_Blogs_DeeksLake2018__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Views/Blogs/DeeksLake2018 */ "./resources/js/Views/Blogs/DeeksLake2018.vue");
+
 
 
 
@@ -37566,10 +37887,16 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
       title: "Contact"
     }
   }, {
-    path: '/Blog',
+    path: '/blog',
     component: _Views_Blog__WEBPACK_IMPORTED_MODULE_9__["default"],
     meta: {
       title: "Blog"
+    }
+  }, {
+    path: '/blog/deeks_lake_2018',
+    component: _Views_Blogs_DeeksLake2018__WEBPACK_IMPORTED_MODULE_10__["default"],
+    meta: {
+      title: 'Howe Sound Adventures - Camping and Fishing at Deeks Lake'
     }
   }, {
     path: '/logout',
