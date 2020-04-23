@@ -2144,6 +2144,40 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'DeeksLake2018',
@@ -2270,23 +2304,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -20944,7 +20961,7 @@ var render = function() {
     [
       _c("TopNav", {
         attrs: {
-          navHeader: "How Sound Adventures:  Camping and Fishing at Deeks Lake"
+          navHeader: "Howe Sound Adventures:  Camping and Fishing at Deeks Lake"
         }
       }),
       _vm._v(" "),
@@ -20986,7 +21003,7 @@ var render = function() {
             _vm._v(" "),
             _c("p", [
               _vm._v(
-                "\n                The lake itself is a small but charming area surrounded by mountains and tall trees of pine and evergreen, \n                some of which had long since fallen and their dry sunbaked trunks lay floating along the banks forming \n                a natural pier of sorts.  By now it was roughly 1 PM and the sun at its zenith.  It's rays shining bright upon the \n                lake's glistening surface emitting dancing sparkles of light, completing the magnificent scenery of the area.  Drenched \n                in sweat, we threw off our heavy packs and proceeded along the pier to dip our weary feet into its refreshing cold.    \n            "
+                "\n                The lake itself is a small but charming area surrounded by mountains and tall trees of pine and evergreen, \n                some of which had long since fallen and their dry sunbaked trunks lay floating along the banks forming \n                a natural pier of sorts.  By now it was roughly 1 PM and the sun at its zenith.  Its rays shining bright upon the \n                lake's glistening surface emitting dancing sparkles of light, completing the magnificent scenery of the area.  Drenched \n                in sweat, we threw off our heavy packs and proceeded along the pier to dip our weary feet into its refreshing cold.    \n            "
               )
             ]),
             _vm._v(" "),
@@ -20997,6 +21014,47 @@ var render = function() {
               }),
               _vm._v(" "),
               _vm._m(3)
+            ]),
+            _vm._v(" "),
+            _vm._m(4),
+            _vm._v(" "),
+            _c("div", { staticClass: "my-6" }, [
+              _c("div", { staticClass: "flex justify-between" }, [
+                _c("img", {
+                  staticClass: "object-scale-down h-112",
+                  attrs: {
+                    src: "../storage/img/blog/9-2018/deeks_lake_fishing_1.jpg"
+                  }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "object-scale-down h-112",
+                  attrs: {
+                    src: "../storage/img/blog/9-2018/deeks_lake_fishing_2.jpg"
+                  }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "object-scale-down h-112",
+                  attrs: { src: "../storage/img/blog/9-2018/deeks_lake_3.jpg" }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "object-scale-down h-112",
+                  attrs: {
+                    src: "../storage/img/blog/9-2018/deeks_lake_fishing_3.jpg"
+                  }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "object-scale-down h-112",
+                  attrs: {
+                    src: "../storage/img/blog/9-2018/deeks_lake_fishing_4.jpg"
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _vm._m(5)
             ])
           ]
         )
@@ -21033,7 +21091,7 @@ var staticRenderFns = [
       _c("br"),
       _c("br"),
       _vm._v(
-        "\n                I set off with my fellow friends and adventurers Jamie and Derek on September 2, the start of \n                the Labour Day long weekend and arrived at the Porteau Cove trailhead sometime around 8 AM.  \n                By then the sun was already shining up high giving off a warmth that would soon boil into a \n                sweltering heat as the day went on.  Our cohort headed south following the Deeks Creek Trail; a gradual uphill for about 2 hours.  \n                The path eventually came across a turnoff marked by a sign connecting eastwards to the \n                Howe Sound Crest Trail (HSCT). The path became significantly steeper on the HSCT with a lot of loose \n                rocks which impeded our progress, in an ordeal that was exacerbated by our heavy backpacks and equipment.  \n                Despite the grueling trial, we encountered various viewpoints for a worthwhile stop and breather \n                offering magnificent views of the Howe Sound.  It would be another 3 hours before we finally reached the banks of Deeks Lake. \n            "
+        "\n                I set off with my fellow friends and adventurers Jamie and Derek on September 2, the start of \n                the Labour Day long weekend and arrived at the Porteau Cove trailhead sometime around 8 AM.  \n                By then the sun was already shining up high giving off a warmth that would soon boil into a \n                sweltering heat as the day went on.  Our cohort headed south following the Deeks Creek Trail; \n                a gradual uphill for about 2 hours.  The path eventually came across a turnoff marked by a sign connecting eastwards to the \n                Howe Sound Crest Trail (HSCT). The path became significantly steeper on the HSCT with a lot of loose \n                rocks which impeded our progress, in an ordeal that was exacerbated by our heavy backpacks and equipment.  \n                Despite the grueling trial, we encountered various viewpoints for a worthwhile stop and breather \n                offering magnificent views of the Howe Sound.  It would be another 3 hours before we finally reached the banks of Deeks Lake. \n            "
       )
     ])
   },
@@ -21072,6 +21130,39 @@ var staticRenderFns = [
         _c("p", [_vm._v("September 2, 2018")])
       ]
     )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _vm._v(
+        "\n                No time was wasted in finding and setting up a campsite.  Having brought fishing rods, we were eager to head back down \n                and get some fishing done.  Deeks Lake contains a healthy number of cutthroat trout; closely related to rainbow trout, \n                cutthroats are distinct for a red and orange colouration on their gill plates and lower jaw.  Depending on their habitat \n                and subspecies, mature cutthroats can grow up to 40 inches long.  However, the largest ones seen at Deeks Lake were only \n                about 8 to 14 inches which all things considered is still pretty sizable given that it is a small lake.  \n            "
+      ),
+      _c("br"),
+      _c("br"),
+      _vm._v(
+        "\n                There is a wonderful feeling that I can’t really put into words or find anywhere else outside of fishing.  \n                Beginning with that initial tug of the line from a curious nibble to a hard pull as a fish sinks down on \n                your bait evokes a sensation of tense excitement every time, followed by a joyous shout of “I got one!” \n                and reeling it in as the hook is set.  It not only is a unique experience, but it certainly does make my \n                buddies and I greatly appreciate the glorious bounty offered by nature right in our backyard.  The fish \n                bit hard that day and we caught plenty.  Most were no more than 10 to 12 inches, but it felt amazing every \n                time reeling them in and letting them go. \n            "
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex justify-between" }, [
+      _c("div", { staticClass: "text-sm font-semibold" }, [
+        _vm._v(
+          "\n                        The fish were biting hard that day.  Eventually we fried one up with a bit of oil, drizzle of lemon juice and some onions.  \n                        It doesn't get any more fresh than this. \n                    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "text-sm font-semibold" }, [
+        _vm._v(
+          "\n                        September 2, 2018\n                    "
+        )
+      ])
+    ])
   }
 ]
 render._withStripped = true

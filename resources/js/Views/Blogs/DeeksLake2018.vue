@@ -1,6 +1,6 @@
 <template>
     <div>
-        <TopNav navHeader="How Sound Adventures:  Camping and Fishing at Deeks Lake"></TopNav>
+        <TopNav navHeader="Howe Sound Adventures:  Camping and Fishing at Deeks Lake"></TopNav>
         <div class="flex justify-center">
            <div class="flex flex-col p-6 w-full text-lg tracking-wide leading-10">
                 <p>
@@ -30,8 +30,8 @@
                     I set off with my fellow friends and adventurers Jamie and Derek on September 2, the start of 
                     the Labour Day long weekend and arrived at the Porteau Cove trailhead sometime around 8 AM.  
                     By then the sun was already shining up high giving off a warmth that would soon boil into a 
-                    sweltering heat as the day went on.  Our cohort headed south following the Deeks Creek Trail; a gradual uphill for about 2 hours.  
-                    The path eventually came across a turnoff marked by a sign connecting eastwards to the 
+                    sweltering heat as the day went on.  Our cohort headed south following the Deeks Creek Trail; 
+                    a gradual uphill for about 2 hours.  The path eventually came across a turnoff marked by a sign connecting eastwards to the 
                     Howe Sound Crest Trail (HSCT). The path became significantly steeper on the HSCT with a lot of loose 
                     rocks which impeded our progress, in an ordeal that was exacerbated by our heavy backpacks and equipment.  
                     Despite the grueling trial, we encountered various viewpoints for a worthwhile stop and breather 
@@ -47,7 +47,7 @@
                 <p>
                     The lake itself is a small but charming area surrounded by mountains and tall trees of pine and evergreen, 
                     some of which had long since fallen and their dry sunbaked trunks lay floating along the banks forming 
-                    a natural pier of sorts.  By now it was roughly 1 PM and the sun at its zenith.  It's rays shining bright upon the 
+                    a natural pier of sorts.  By now it was roughly 1 PM and the sun at its zenith.  Its rays shining bright upon the 
                     lake's glistening surface emitting dancing sparkles of light, completing the magnificent scenery of the area.  Drenched 
                     in sweat, we threw off our heavy packs and proceeded along the pier to dip our weary feet into its refreshing cold.    
                 </p>
@@ -59,6 +59,40 @@
                         <p>September 2, 2018</p>
                     </div>
                 </div>
+                <p>
+                    No time was wasted in finding and setting up a campsite.  Having brought fishing rods, we were eager to head back down 
+                    and get some fishing done.  Deeks Lake contains a healthy number of cutthroat trout; closely related to rainbow trout, 
+                    cutthroats are distinct for a red and orange colouration on their gill plates and lower jaw.  Depending on their habitat 
+                    and subspecies, mature cutthroats can grow up to 40 inches long.  However, the largest ones seen at Deeks Lake were only 
+                    about 8 to 14 inches which all things considered is still pretty sizable given that it is a small lake.  
+                <br><br>
+                    There is a wonderful feeling that I can’t really put into words or find anywhere else outside of fishing.  
+                    Beginning with that initial tug of the line from a curious nibble to a hard pull as a fish sinks down on 
+                    your bait evokes a sensation of tense excitement every time, followed by a joyous shout of “I got one!” 
+                    and reeling it in as the hook is set.  It not only is a unique experience, but it certainly does make my 
+                    buddies and I greatly appreciate the glorious bounty offered by nature right in our backyard.  The fish 
+                    bit hard that day and we caught plenty.  Most were no more than 10 to 12 inches, but it felt amazing every 
+                    time reeling them in and letting them go. 
+                </p>
+                <div class="my-6">
+                    <div class="flex justify-between">
+                        <img :src="'../storage/img/blog/9-2018/deeks_lake_fishing_1.jpg'"  class="object-scale-down h-112">
+                        <img :src="'../storage/img/blog/9-2018/deeks_lake_fishing_2.jpg'"  class="object-scale-down h-112">
+                        <img :src="'../storage/img/blog/9-2018/deeks_lake_3.jpg'"  class="object-scale-down h-112">
+                        <img :src="'../storage/img/blog/9-2018/deeks_lake_fishing_3.jpg'"  class="object-scale-down h-112">
+                        <img :src="'../storage/img/blog/9-2018/deeks_lake_fishing_4.jpg'"  class="object-scale-down h-112">
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="text-sm font-semibold">
+                            The fish were biting hard that day.  Eventually we fried one up with a bit of oil, drizzle of lemon juice and some onions.  
+                            It doesn't get any more fresh than this. 
+                        </div>
+                        <div class="text-sm font-semibold">
+                            September 2, 2018
+                        </div>
+                    </div>
+                </div>
+                
            </div>
         </div>
     </div>
