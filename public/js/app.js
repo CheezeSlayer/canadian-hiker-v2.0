@@ -2178,6 +2178,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'DeeksLake2018',
@@ -2255,39 +2268,6 @@ __webpack_require__.r(__webpack_exports__);
       }
     };
   },
-  components: {
-    TopNav: _components_TopNav__WEBPACK_IMPORTED_MODULE_0__["default"]
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Views/Welcome.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Views/Welcome.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_TopNav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/TopNav */ "./resources/js/components/TopNav.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Welcome',
   components: {
     TopNav: _components_TopNav__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
@@ -2402,8 +2382,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "App",
   props: ['user'],
+  data: function data() {
+    return {
+      title: ''
+    };
+  },
+  watch: {
+    $route: function $route(to, from) {
+      this.title = to.meta.title;
+    },
+    title: function title() {
+      document.title = 'Canadian Hiker | ' + this.title;
+    }
+  },
   created: function created() {
-    console.log(this.user);
+    this.title = this.$route.meta.title;
   }
 });
 
@@ -2439,31 +2432,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&":
-/*!***************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log('Component mounted.');
-  }
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/TopNav.vue?vue&type=script&lang=js&":
 /*!*****************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/TopNav.vue?vue&type=script&lang=js& ***!
@@ -2479,9 +2447,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "TopNav",
-  props: ['navHeader']
+  props: ['navHeader', 'imgSrc']
 });
 
 /***/ }),
@@ -20805,18 +20775,19 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("TopNav", { attrs: { navHeader: "About Me" } }),
+      _c("TopNav", {
+        attrs: { navHeader: "About Me", imgSrc: "grousemtn.jpg" }
+      }),
       _vm._v(" "),
       _c("div", { staticClass: "flex flex-col items-center" }, [
         _c(
           "div",
           {
-            staticClass:
-              "m-6 p-6 w-2/3 flex content-center bg-gray-300 rounded-lg items-center"
+            staticClass: "m-6 p-6 flex content-center rounded-lg items-center"
           },
           [
             _c("img", {
-              staticClass: "m-2 object-contain h-64 rounded-lg",
+              staticClass: "m-2 object-contain h-96 rounded-lg",
               attrs: { src: "../storage/img/about-me.jpg" }
             }),
             _vm._v(" "),
@@ -20895,7 +20866,9 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("TopNav", { attrs: { navHeader: "Canadian Hiker" } }),
+      _c("TopNav", {
+        attrs: { navHeader: "Canadian Hiker", imgSrc: "mysterylake.jpg" }
+      }),
       _vm._v(" "),
       _c("div", { staticClass: "flex justify-center" }, [
         _c(
@@ -20961,7 +20934,9 @@ var render = function() {
     [
       _c("TopNav", {
         attrs: {
-          navHeader: "Howe Sound Adventures:  Camping and Fishing at Deeks Lake"
+          navHeader:
+            "Howe Sound Adventures:  Camping and Fishing at Deeks Lake",
+          imgSrc: "deekslake_2.jpg"
         }
       }),
       _vm._v(" "),
@@ -20975,7 +20950,7 @@ var render = function() {
           [
             _c("p", [
               _vm._v(
-                "\n                The North Shore Mountains has always been a marvel of beauty.  \n                During my lunch breaks I would frequent the waterfront of Coal Harbour \n                and gaze upon the humbling majesty of those rocky giants overlooking Greater Vancouver; \n                an experience surpassed only by exploring every trail, summit,\n                nook and cranny that these mountains offered to folks of adventurous spirit.  \n                For within the glorious outback hides a sprawl of trails old and new, leading to treasures of \n                lakes, creeks, waterfalls, and peaks of unparalleled beauty.  A sanctuary diverse in various \n                forms fish, birds, animals, insects and plants alike, hidden away from the noise and fumes of industry.  \n            "
+                "\n                The North Shore Mountains has always been a marvel of beauty.  \n                During my lunch breaks I would frequent the waterfront of Coal Harbour \n                and gaze upon the humbling majesty of those rocky giants overlooking Greater Vancouver; \n                an experience surpassed only by exploring every trail, summit,\n                nook and cranny that these mountains offered to folks of adventurous spirit.  \n                For within the glorious outback hides a sprawl of trails old and new, leading to treasures of \n                lakes, creeks, waterfalls, and peaks of unparalleled beauty.  A sanctuary diverse in various \n                forms fish, birds, animals, insects and plants alike, secluded away from the noise and fumes of the city.  \n            "
               )
             ]),
             _vm._v(" "),
@@ -21001,11 +20976,7 @@ var render = function() {
               _vm._m(2)
             ]),
             _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "\n                The lake itself is a small but charming area surrounded by mountains and tall trees of pine and evergreen, \n                some of which had long since fallen and their dry sunbaked trunks lay floating along the banks forming \n                a natural pier of sorts.  By now it was roughly 1 PM and the sun at its zenith.  Its rays shining bright upon the \n                lake's glistening surface emitting dancing sparkles of light, completing the magnificent scenery of the area.  Drenched \n                in sweat, we threw off our heavy packs and proceeded along the pier to dip our weary feet into its refreshing cold.    \n            "
-              )
-            ]),
+            _vm._m(3),
             _vm._v(" "),
             _c("div", { staticClass: "flex flex-col my-6" }, [
               _c("img", {
@@ -21013,10 +20984,10 @@ var render = function() {
                 attrs: { src: "../storage/img/blog/9-2018/deeks_lake_1.jpg" }
               }),
               _vm._v(" "),
-              _vm._m(3)
+              _vm._m(4)
             ]),
             _vm._v(" "),
-            _vm._m(4),
+            _vm._m(5),
             _vm._v(" "),
             _c("div", { staticClass: "my-6" }, [
               _c("div", { staticClass: "flex justify-between" }, [
@@ -21054,7 +21025,7 @@ var render = function() {
                 })
               ]),
               _vm._v(" "),
-              _vm._m(5)
+              _vm._m(6)
             ])
           ]
         )
@@ -21086,12 +21057,12 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("p", [
       _vm._v(
-        "\n                One of these trails is the Howe Sound Crest Trail.  Boasting a length of roughly 29 km, \n                this trail stretches northwards from Cypress Bowl to Porteau Cove along the Sea-to-Sky \n                Highway and passes through various notable landmarks such as The Lions and Brunswick Mountain.  \n                Just a little due south of the Porteau Cove trailhead is Deeks Lake, the site of my first \n                backpacking trip ever in British Columbia among the North Shore Mountains.  \n            "
+        "\n                One of these trails is the Howe Sound Crest Trail.  Boasting a length of roughly 29 km, \n                this trail stretches northwards from Cypress Bowl to Porteau Cove along the Sea-to-Sky \n                Highway and passes through various notable landmarks such as the iconic Lions and Brunswick Mountain, \n                the highest of the North Shore Mountains.  Just a little due south of the Porteau Cove trailhead is \n                Deeks Lake, the site of my first backpacking trip ever in British Columbia's glorious outback.  \n            "
       ),
       _c("br"),
       _c("br"),
       _vm._v(
-        "\n                I set off with my fellow friends and adventurers Jamie and Derek on September 2, the start of \n                the Labour Day long weekend and arrived at the Porteau Cove trailhead sometime around 8 AM.  \n                By then the sun was already shining up high giving off a warmth that would soon boil into a \n                sweltering heat as the day went on.  Our cohort headed south following the Deeks Creek Trail; \n                a gradual uphill for about 2 hours.  The path eventually came across a turnoff marked by a sign connecting eastwards to the \n                Howe Sound Crest Trail (HSCT). The path became significantly steeper on the HSCT with a lot of loose \n                rocks which impeded our progress, in an ordeal that was exacerbated by our heavy backpacks and equipment.  \n                Despite the grueling trial, we encountered various viewpoints for a worthwhile stop and breather \n                offering magnificent views of the Howe Sound.  It would be another 3 hours before we finally reached the banks of Deeks Lake. \n            "
+        "\n                I set off early morning with my fellow friends and adventurers Jamie and Derek on September 2, 2018 the start of \n                the Labour Day long weekend and arrived at the Porteau Cove trailhead sometime around 9 AM.  \n                By then the sun was already shining up high giving off a warmth that would soon boil into a \n                sweltering heat as the day went on.  Our cohort headed south following the Deeks Creek Trail; \n                a gradual uphill for about 2 hours.  The path eventually came across a turnoff marked by a sign connecting eastwards to the \n                Howe Sound Crest Trail (HSCT). The path became significantly steeper on the HSCT with a lot of loose \n                rocks which impeded our progress, in an ordeal that was exacerbated by our heavy backpacks and equipment.  \n                Despite the grueling trial, we encountered various viewpoints for a worthwhile stop and breather \n                offering magnificent views of the Howe Sound.  It would be another 3 hours before we finally reached the banks of Deeks Lake. \n            "
       )
     ])
   },
@@ -21117,6 +21088,21 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("p", [
+      _vm._v(
+        "\n                The lake itself is a small but charming area; a view that is nothing short of magnificent surrounded by mountains and tall trees of pine and evergreen, \n                some of which had long since fallen and their dry sunbaked trunks lay floating along the banks forming \n                a natural pier of sorts.  By now it was roughly 1 PM and the sun at its zenith.  Its rays shining bright upon the \n                lake's glistening surface emitting dancing sparkles of light, completing the enchanting scenery of the area.  Drenched \n                in sweat, we threw off our heavy packs and proceeded along the pier of logs to dip our weary feet into its refreshing cold.    \n            "
+      ),
+      _c("br"),
+      _c("br"),
+      _vm._v(
+        "\n                No time was wasted in finding and setting up a campsite.  Having brought fishing rods, we were eager to head back down \n                and get some fishing done.  Deeks Lake contains a healthy number of cutthroat trout; closely related to rainbow trout, \n                cutthroats are distinct for a red and orange colouration on their gill plates and lower jaw.  Depending on their habitat \n                and subspecies, mature cutthroats can grow up to 40 inches long.  However, the largest ones seen at Deeks Lake were only \n                about 8 to 14 inches which all things considered is still pretty sizable given that it is a small lake.  \n            "
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c(
       "div",
       { staticClass: "flex justify-between text-sm font-semibold" },
@@ -21137,12 +21123,17 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("p", [
       _vm._v(
-        "\n                No time was wasted in finding and setting up a campsite.  Having brought fishing rods, we were eager to head back down \n                and get some fishing done.  Deeks Lake contains a healthy number of cutthroat trout; closely related to rainbow trout, \n                cutthroats are distinct for a red and orange colouration on their gill plates and lower jaw.  Depending on their habitat \n                and subspecies, mature cutthroats can grow up to 40 inches long.  However, the largest ones seen at Deeks Lake were only \n                about 8 to 14 inches which all things considered is still pretty sizable given that it is a small lake.  \n            "
+        "\n                There is a wonderful feeling that I can’t really put into words or find anywhere else outside of fishing.  \n                Beginning with that initial tug of the line from a curious nibble to a hard pull as a fish sinks down on \n                your bait evokes a sensation of tense excitement every time, followed by a joyous shout of “I got one!” \n                and reeling it in as the hook is set.  It not only is a unique experience, but it certainly does make my \n                buddies and I greatly appreciate the glorious bounty offered by nature right in our backyard.  The fish \n                bit hard that day and we caught plenty.  Most were no more than 10 to 12 inches, but it felt amazing every \n                time to reel them in and let them go. \n            "
       ),
       _c("br"),
       _c("br"),
       _vm._v(
-        "\n                There is a wonderful feeling that I can’t really put into words or find anywhere else outside of fishing.  \n                Beginning with that initial tug of the line from a curious nibble to a hard pull as a fish sinks down on \n                your bait evokes a sensation of tense excitement every time, followed by a joyous shout of “I got one!” \n                and reeling it in as the hook is set.  It not only is a unique experience, but it certainly does make my \n                buddies and I greatly appreciate the glorious bounty offered by nature right in our backyard.  The fish \n                bit hard that day and we caught plenty.  Most were no more than 10 to 12 inches, but it felt amazing every \n                time reeling them in and letting them go. \n            "
+        "\n                A fishing trip wouldn’t be complete without a catch and cook.   Trout in general is delicious and cooking \n                them isn’t hard at all.  I won’t go into detail on how we gutted and prepped it for the frying pan but eventually, \n                I may plan on making a separate post on how I go about the process.  Frying it up with a little bit of oil, \n                drizzle of lemon juice with a side of onion led to mouthwatering results.   Man, it doesn’t get any fresher than this.  \n            "
+      ),
+      _c("br"),
+      _c("br"),
+      _vm._v(
+        "\n                As bright as the sun was during the day, the moon glowed powerfully with vibrant brilliance at night.  \n                I remember being woken up to by Jamie and left the tent to a dazzling display of the night sky filled with stars; \n                a view that simply could not be witnessed back in the city or the suburbs.  It’s times like this that I wish \n                I was not limited to the camera on my phone but had an actual DSLR capable of taking nighttime long exposure shots.  \n                Experiences like often get me thinking that at one point in time, most people were living like this without phones, \n                cameras, or any modern condiments to survive on.  In a way it certainly makes me appreciate the great outback \n                even more, for in all the bounties it can offer, the North Shore Mountains can easily be a harsh and unforgiving place.  \n            "
       )
     ])
   },
@@ -21153,13 +21144,13 @@ var staticRenderFns = [
     return _c("div", { staticClass: "flex justify-between" }, [
       _c("div", { staticClass: "text-sm font-semibold" }, [
         _vm._v(
-          "\n                        The fish were biting hard that day.  Eventually we fried one up with a bit of oil, drizzle of lemon juice and some onions.  \n                        It doesn't get any more fresh than this. \n                    "
+          "\n                        The fish were biting hard that day.  Eventually we fried one up with a bit of oil, drizzle of lemon juice and some onions.  \n                        It doesn't get any fresher than this. \n                    "
         )
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "text-sm font-semibold" }, [
         _vm._v(
-          "\n                        September 2, 2018\n                    "
+          "\n                        September 2-3, 2018\n                    "
         )
       ])
     ])
@@ -21189,7 +21180,9 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("TopNav", { attrs: { navHeader: "Where to Find Me" } }),
+      _c("TopNav", {
+        attrs: { navHeader: "Where to Find Me", imgSrc: "stmarks.jpg" }
+      }),
       _vm._v(" "),
       _c("div", { staticClass: "flex flex-col items-center" }, [
         _vm._m(0),
@@ -21198,7 +21191,7 @@ var render = function() {
           "div",
           {
             staticClass:
-              "flex m-6 p-6 w-2/3 content-center bg-gray-300 rounded-lg justify-between"
+              "flex m-6 p-6 w-2/3 content-center rounded-lg justify-between"
           },
           [
             _c("div", { staticClass: "flex flex-col items-center m-2" }, [
@@ -21338,73 +21331,6 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Views/Welcome.vue?vue&type=template&id=05acee73&scoped=true&":
-/*!*****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Views/Welcome.vue?vue&type=template&id=05acee73&scoped=true& ***!
-  \*****************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("TopNav", { attrs: { navHeader: "Welcome" } }),
-      _vm._v(" "),
-      _c("div", { staticClass: "flex flex-col items-center" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "flex flex-col m-6 p-6 w-2/3 flex content-center bg-gray-300 rounded-lg items-center"
-          },
-          [
-            _vm._m(0),
-            _vm._v(" "),
-            _c("img", {
-              staticClass: "mt-6 mb-2 mx-2 object-contain rounded-lg",
-              attrs: { src: "../storage/img/deekslake.jpg" }
-            })
-          ]
-        )
-      ])
-    ],
-    1
-  )
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "p",
-      { staticClass: "p-6 text-lg font-semibold bg-gray-400 rounded-lg" },
-      [
-        _vm._v(
-          "Greetings wanderer!  You must be tired from surfing through the web.  \n                "
-        ),
-        _c("br"),
-        _vm._v(
-          "Feel free to stay a while and rest your weary mind before moving on."
-        )
-      ]
-    )
-  }
-]
-render._withStripped = true
-
-
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/App.vue?vue&type=template&id=332fccf4&scoped=true&":
 /*!******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/App.vue?vue&type=template&id=332fccf4&scoped=true& ***!
@@ -21431,7 +21357,7 @@ var render = function() {
               "nav",
               { staticClass: "pt-4" },
               [
-                _c("router-link", { attrs: { to: "/" } }, [
+                _c("router-link", { attrs: { to: "/about" } }, [
                   _c("img", {
                     staticClass:
                       "rounded-full border-solid border-2 border-gray-400",
@@ -21447,6 +21373,64 @@ var render = function() {
                     [_vm._v("Henry Chang")]
                   )
                 ]),
+                _vm._v(" "),
+                _c(
+                  "router-link",
+                  {
+                    staticClass:
+                      "flex items-center py-12 text-gray-600 hover:text-gray-900",
+                    attrs: { to: "/blog" }
+                  },
+                  [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "bi-image b-icon bi h-8 w-8",
+                        attrs: {
+                          "data-v-8892b924": "",
+                          viewBox: "0 0 16 16",
+                          width: "1em",
+                          height: "1em",
+                          focusable: "false",
+                          role: "img",
+                          alt: "icon",
+                          xmlns: "http://www.w3.org/2000/svg",
+                          fill: "currentColor"
+                        }
+                      },
+                      [
+                        _c("g", { attrs: { "data-v-8892b924": "" } }, [
+                          _c("path", {
+                            attrs: {
+                              "fill-rule": "evenodd",
+                              d:
+                                "M14.002 2h-12a1 1 0 00-1 1v10a1 1 0 001 1h12a1 1 0 001-1V3a1 1 0 00-1-1zm-12-1a2 \n                            2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V3a2 2 0 00-2-2h-12z",
+                              "clip-rule": "evenodd"
+                            }
+                          }),
+                          _c("path", {
+                            attrs: {
+                              d:
+                                "M10.648 \n                            7.646a.5.5 0 01.577-.093L15.002 9.5V14h-14v-2l2.646-2.354a.5.5 0 01.63-.062l2.66 1.773 3.71-3.71z"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("path", {
+                            attrs: {
+                              "fill-rule": "evenodd",
+                              d: "M4.502 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3z",
+                              "clip-rule": "evenodd"
+                            }
+                          })
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("h1", { staticClass: "uppercase font-bold mx-auto" }, [
+                      _vm._v("Blog")
+                    ])
+                  ]
+                ),
                 _vm._v(" "),
                 _c(
                   "router-link",
@@ -21544,64 +21528,6 @@ var render = function() {
                     _vm._v(" "),
                     _c("h1", { staticClass: "uppercase font-bold mx-auto" }, [
                       _vm._v("Contact")
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "router-link",
-                  {
-                    staticClass:
-                      "flex items-center py-12 text-gray-600 hover:text-gray-900",
-                    attrs: { to: "/blog" }
-                  },
-                  [
-                    _c(
-                      "svg",
-                      {
-                        staticClass: "bi-image b-icon bi h-8 w-8",
-                        attrs: {
-                          "data-v-8892b924": "",
-                          viewBox: "0 0 16 16",
-                          width: "1em",
-                          height: "1em",
-                          focusable: "false",
-                          role: "img",
-                          alt: "icon",
-                          xmlns: "http://www.w3.org/2000/svg",
-                          fill: "currentColor"
-                        }
-                      },
-                      [
-                        _c("g", { attrs: { "data-v-8892b924": "" } }, [
-                          _c("path", {
-                            attrs: {
-                              "fill-rule": "evenodd",
-                              d:
-                                "M14.002 2h-12a1 1 0 00-1 1v10a1 1 0 001 1h12a1 1 0 001-1V3a1 1 0 00-1-1zm-12-1a2 \n                            2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V3a2 2 0 00-2-2h-12z",
-                              "clip-rule": "evenodd"
-                            }
-                          }),
-                          _c("path", {
-                            attrs: {
-                              d:
-                                "M10.648 \n                            7.646a.5.5 0 01.577-.093L15.002 9.5V14h-14v-2l2.646-2.354a.5.5 0 01.63-.062l2.66 1.773 3.71-3.71z"
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("path", {
-                            attrs: {
-                              "fill-rule": "evenodd",
-                              d: "M4.502 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3z",
-                              "clip-rule": "evenodd"
-                            }
-                          })
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("h1", { staticClass: "uppercase font-bold mx-auto" }, [
-                      _vm._v("Blog")
                     ])
                   ]
                 ),
@@ -21808,7 +21734,7 @@ var render = function() {
                 _c(
                   "transition",
                   { attrs: { name: "fade" } },
-                  [_c("router-view", { staticClass: "p-6 overflow-x-hidden" })],
+                  [_c("router-view", { staticClass: "overflow-x-hidden" })],
                   1
                 )
               ],
@@ -21866,39 +21792,6 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&":
-/*!*******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e& ***!
-  \*******************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", [_vm._v("\n        Welcome to My Portfolio\n    ")])
-    ])
-  }
-]
-render._withStripped = true
-
-
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/TopNav.vue?vue&type=template&id=9b6caa8e&scoped=true&":
 /*!*********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/TopNav.vue?vue&type=template&id=9b6caa8e&scoped=true& ***!
@@ -21918,9 +21811,20 @@ var render = function() {
     "div",
     {
       staticClass:
-        "h-24 p-2 border-b-2 border-dotted border-gray-500 flex flex-col items-center"
+        "h-96 border-b-2 border-gray-500 flex flex-col items-center justify-center bg-cover bg-center relative",
+      style: "background-image: url(../storage/img/banner/" + _vm.imgSrc
     },
-    [_c("h1", { staticClass: "text-4xl" }, [_vm._v(_vm._s(_vm.navHeader))])]
+    [
+      _c(
+        "h1",
+        { staticClass: "text-6xl font-bold text-white absolute z-20 px-6" },
+        [_vm._v(_vm._s(_vm.navHeader))]
+      ),
+      _vm._v(" "),
+      _c("div", {
+        staticClass: "bg-black bg-cover opacity-25 h-full w-full z-10"
+      })
+    ]
   )
 }
 var staticRenderFns = []
@@ -37501,75 +37405,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/Views/Welcome.vue":
-/*!****************************************!*\
-  !*** ./resources/js/Views/Welcome.vue ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Welcome_vue_vue_type_template_id_05acee73_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Welcome.vue?vue&type=template&id=05acee73&scoped=true& */ "./resources/js/Views/Welcome.vue?vue&type=template&id=05acee73&scoped=true&");
-/* harmony import */ var _Welcome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Welcome.vue?vue&type=script&lang=js& */ "./resources/js/Views/Welcome.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Welcome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Welcome_vue_vue_type_template_id_05acee73_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Welcome_vue_vue_type_template_id_05acee73_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "05acee73",
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/Views/Welcome.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/Views/Welcome.vue?vue&type=script&lang=js&":
-/*!*****************************************************************!*\
-  !*** ./resources/js/Views/Welcome.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Welcome.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Views/Welcome.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/Views/Welcome.vue?vue&type=template&id=05acee73&scoped=true&":
-/*!***********************************************************************************!*\
-  !*** ./resources/js/Views/Welcome.vue?vue&type=template&id=05acee73&scoped=true& ***!
-  \***********************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_05acee73_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Welcome.vue?vue&type=template&id=05acee73&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Views/Welcome.vue?vue&type=template&id=05acee73&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_05acee73_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_05acee73_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -37787,75 +37622,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/ExampleComponent.vue":
-/*!******************************************************!*\
-  !*** ./resources/js/components/ExampleComponent.vue ***!
-  \******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ExampleComponent.vue?vue&type=template&id=299e239e& */ "./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&");
-/* harmony import */ var _ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ExampleComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/ExampleComponent.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************!*\
-  !*** ./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./ExampleComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&":
-/*!*************************************************************************************!*\
-  !*** ./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e& ***!
-  \*************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./ExampleComponent.vue?vue&type=template&id=299e239e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
 /***/ "./resources/js/components/TopNav.vue":
 /*!********************************************!*\
   !*** ./resources/js/components/TopNav.vue ***!
@@ -37937,17 +37703,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
-/* harmony import */ var _components_ExampleComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/ExampleComponent */ "./resources/js/components/ExampleComponent.vue");
-/* harmony import */ var _Actions_Logout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Actions/Logout */ "./resources/js/Actions/Logout.vue");
-/* harmony import */ var _Actions_Login__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Actions/Login */ "./resources/js/Actions/Login.vue");
-/* harmony import */ var _Actions_Signup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Actions/Signup */ "./resources/js/Actions/Signup.vue");
-/* harmony import */ var _Views_Welcome__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Views/Welcome */ "./resources/js/Views/Welcome.vue");
-/* harmony import */ var _Views_AboutMe__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Views/AboutMe */ "./resources/js/Views/AboutMe.vue");
-/* harmony import */ var _Views_Contact__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Views/Contact */ "./resources/js/Views/Contact.vue");
-/* harmony import */ var _Views_Blog__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Views/Blog */ "./resources/js/Views/Blog.vue");
-/* harmony import */ var _Views_Blogs_DeeksLake2018__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Views/Blogs/DeeksLake2018 */ "./resources/js/Views/Blogs/DeeksLake2018.vue");
-
-
+/* harmony import */ var _Actions_Logout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Actions/Logout */ "./resources/js/Actions/Logout.vue");
+/* harmony import */ var _Actions_Login__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Actions/Login */ "./resources/js/Actions/Login.vue");
+/* harmony import */ var _Actions_Signup__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Actions/Signup */ "./resources/js/Actions/Signup.vue");
+/* harmony import */ var _Views_AboutMe__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Views/AboutMe */ "./resources/js/Views/AboutMe.vue");
+/* harmony import */ var _Views_Contact__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Views/Contact */ "./resources/js/Views/Contact.vue");
+/* harmony import */ var _Views_Blog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Views/Blog */ "./resources/js/Views/Blog.vue");
+/* harmony import */ var _Views_Blogs_DeeksLake2018__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Views/Blogs/DeeksLake2018 */ "./resources/js/Views/Blogs/DeeksLake2018.vue");
 
 
 
@@ -37961,43 +37723,43 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 /* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: [{
     path: '/',
-    component: _Views_Welcome__WEBPACK_IMPORTED_MODULE_6__["default"],
+    component: _Views_Blog__WEBPACK_IMPORTED_MODULE_7__["default"],
     meta: {
-      title: "Welcome"
+      title: "Blog"
     }
   }, {
     path: '/about',
-    component: _Views_AboutMe__WEBPACK_IMPORTED_MODULE_7__["default"],
+    component: _Views_AboutMe__WEBPACK_IMPORTED_MODULE_5__["default"],
     meta: {
       title: "About Me"
     }
   }, {
     path: '/contact',
-    component: _Views_Contact__WEBPACK_IMPORTED_MODULE_8__["default"],
+    component: _Views_Contact__WEBPACK_IMPORTED_MODULE_6__["default"],
     meta: {
       title: "Contact"
     }
   }, {
     path: '/blog',
-    component: _Views_Blog__WEBPACK_IMPORTED_MODULE_9__["default"],
+    component: _Views_Blog__WEBPACK_IMPORTED_MODULE_7__["default"],
     meta: {
       title: "Blog"
     }
   }, {
     path: '/blog/deeks_lake_2018',
-    component: _Views_Blogs_DeeksLake2018__WEBPACK_IMPORTED_MODULE_10__["default"],
+    component: _Views_Blogs_DeeksLake2018__WEBPACK_IMPORTED_MODULE_8__["default"],
     meta: {
       title: 'Howe Sound Adventures - Camping and Fishing at Deeks Lake'
     }
   }, {
     path: '/logout',
-    component: _Actions_Logout__WEBPACK_IMPORTED_MODULE_3__["default"]
+    component: _Actions_Logout__WEBPACK_IMPORTED_MODULE_2__["default"]
   }, {
     path: '/login',
-    component: _Actions_Login__WEBPACK_IMPORTED_MODULE_4__["default"]
+    component: _Actions_Login__WEBPACK_IMPORTED_MODULE_3__["default"]
   }, {
     path: '/signup',
-    component: _Actions_Signup__WEBPACK_IMPORTED_MODULE_5__["default"]
+    component: _Actions_Signup__WEBPACK_IMPORTED_MODULE_4__["default"]
   }],
   mode: 'history'
 }));

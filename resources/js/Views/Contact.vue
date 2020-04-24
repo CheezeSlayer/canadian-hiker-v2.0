@@ -1,13 +1,13 @@
 <template>
     <div>
-        <TopNav navHeader="Where to Find Me"></TopNav>
+        <TopNav navHeader="Where to Find Me" imgSrc="stmarks.jpg"></TopNav>
         <div class="flex flex-col items-center">
             <div class="mx-6 mt-6 p-6 w-1/3 bg-gray-300 rounded-lg">
                 <p>
                     For professional inquiries, contact me through LinkedIn.  My personal projects are on Github.  To follow my hiking adventures, visit my Instagram page.  
                 </p>
             </div>
-            <div class="flex m-6 p-6 w-2/3 content-center bg-gray-300 rounded-lg justify-between">
+            <div class="flex m-6 p-6 w-2/3 content-center rounded-lg justify-between">
                 <div class="flex flex-col items-center m-2">
                     <a :href="profile.linkedin" class="border rounded-lg hover:border-2 hover:border-black">
                         <img :src="'../storage/img/icons/linkedin.png'" class="m-2 object-contain h-48 rounded-lg">

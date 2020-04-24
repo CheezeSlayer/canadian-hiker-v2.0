@@ -4,9 +4,20 @@
             <div class="flex">
                 <div class="px-6 bg-gray-200 w-56 h-screen border-r-2">
                     <nav class="pt-4">
-                        <router-link to="/">
+                        <router-link to="/about">
                             <img :src="'../storage/img/profile.jpg'" class="rounded-full border-solid border-2 border-gray-400">
                             <h1 class="pb-6 text-center text-xl text-gray-600 border-dotted border-b-2 border-gray-600">Henry Chang</h1>
+                        </router-link>
+
+                        <router-link to="/blog" class="flex items-center py-12 text-gray-600 hover:text-gray-900">
+                            <svg data-v-8892b924="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon" 
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-image b-icon bi h-8 w-8"><g data-v-8892b924="">
+                                <path fill-rule="evenodd" d="M14.002 2h-12a1 1 0 00-1 1v10a1 1 0 001 1h12a1 1 0 001-1V3a1 1 0 00-1-1zm-12-1a2 
+                                2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V3a2 2 0 00-2-2h-12z" clip-rule="evenodd"></path><path d="M10.648 
+                                7.646a.5.5 0 01.577-.093L15.002 9.5V14h-14v-2l2.646-2.354a.5.5 0 01.63-.062l2.66 1.773 3.71-3.71z"></path>
+                                <path fill-rule="evenodd" d="M4.502 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clip-rule="evenodd"></path></g></svg>
+
+                            <h1 class="uppercase font-bold mx-auto">Blog</h1>
                         </router-link>
 
                         <router-link to="/about" class="flex items-center py-12 text-gray-600 hover:text-gray-900">
@@ -30,17 +41,6 @@
                                 3.5.504.864zm8.496-3.5l-.432-.252.504-.864.432.252-.504.864zm6 3.5l-6-3.5.504-.864 6 3.5-.504.864z"></path></g></svg>
 
                             <h1 class="uppercase font-bold mx-auto">Contact</h1>
-                        </router-link>
-                    
-                        <router-link to="/blog" class="flex items-center py-12 text-gray-600 hover:text-gray-900">
-                            <svg data-v-8892b924="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon" 
-                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-image b-icon bi h-8 w-8"><g data-v-8892b924="">
-                                <path fill-rule="evenodd" d="M14.002 2h-12a1 1 0 00-1 1v10a1 1 0 001 1h12a1 1 0 001-1V3a1 1 0 00-1-1zm-12-1a2 
-                                2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V3a2 2 0 00-2-2h-12z" clip-rule="evenodd"></path><path d="M10.648 
-                                7.646a.5.5 0 01.577-.093L15.002 9.5V14h-14v-2l2.646-2.354a.5.5 0 01.63-.062l2.66 1.773 3.71-3.71z"></path>
-                                <path fill-rule="evenodd" d="M4.502 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clip-rule="evenodd"></path></g></svg>
-
-                            <h1 class="uppercase font-bold mx-auto">Blog</h1>
                         </router-link>
 
                         <router-link v-if="this.user" to="/logout" class="flex items-center py-12 text-gray-600 hover:text-gray-900">
@@ -84,7 +84,7 @@
                 <div class="flex flex-col flex-1 h-screen overflow-y-hidden">
                     <div class="flex flex-col overflow-y-hidden flex-1">
                         <transition name="fade">
-                            <router-view class="p-6 overflow-x-hidden"></router-view>
+                            <router-view class="overflow-x-hidden"></router-view>
                         </transition>
                     </div>
                 </div>
@@ -100,8 +100,24 @@ export default {
     props: [
         'user'
     ],
+    data: function () {
+        return {
+            title: '',
+        }
+    },
+
+    watch: {
+        $route(to, from) {
+            this.title = to.meta.title;
+        },
+
+        title() {
+            document.title = 'Canadian Hiker | ' + this.title
+        }
+    },
+
     created() {
-        console.log(this.user);
+        this.title = this.$route.meta.title;
     }
 }
 </script>

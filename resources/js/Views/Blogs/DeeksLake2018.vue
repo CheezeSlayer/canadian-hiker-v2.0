@@ -1,6 +1,6 @@
 <template>
     <div>
-        <TopNav navHeader="Howe Sound Adventures:  Camping and Fishing at Deeks Lake"></TopNav>
+        <TopNav navHeader="Howe Sound Adventures:  Camping and Fishing at Deeks Lake" imgSrc="deekslake_2.jpg"></TopNav>
         <div class="flex justify-center">
            <div class="flex flex-col p-6 w-full text-lg tracking-wide leading-10">
                 <p>
@@ -11,7 +11,7 @@
                     nook and cranny that these mountains offered to folks of adventurous spirit.  
                     For within the glorious outback hides a sprawl of trails old and new, leading to treasures of 
                     lakes, creeks, waterfalls, and peaks of unparalleled beauty.  A sanctuary diverse in various 
-                    forms fish, birds, animals, insects and plants alike, hidden away from the noise and fumes of industry.  
+                    forms fish, birds, animals, insects and plants alike, secluded away from the noise and fumes of the city.  
                 </p>
                 <div class="flex flex-col my-6">
                     <img :src="'../storage/img/blog/9-2018/coal_harbour.jpg'"  class="object-cover h-112 w-full">
@@ -23,12 +23,12 @@
                 <p>
                     One of these trails is the Howe Sound Crest Trail.  Boasting a length of roughly 29 km, 
                     this trail stretches northwards from Cypress Bowl to Porteau Cove along the Sea-to-Sky 
-                    Highway and passes through various notable landmarks such as The Lions and Brunswick Mountain.  
-                    Just a little due south of the Porteau Cove trailhead is Deeks Lake, the site of my first 
-                    backpacking trip ever in British Columbia among the North Shore Mountains.  
+                    Highway and passes through various notable landmarks such as the iconic Lions and Brunswick Mountain, 
+                    the highest of the North Shore Mountains.  Just a little due south of the Porteau Cove trailhead is 
+                    Deeks Lake, the site of my first backpacking trip ever in British Columbia's glorious outback.  
                 <br><br>
-                    I set off with my fellow friends and adventurers Jamie and Derek on September 2, the start of 
-                    the Labour Day long weekend and arrived at the Porteau Cove trailhead sometime around 8 AM.  
+                    I set off early morning with my fellow friends and adventurers Jamie and Derek on September 2, 2018 the start of 
+                    the Labour Day long weekend and arrived at the Porteau Cove trailhead sometime around 9 AM.  
                     By then the sun was already shining up high giving off a warmth that would soon boil into a 
                     sweltering heat as the day went on.  Our cohort headed south following the Deeks Creek Trail; 
                     a gradual uphill for about 2 hours.  The path eventually came across a turnoff marked by a sign connecting eastwards to the 
@@ -45,11 +45,17 @@
                     </div>
                 </div>
                 <p>
-                    The lake itself is a small but charming area surrounded by mountains and tall trees of pine and evergreen, 
+                    The lake itself is a small but charming area; a view that is nothing short of magnificent surrounded by mountains and tall trees of pine and evergreen, 
                     some of which had long since fallen and their dry sunbaked trunks lay floating along the banks forming 
                     a natural pier of sorts.  By now it was roughly 1 PM and the sun at its zenith.  Its rays shining bright upon the 
-                    lake's glistening surface emitting dancing sparkles of light, completing the magnificent scenery of the area.  Drenched 
-                    in sweat, we threw off our heavy packs and proceeded along the pier to dip our weary feet into its refreshing cold.    
+                    lake's glistening surface emitting dancing sparkles of light, completing the enchanting scenery of the area.  Drenched 
+                    in sweat, we threw off our heavy packs and proceeded along the pier of logs to dip our weary feet into its refreshing cold.    
+                <br><br>
+                    No time was wasted in finding and setting up a campsite.  Having brought fishing rods, we were eager to head back down 
+                    and get some fishing done.  Deeks Lake contains a healthy number of cutthroat trout; closely related to rainbow trout, 
+                    cutthroats are distinct for a red and orange colouration on their gill plates and lower jaw.  Depending on their habitat 
+                    and subspecies, mature cutthroats can grow up to 40 inches long.  However, the largest ones seen at Deeks Lake were only 
+                    about 8 to 14 inches which all things considered is still pretty sizable given that it is a small lake.  
                 </p>
                 <div class="flex flex-col my-6">
                     <img :src="'../storage/img/blog/9-2018/deeks_lake_1.jpg'"  class="object-cover h-112 w-full">
@@ -60,19 +66,26 @@
                     </div>
                 </div>
                 <p>
-                    No time was wasted in finding and setting up a campsite.  Having brought fishing rods, we were eager to head back down 
-                    and get some fishing done.  Deeks Lake contains a healthy number of cutthroat trout; closely related to rainbow trout, 
-                    cutthroats are distinct for a red and orange colouration on their gill plates and lower jaw.  Depending on their habitat 
-                    and subspecies, mature cutthroats can grow up to 40 inches long.  However, the largest ones seen at Deeks Lake were only 
-                    about 8 to 14 inches which all things considered is still pretty sizable given that it is a small lake.  
-                <br><br>
                     There is a wonderful feeling that I can’t really put into words or find anywhere else outside of fishing.  
                     Beginning with that initial tug of the line from a curious nibble to a hard pull as a fish sinks down on 
                     your bait evokes a sensation of tense excitement every time, followed by a joyous shout of “I got one!” 
                     and reeling it in as the hook is set.  It not only is a unique experience, but it certainly does make my 
                     buddies and I greatly appreciate the glorious bounty offered by nature right in our backyard.  The fish 
                     bit hard that day and we caught plenty.  Most were no more than 10 to 12 inches, but it felt amazing every 
-                    time reeling them in and letting them go. 
+                    time to reel them in and let them go. 
+                <br><br>
+                    A fishing trip wouldn’t be complete without a catch and cook.   Trout in general is delicious and cooking 
+                    them isn’t hard at all.  I won’t go into detail on how we gutted and prepped it for the frying pan but eventually, 
+                    I may plan on making a separate post on how I go about the process.  Frying it up with a little bit of oil, 
+                    drizzle of lemon juice with a side of onion led to mouthwatering results.   Man, it doesn’t get any fresher than this.  
+                <br><br>
+                    As bright as the sun was during the day, the moon glowed powerfully with vibrant brilliance at night.  
+                    I remember being woken up to by Jamie and left the tent to a dazzling display of the night sky filled with stars; 
+                    a view that simply could not be witnessed back in the city or the suburbs.  It’s times like this that I wish 
+                    I was not limited to the camera on my phone but had an actual DSLR capable of taking nighttime long exposure shots.  
+                    Experiences like often get me thinking that at one point in time, most people were living like this without phones, 
+                    cameras, or any modern condiments to survive on.  In a way it certainly makes me appreciate the great outback 
+                    even more, for in all the bounties it can offer, the North Shore Mountains can easily be a harsh and unforgiving place.  
                 </p>
                 <div class="my-6">
                     <div class="flex justify-between">
@@ -85,10 +98,10 @@
                     <div class="flex justify-between">
                         <div class="text-sm font-semibold">
                             The fish were biting hard that day.  Eventually we fried one up with a bit of oil, drizzle of lemon juice and some onions.  
-                            It doesn't get any more fresh than this. 
+                            It doesn't get any fresher than this. 
                         </div>
                         <div class="text-sm font-semibold">
-                            September 2, 2018
+                            September 2-3, 2018
                         </div>
                     </div>
                 </div>

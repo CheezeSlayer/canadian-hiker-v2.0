@@ -1,6 +1,6 @@
 <template>
     <div>
-        <TopNav navHeader="Canadian Hiker"></TopNav>
+        <TopNav navHeader="Canadian Hiker" imgSrc="mysterylake.jpg"></TopNav>
         <div class="flex justify-center">
             <div class="flex">
             <router-link to="/blog/deeks_lake_2018">

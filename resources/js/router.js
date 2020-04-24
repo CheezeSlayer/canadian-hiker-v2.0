@@ -1,15 +1,13 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import ExampleComponent from "./components/ExampleComponent";
+
 import Logout from "./Actions/Logout";
 import Login from "./Actions/Login";
 import Signup from "./Actions/Signup";
-
-import Welcome from "./Views/Welcome";
 import AboutMe from "./Views/AboutMe";
 import Contact from "./Views/Contact";
-
 import Blog from "./Views/Blog";
+
 import DeeksLake2018 from "./Views/Blogs/DeeksLake2018";
 
 Vue.use(VueRouter);
@@ -17,8 +15,8 @@ Vue.use(VueRouter);
 export default new VueRouter({
     routes: [
         {
-            path: '/', component: Welcome,
-            meta: { title: "Welcome"}
+            path: '/', component: Blog,
+            meta: { title: "Blog"}
         },
         {
             path: '/about', component: AboutMe,
