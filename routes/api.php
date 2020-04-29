@@ -14,8 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:api')->group( function() {
+    // Route::get('/user', function (Request $request) {
+    //     return $request->user();
+    // });
+
+    Route::post('/posts/{blog}', 'PostController@store'); // ->where(['blog' => '^(?!\s*$).+']);
+    Route::delete('/posts/{post}', 'PostController@destroy');
 });
 
-Route::get('/login', 'Auth/LoginController@showLoginForm')->name('login');
+// Route::get('/login', 'Auth/LoginController@showLoginForm')->name('login');

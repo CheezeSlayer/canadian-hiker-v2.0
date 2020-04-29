@@ -9,7 +9,7 @@
             </div>
             <div class="flex m-6 p-6 w-2/3 content-center rounded-lg justify-between">
                 <div class="flex flex-col items-center m-2">
-                    <a :href="profile.linkedin" class="border rounded-lg hover:border-2 hover:border-black">
+                    <a :href="profile.linkedin">
                         <img :src="'../storage/img/icons/linkedin.png'" class="m-2 object-contain h-48 rounded-lg">
                         <div class="flex flex-col items-center">
                             <h2 class="text-lg font-bold">LinkedIn</h2>
@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="flex flex-col items-center m-2">
-                    <a :href="profile.github" class="border rounded-lg hover:border-2 hover:border-black">
+                    <a :href="profile.github">
                         <img :src="'../storage/img/icons/github-image.png'" class="m-2 object-contain h-48 rounded-lg">
                         <div class="flex flex-col items-center">
                             <h2 class="text-lg font-bold">Github</h2>
@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="flex flex-col items-center m-2">
-                    <a :href="profile.instagram" class="border rounded-lg hover:border-2 hover:border-black">
+                    <a :href="profile.instagram">
                         <img :src="'../storage/img/icons/instagram.png'" class="m-2 object-contain h-48 rounded-lg">
                         <div class="flex flex-col items-center">
                             <h2 class="text-lg font-bold">Instagram</h2>

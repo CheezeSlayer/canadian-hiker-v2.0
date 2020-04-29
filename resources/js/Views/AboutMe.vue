@@ -6,7 +6,7 @@
                 <img :src="'../storage/img/about-me.jpg'" class="m-2 object-contain h-96 rounded-lg">
                 <p class="text-lg m-2">My name is Henry Chang and I am a computer programmer with experience in web development and testing.  
                     I am based in Vancouver, British Columbia and have lived in Canada all my life.
-                     When I am not sitting infront of a computer, I can hopefully be trekking the outback, hiking ontop one 
+                     When I am not sitting infront of a computer, I can hopefully be found trekking the outback, hiking ontop one 
                      of British Columbia's many glorious mountains 
                      <br>
                      <br>

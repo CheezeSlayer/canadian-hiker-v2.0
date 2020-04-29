@@ -20793,7 +20793,7 @@ var render = function() {
             _vm._v(" "),
             _c("p", { staticClass: "text-lg m-2" }, [
               _vm._v(
-                "My name is Henry Chang and I am a computer programmer with experience in web development and testing.  \n                I am based in Vancouver, British Columbia and have lived in Canada all my life.\n                 When I am not sitting infront of a computer, I can hopefully be trekking the outback, hiking ontop one \n                 of British Columbia's many glorious mountains \n                 "
+                "My name is Henry Chang and I am a computer programmer with experience in web development and testing.  \n                I am based in Vancouver, British Columbia and have lived in Canada all my life.\n                 When I am not sitting infront of a computer, I can hopefully be found trekking the outback, hiking ontop one \n                 of British Columbia's many glorious mountains \n                 "
               ),
               _c("br"),
               _vm._v(" "),
@@ -21195,60 +21195,36 @@ var render = function() {
           },
           [
             _c("div", { staticClass: "flex flex-col items-center m-2" }, [
-              _c(
-                "a",
-                {
-                  staticClass:
-                    "border rounded-lg hover:border-2 hover:border-black",
-                  attrs: { href: _vm.profile.linkedin }
-                },
-                [
-                  _c("img", {
-                    staticClass: "m-2 object-contain h-48 rounded-lg",
-                    attrs: { src: "../storage/img/icons/linkedin.png" }
-                  }),
-                  _vm._v(" "),
-                  _vm._m(1)
-                ]
-              )
+              _c("a", { attrs: { href: _vm.profile.linkedin } }, [
+                _c("img", {
+                  staticClass: "m-2 object-contain h-48 rounded-lg",
+                  attrs: { src: "../storage/img/icons/linkedin.png" }
+                }),
+                _vm._v(" "),
+                _vm._m(1)
+              ])
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "flex flex-col items-center m-2" }, [
-              _c(
-                "a",
-                {
-                  staticClass:
-                    "border rounded-lg hover:border-2 hover:border-black",
-                  attrs: { href: _vm.profile.github }
-                },
-                [
-                  _c("img", {
-                    staticClass: "m-2 object-contain h-48 rounded-lg",
-                    attrs: { src: "../storage/img/icons/github-image.png" }
-                  }),
-                  _vm._v(" "),
-                  _vm._m(2)
-                ]
-              )
+              _c("a", { attrs: { href: _vm.profile.github } }, [
+                _c("img", {
+                  staticClass: "m-2 object-contain h-48 rounded-lg",
+                  attrs: { src: "../storage/img/icons/github-image.png" }
+                }),
+                _vm._v(" "),
+                _vm._m(2)
+              ])
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "flex flex-col items-center m-2" }, [
-              _c(
-                "a",
-                {
-                  staticClass:
-                    "border rounded-lg hover:border-2 hover:border-black",
-                  attrs: { href: _vm.profile.instagram }
-                },
-                [
-                  _c("img", {
-                    staticClass: "m-2 object-contain h-48 rounded-lg",
-                    attrs: { src: "../storage/img/icons/instagram.png" }
-                  }),
-                  _vm._v(" "),
-                  _vm._m(3)
-                ]
-              )
+              _c("a", { attrs: { href: _vm.profile.instagram } }, [
+                _c("img", {
+                  staticClass: "m-2 object-contain h-48 rounded-lg",
+                  attrs: { src: "../storage/img/icons/instagram.png" }
+                }),
+                _vm._v(" "),
+                _vm._m(3)
+              ])
             ])
           ]
         ),
