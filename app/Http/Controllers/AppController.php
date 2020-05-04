@@ -23,12 +23,15 @@ class AppController extends Controller
      */
     public function index()
     {
-        $userStatus;
-        if( auth()->user() ) {
-            $userStatus = true;
-        } else {
-            $userStatus = false;
-        }
-        return view('home', compact("userStatus"));
+        // $userStatus;
+        // if( auth()->user() ) {
+        //     $userStatus = true;
+        // } else {
+        //     $userStatus = false;
+        // }
+        // return view('home', compact("userStatus"));
+        return view('home', [
+            'auth_user' => auth()->user()
+        ]);
     }
 }

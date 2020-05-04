@@ -105,7 +105,9 @@
                         </div>
                     </div>
                 </div>
-                
+                <Comment>
+                    
+                </Comment>
            </div>
         </div>
     </div>
@@ -113,11 +115,17 @@
 
 <script>
 import TopNav from '../../components/TopNav';
+import Comment from '../../components/Comment';
 export default {
     name: 'DeeksLake2018',
 
     components: {
-        TopNav
+        TopNav,
+        Comment
+    }, 
+
+    mounted() {
+        console.log(this.$store.getters.isLoggedIn);
     }
 }
 </script>

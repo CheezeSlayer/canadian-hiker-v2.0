@@ -6,7 +6,7 @@
                     <nav class="pt-4">
                         <router-link to="/about">
                             <img :src="'../storage/img/profile.jpg'" class="rounded-full border-solid border-2 border-gray-400">
-                            <h1 class="pb-6 text-center text-xl text-gray-600 border-dotted border-b-2 border-gray-600">Henry Chang</h1>
+                            <h1 class="py-3 text-center text-xl text-gray-600 border-dotted border-b-2 border-gray-600">Henry Chang</h1>
                         </router-link>
 
                         <router-link to="/blog" class="flex items-center py-12 text-gray-600 hover:text-gray-900">
@@ -43,7 +43,7 @@
                             <h1 class="uppercase font-bold mx-auto">Contact</h1>
                         </router-link>
 
-                        <router-link v-if="this.user" to="/logout" class="flex items-center py-12 text-gray-600 hover:text-gray-900">
+                        <router-link v-if="this.user_logged_in" to="/logout" class="flex items-center py-12 text-gray-600 hover:text-gray-900">
                             <svg data-v-8892b924="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon" 
                             xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-box-arrow-left b-icon bi h-8 w-8"><g data-v-8892b924="">
                                 <path fill-rule="evenodd" d="M4.354 11.354a.5.5 0 000-.708L1.707 8l2.647-2.646a.5.5 0 10-.708-.708l-3 3a.5.5 0 000 
@@ -51,7 +51,7 @@
                                 0 000 1h9a.5.5 0 00.5-.5z" clip-rule="evenodd"></path><path fill-rule="evenodd" d="M14 13.5a1.5 1.5 0 001.5-1.5V4A1.5 
                                 1.5 0 0014 2.5H7A1.5 1.5 0 005.5 4v1.5a.5.5 0 001 0V4a.5.5 0 01.5-.5h7a.5.5 0 01.5.5v8a.5.5 0 01-.5.5H7a.5.5 0 
                                 01-.5-.5v-1.5a.5.5 0 00-1 0V12A1.5 1.5 0 007 13.5h7z" clip-rule="evenodd"></path></g></svg>
-
+                        
                             <h1 class="uppercase font-bold mx-auto">Logout</h1>
                         </router-link>
                         <div v-else>
@@ -100,9 +100,11 @@ export default {
     props: [
         'user'
     ],
+
     data: function () {
         return {
             title: '',
+            user_logged_in: 'false',
         }
     },
 
@@ -118,6 +120,9 @@ export default {
 
     created() {
         this.title = this.$route.meta.title;
+        this.$store.commit('setAuthUser', window.auth_user);
+        this.user_logged_in = this.$store.getters.isLoggedIn;
+        console.log(this.user_logged_in);
     }
 }
 </script>

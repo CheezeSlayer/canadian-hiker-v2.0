@@ -1,9 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    @if( $userStatus )
-        <App :user="{{ auth()->user() || false }}"></App>
-    @else
+        {{-- <App :user="{{ $auth_user || false }}"></App> --}}
         <App></App>
-    @endif
 @endsection
+
+<script>
+    window.auth_user = {!! json_encode($auth_user); !!};
+</script>
