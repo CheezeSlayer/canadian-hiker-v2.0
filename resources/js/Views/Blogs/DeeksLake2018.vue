@@ -105,7 +105,7 @@
                         </div>
                     </div>
                 </div>
-                <Comment>
+                <Comment blog_name="deeks_lake_2018">
                     
                 </Comment>
            </div>

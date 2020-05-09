@@ -2461,8 +2461,50 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Comment'
+  name: 'Comment',
+  data: function data() {
+    return {
+      user_logged_in: false,
+      user_info: '',
+      post_data: {
+        data: {
+          type: 'post',
+          attributes: {
+            body: '',
+            blog: ''
+          }
+        }
+      },
+      post_body: '',
+      loading: false
+    };
+  },
+  props: ['blog_name'],
+  methods: {
+    post_comment: function post_comment() {
+      this.loading = true;
+      this.post_data.data.type = 'post', this.post_data.data.attributes.body = this.post_body;
+      this.post_data.data.attributes.blog = this.blog_name;
+      axios.post("/api/posts/".concat(this.blog_name, "?api_token=").concat(this.user_info.api_token), this.post_data).then(function (response) {
+        return response;
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.user_logged_in = this.$store.getters.isLoggedIn;
+    this.user_info = this.$store.getters.getUserInfo;
+  }
 });
 
 /***/ }),
@@ -21063,7 +21105,7 @@ var render = function() {
               _vm._m(6)
             ]),
             _vm._v(" "),
-            _c("Comment")
+            _c("Comment", { attrs: { blog_name: "deeks_lake_2018" } })
           ],
           1
         )
@@ -21821,28 +21863,75 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
+  return _c("div", [
+    _c("div", [
       _c("h1", { staticClass: "text-black text-xl" }, [
         _vm._v("Leave a comment: ")
       ]),
       _vm._v(" "),
-      _c("textarea", { staticClass: "w-full", attrs: { name: "comment" } }),
-      _vm._v(" "),
-      _c(
-        "button",
-        { staticClass: "w-3 h-2 border-solid border-4 border-gray-600" },
-        [_vm._v("Submit")]
-      )
+      this.user_logged_in
+        ? _c("div", [
+            _c("textarea", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.post_body,
+                  expression: "post_body"
+                }
+              ],
+              staticClass: "w-full px-2",
+              domProps: { value: _vm.post_body },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.post_body = $event.target.value
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "border-solid bg-gray-600 text-white px-2 my-2",
+                on: {
+                  click: function($event) {
+                    return _vm.post_comment()
+                  }
+                }
+              },
+              [_vm._v("Submit")]
+            )
+          ])
+        : _c("div", [
+            _c("textarea", {
+              staticClass: "w-full px-2",
+              attrs: {
+                disabled: "",
+                placeholder: "Must be logged in to leave a comment"
+              }
+            }),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "border-solid bg-gray-600 text-white px-2 my-2",
+                attrs: { disabled: "" },
+                on: {
+                  click: function($event) {
+                    return _vm.post_comment()
+                  }
+                }
+              },
+              [_vm._v("Submit")]
+            )
+          ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -39022,6 +39111,9 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
   getters: {
     isLoggedIn: function isLoggedIn(state) {
       return state.user !== null;
+    },
+    getUserInfo: function getUserInfo(state) {
+      return state.user;
     }
   }
 });
@@ -39046,8 +39138,8 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Henry\Desktop\Playground\laravel\projects\my_portfolio\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Henry\Desktop\Playground\laravel\projects\my_portfolio\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Henry\Desktop\laravel-projects\Projects\my_portfolio\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Henry\Desktop\laravel-projects\Projects\my_portfolio\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
