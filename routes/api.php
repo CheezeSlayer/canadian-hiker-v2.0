@@ -23,4 +23,5 @@ Route::middleware('auth:api')->group( function() {
     Route::delete('/posts/{post}', 'PostController@destroy');
 });
 
+Route::get('/posts/{blog}', 'PostController@index');
 // Route::get('/login', 'Auth/LoginController@showLoginForm')->name('login');

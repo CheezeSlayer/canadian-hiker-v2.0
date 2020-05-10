@@ -80,6 +80,48 @@ class PostTest extends TestCase
         $response->assertStatus(403);
     }
 
+    /** @test */
+    public function any_user_can_get_a_blogs_posts() {
+        $this->withoutExceptionHandling();
+        $user = factory(\App\User::class)->create();
+
+        $post = factory(\App\Post::class, 5)->create(['user_id' => $user->id]);
+        $this->assertCount(5, Post::all());
+
+        $response = $this->get('/api/posts/deeks_lake_2018');
+
+        $response->assertStatus(200);
+        $response->assertJson([
+            'data' => [
+                [
+                    "id" => 1,
+                    "user_id" => 1,
+                    "blog" => "deeks_lake_2018",
+                ],
+                [
+                    "id" => 2,
+                    "user_id" => 1,
+                    "blog" => "deeks_lake_2018",
+                ],
+                [
+                    "id" => 3,
+                    "user_id" => 1,
+                    "blog" => "deeks_lake_2018",
+                ],
+                [
+                    "id" => 4,
+                    "user_id" => 1,
+                    "blog" => "deeks_lake_2018",
+                ],
+                [
+                    "id" => 5,
+                    "user_id" => 1,
+                    "blog" => "deeks_lake_2018",
+                ]
+            ]
+        ]);
+    }
+
     private function data() {
         return [
             'data' => [

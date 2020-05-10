@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\DB;
 use App\Post;
 
 class PostController extends Controller
@@ -47,5 +48,14 @@ class PostController extends Controller
         $post->delete();
 
         return response([], Response::HTTP_NO_CONTENT);
+    }
+
+    public function index($blog) {
+        $data = request()->validate([$blog]);
+
+        $posts = DB::table('posts')->where('blog', $blog)->get();
+        return [
+            'data' => $posts
+        ];
     }
 }
