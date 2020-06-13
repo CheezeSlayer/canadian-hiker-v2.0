@@ -2505,6 +2505,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Comment',
   data: function data() {
@@ -2522,8 +2527,16 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       },
       post_body: '',
       comments: [],
+      comment_template: {
+        blog: '',
+        body: '',
+        created_at: '',
+        id: '',
+        updated_at: '',
+        user_id: ''
+      },
       loading_comments: true,
-      posting_comments: false
+      post_error: false
     };
   },
   props: ['blog_name'],
@@ -2536,18 +2549,35 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                this.posting_comments = true;
-                this.post_data.data.type = 'post', this.post_data.data.attributes.body = this.post_body;
                 this.post_data.data.attributes.blog = this.blog_name;
+
+                if (!(this.post_data.data.attributes.body == '')) {
+                  _context.next = 4;
+                  break;
+                }
+
+                post_error = true;
+                return _context.abrupt("return");
+
+              case 4:
                 axios.post("/api/posts/".concat(this.blog_name, "?api_token=").concat(this.user_info.api_token), this.post_data).then(function (response) {
-                  _this.posting_comments = false;
+                  console.log(response);
+                  _this.comment_template.blog = _this.blog_name;
+                  _this.comment_template.body = response.data.data.attributes.body;
+                  _this.comment_template.created_at = response.data.data.attributes.posted_at.date;
+                  _this.comment_template.id = response.data.data.id;
+                  _this.comment_template.updated_at = response.data.data.attributes.posted_at.date;
+                  _this.comment_template.user_id = _this.user_info.id;
+
+                  _this.comments.push(_this.comment_template);
+
+                  console.log(_this.comments);
                   return response;
                 })["catch"](function (error) {
-                  _this.posting_comments = false;
                   console.log(error);
                 });
 
-              case 4:
+              case 5:
               case "end":
                 return _context.stop();
             }
@@ -2561,23 +2591,25 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
       return post_comment;
     }(),
-    get_comments: function () {
-      var _get_comments = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(index) {
+    delete_comment: function () {
+      var _delete_comment = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(comment) {
         var _this2 = this;
 
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                axios.get("/api/posts/".concat(this.blog_name)).then(function (response) {
-                  _this2.comments = response.data.data;
-                  _this2.loading_comments = false;
+                console.log(comment.user_id == this.user_info.id);
+                axios["delete"]("/api/posts/".concat(comment.id, "?api_token=").concat(this.user_info.api_token)).then(function (response) {
+                  _this2.comments.splice(comment);
+
+                  return response;
                 })["catch"](function (error) {
                   console.log(error);
-                  _this2.loading_comments = false;
+                  return error;
                 });
 
-              case 1:
+              case 2:
               case "end":
                 return _context2.stop();
             }
@@ -2585,30 +2617,31 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee2, this);
       }));
 
-      function get_comments(_x) {
-        return _get_comments.apply(this, arguments);
+      function delete_comment(_x) {
+        return _delete_comment.apply(this, arguments);
       }
 
-      return get_comments;
+      return delete_comment;
     }(),
-    submit_comment: function () {
-      var _submit_comment = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
+    get_comments: function () {
+      var _get_comments = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(index) {
         var _this3 = this;
 
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                _context3.next = 2;
-                return this.post_comment().then(function (response) {
-                  return _this3.get_comments();
-                }).then(function (response) {
-                  console.log('Axios promise chain test: ' + response);
+                axios.get("/api/posts/".concat(this.blog_name)).then(function (response) {
+                  _this3.comments = response.data.data;
+                  _this3.loading_comments = false;
+                  return response;
                 })["catch"](function (error) {
                   console.log(error);
+                  _this3.loading_comments = false;
+                  return error;
                 });
 
-              case 2:
+              case 1:
               case "end":
                 return _context3.stop();
             }
@@ -2616,14 +2649,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee3, this);
       }));
 
-      function submit_comment() {
-        return _submit_comment.apply(this, arguments);
+      function get_comments(_x2) {
+        return _get_comments.apply(this, arguments);
       }
 
-      return submit_comment;
+      return get_comments;
     }()
   },
-  mounted: function mounted() {
+  created: function created() {
     this.user_logged_in = this.$store.getters.isLoggedIn;
     this.user_info = this.$store.getters.getUserInfo;
     this.get_comments();
@@ -21918,9 +21951,9 @@ var render = function() {
             _vm._v(" "),
             _vm._m(3),
             _vm._v(" "),
-            _c("div", { staticClass: "flex flex-col my-6" }, [
+            _c("div", { staticClass: "flex flex-col my-6 w-full" }, [
               _c("img", {
-                staticClass: "object-cover h-112 w-full",
+                staticClass: "flex-1 object-cover overflow-auto h-112 w-full",
                 attrs: { src: "../storage/img/blog/9-2018/deeks_lake_1.jpg" }
               }),
               _vm._v(" "),
@@ -21930,7 +21963,7 @@ var render = function() {
             _vm._m(5),
             _vm._v(" "),
             _c("div", { staticClass: "my-6" }, [
-              _c("div", { staticClass: "flex justify-between" }, [
+              _c("div", { staticClass: "flex justify-between overflow-auto" }, [
                 _c("img", {
                   staticClass: "object-scale-down h-112",
                   attrs: {
@@ -22727,23 +22760,43 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm.loading
+    _vm.loading_comments
       ? _c("div", [_c("h1", [_vm._v("Loading Comments...")])])
       : _c(
           "div",
           { staticClass: "flex flex-col" },
-          _vm._l(_vm.comments, function(comment, index) {
+          _vm._l(_vm.comments, function(comment) {
             return _c("div", { key: comment.id }, [
               _c(
                 "div",
                 { staticClass: "w-full m-2 px-2 bg-gray-300 rounded-lg" },
                 [
-                  _c("div", { staticClass: "text-sm" }, [
-                    _vm._v(
-                      "\n                    " +
-                        _vm._s(comment.created_at) +
-                        "\n                "
-                    )
+                  _c("div", { staticClass: "flex justify-between" }, [
+                    _c("div", { staticClass: "text-sm px-4" }, [
+                      _vm._v(
+                        "\n                        " +
+                          _vm._s(comment.created_at) +
+                          "\n                    "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    comment.user_id == _vm.user_info.id
+                      ? _c("div", [
+                          _c(
+                            "button",
+                            {
+                              staticClass:
+                                "hover:text-red-600 px-4 outline-none",
+                              on: {
+                                click: function($event) {
+                                  return _vm.delete_comment(comment)
+                                }
+                              }
+                            },
+                            [_vm._v(" x ")]
+                          )
+                        ])
+                      : _vm._e()
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "text-center p-2" }, [
@@ -22767,44 +22820,46 @@ var render = function() {
       _vm._v(" "),
       this.user_logged_in
         ? _c("div", [
-            this.posting_comments
-              ? _c("div", [
-                  _c("textarea", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.post_body,
-                        expression: "post_body"
-                      }
-                    ],
-                    staticClass: "w-full px-2",
-                    domProps: { value: _vm.post_body },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.post_body = $event.target.value
-                      }
+            _c("div", [
+              _c("textarea", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.post_data.data.attributes.body,
+                    expression: "post_data.data.attributes.body"
+                  }
+                ],
+                staticClass: "w-full px-2",
+                domProps: { value: _vm.post_data.data.attributes.body },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
                     }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass:
-                        "border-solid bg-gray-600 text-white px-2 my-2",
-                      on: {
-                        click: function($event) {
-                          return _vm.submit_comment()
-                        }
-                      }
-                    },
-                    [_vm._v("Submit")]
-                  )
-                ])
-              : _vm._e()
+                    _vm.$set(
+                      _vm.post_data.data.attributes,
+                      "body",
+                      $event.target.value
+                    )
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass:
+                    "border-solid bg-gray-600 text-white px-2 my-2 outline-none",
+                  on: {
+                    click: function($event) {
+                      return _vm.post_comment()
+                    }
+                  }
+                },
+                [_vm._v("Submit")]
+              )
+            ])
           ])
         : _c("div", [
             _c("textarea", {
@@ -22815,7 +22870,8 @@ var render = function() {
             _c(
               "button",
               {
-                staticClass: "border-solid bg-gray-600 text-white px-2 my-2",
+                staticClass:
+                  "border-solid bg-gray-600 text-white px-2 my-2 outline-none",
                 attrs: { disabled: "" }
               },
               [_vm._v("Submit")]

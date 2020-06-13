@@ -57,8 +57,8 @@
                     and subspecies, mature cutthroats can grow up to 40 inches long.  However, the largest ones seen at Deeks Lake were only 
                     about 8 to 14 inches which all things considered is still pretty sizable given that it is a small lake.  
                 </p>
-                <div class="flex flex-col my-6">
-                    <img :src="'../storage/img/blog/9-2018/deeks_lake_1.jpg'"  class="object-cover h-112 w-full">
+                <div class="flex flex-col my-6 w-full">
+                    <img :src="'../storage/img/blog/9-2018/deeks_lake_1.jpg'"  class="flex-1 object-cover overflow-auto h-112 w-full">
                     <div class="flex justify-between text-sm font-semibold">
                         <p>Deeks Lake.  This photo was taken in the evening at around 6 PM.  
                             By then the sunlight had all but left with only the peaks and mountains catching its last rays</p>
@@ -88,7 +88,7 @@
                     even more, for in all the bounties it can offer, the North Shore Mountains can easily be a harsh and unforgiving place.  
                 </p>
                 <div class="my-6">
-                    <div class="flex justify-between">
+                    <div class="flex justify-between overflow-auto">
                         <img :src="'../storage/img/blog/9-2018/deeks_lake_fishing_1.jpg'"  class="object-scale-down h-112">
                         <img :src="'../storage/img/blog/9-2018/deeks_lake_fishing_2.jpg'"  class="object-scale-down h-112">
                         <img :src="'../storage/img/blog/9-2018/deeks_lake_3.jpg'"  class="object-scale-down h-112">

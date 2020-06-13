@@ -33,7 +33,7 @@ class PostTest extends TestCase
                         'data' => [
                             'type' => 'post',
                             'id' => $post->id,
-                            'attrinutes' => [
+                            'attributes' => [
                                 'posted_by' => [
                                     'name' => $user->name,
                                     'user_id' => $post->user_id,
