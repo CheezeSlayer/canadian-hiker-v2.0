@@ -16,8 +16,7 @@ class PostController extends Controller
             'data.attributes.body' => '',
             'data.attributes.blog' => '',
         ]);
-
-        if( $data->attributes->body && $data->attributes->blog) {
+        if( $data['data']['attributes']['body'] && $data['data']['attributes']['blog']) {
             $post = request()->user()->post()->create($data['data']['attributes']);
             return response([
                 'data' => [

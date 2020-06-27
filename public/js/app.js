@@ -2510,6 +2510,22 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Comment',
   data: function data() {
@@ -2535,8 +2551,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         updated_at: '',
         user_id: ''
       },
-      loading_comments: true,
-      post_error: false
+      comments_state: {
+        loading_comments: true,
+        posting_comments: false,
+        deleting_comments: false
+      },
+
+      /* Themes */
+      submit_button_theme: 'border-solid bg-blue-600 text-white px-2 my-2 outline-none rounded',
+      submit_button_theme_disabled: 'border-solid bg-gray-600 text-white px-2 my-2 outline-none rounded'
     };
   },
   props: ['blog_name'],
@@ -2549,19 +2572,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
+                this.comments_state.posting_comments = true;
                 this.post_data.data.attributes.blog = this.blog_name;
-
-                if (!(this.post_data.data.attributes.body == '')) {
-                  _context.next = 4;
-                  break;
-                }
-
-                post_error = true;
-                return _context.abrupt("return");
-
-              case 4:
                 axios.post("/api/posts/".concat(this.blog_name, "?api_token=").concat(this.user_info.api_token), this.post_data).then(function (response) {
-                  console.log(response);
+                  setTimeout(2000);
                   _this.comment_template.blog = _this.blog_name;
                   _this.comment_template.body = response.data.data.attributes.body;
                   _this.comment_template.created_at = response.data.data.attributes.posted_at.date;
@@ -2571,13 +2585,16 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
                   _this.comments.push(_this.comment_template);
 
-                  console.log(_this.comments);
+                  _this.comment_template = {};
+                  _this.post_data.data.attributes.body = null;
+                  _this.comments_state.posting_comments = false;
                   return response;
                 })["catch"](function (error) {
-                  console.log(error);
+                  _this.comments_state.posting_comments = false;
+                  return error;
                 });
 
-              case 5:
+              case 3:
               case "end":
                 return _context.stop();
             }
@@ -2599,17 +2616,21 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                console.log(comment.user_id == this.user_info.id);
+                this.comments_state.deleting_comments = true;
+                this.comments[this.comments.indexOf(comment)].deleting = true;
                 axios["delete"]("/api/posts/".concat(comment.id, "?api_token=").concat(this.user_info.api_token)).then(function (response) {
-                  _this2.comments.splice(comment);
+                  setTimeout(2000);
 
+                  _this2.comments.splice(_this2.comments.indexOf(comment), 1);
+
+                  _this2.comments_state.deleting_comments = false;
                   return response;
                 })["catch"](function (error) {
-                  console.log(error);
+                  _this2.comments_state.deleting_comments = false;
                   return error;
                 });
 
-              case 2:
+              case 3:
               case "end":
                 return _context2.stop();
             }
@@ -2631,17 +2652,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
+                this.comments_state.loading_comments = true;
                 axios.get("/api/posts/".concat(this.blog_name)).then(function (response) {
                   _this3.comments = response.data.data;
-                  _this3.loading_comments = false;
+                  _this3.comments_state.loading_comments = false;
                   return response;
                 })["catch"](function (error) {
-                  console.log(error);
-                  _this3.loading_comments = false;
+                  _this3.comments_state.loading_comments = false;
                   return error;
                 });
 
-              case 1:
+              case 2:
               case "end":
                 return _context3.stop();
             }
@@ -22760,7 +22781,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm.loading_comments
+    _vm.comments_state.loading_comments
       ? _c("div", [_c("h1", [_vm._v("Loading Comments...")])])
       : _c(
           "div",
@@ -22780,20 +22801,31 @@ var render = function() {
                       )
                     ]),
                     _vm._v(" "),
-                    comment.user_id == _vm.user_info.id
-                      ? _c("div", [
+                    _vm.user_info && comment.user_id == _vm.user_info.id
+                      ? _c("div", { staticClass: "flex" }, [
+                          comment.deleting
+                            ? _c("h1", { staticClass: "mx-2" }, [
+                                _vm._v("Deleting...")
+                              ])
+                            : _vm._e(),
+                          _vm._v(" "),
                           _c(
                             "button",
                             {
                               staticClass:
-                                "hover:text-red-600 px-4 outline-none",
+                                "hover:text-red-600 px-4 font-bold outline-none",
+                              attrs: {
+                                disabled: _vm.comments_state.deleting_comments
+                                  ? "disabled"
+                                  : undefined
+                              },
                               on: {
                                 click: function($event) {
                                   return _vm.delete_comment(comment)
                                 }
                               }
                             },
-                            [_vm._v(" x ")]
+                            [_vm._v(" X ")]
                           )
                         ])
                       : _vm._e()
@@ -22818,63 +22850,72 @@ var render = function() {
         _vm._v("Leave a comment: ")
       ]),
       _vm._v(" "),
-      this.user_logged_in
+      !_vm.comments_state.posting_comments &&
+      !_vm.comments_state.deleting_comments
         ? _c("div", [
-            _c("div", [
-              _c("textarea", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.post_data.data.attributes.body,
-                    expression: "post_data.data.attributes.body"
-                  }
-                ],
-                staticClass: "w-full px-2",
-                domProps: { value: _vm.post_data.data.attributes.body },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(
-                      _vm.post_data.data.attributes,
-                      "body",
-                      $event.target.value
-                    )
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass:
-                    "border-solid bg-gray-600 text-white px-2 my-2 outline-none",
-                  on: {
-                    click: function($event) {
-                      return _vm.post_comment()
-                    }
-                  }
-                },
-                [_vm._v("Submit")]
-              )
-            ])
-          ])
-        : _c("div", [
             _c("textarea", {
-              staticClass: "w-full px-2",
-              attrs: { disabled: "", placeholder: "Log in to post a comment" }
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.post_data.data.attributes.body,
+                  expression: "post_data.data.attributes.body"
+                }
+              ],
+              staticClass: "w-full px-2 placeholder-gray-600 bg-white",
+              attrs: {
+                disabled: _vm.user_info ? undefined : "disabled",
+                placeholder: this.user_info ? "" : "Log in to post a comment"
+              },
+              domProps: { value: _vm.post_data.data.attributes.body },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(
+                    _vm.post_data.data.attributes,
+                    "body",
+                    $event.target.value
+                  )
+                }
+              }
             }),
             _vm._v(" "),
             _c(
               "button",
               {
-                staticClass:
-                  "border-solid bg-gray-600 text-white px-2 my-2 outline-none",
-                attrs: { disabled: "" }
+                class: this.user_info
+                  ? _vm.submit_button_theme
+                  : _vm.submit_button_theme_disabled,
+                attrs: { disabled: _vm.user_info ? undefined : "disabled" },
+                on: {
+                  click: function($event) {
+                    return _vm.post_comment()
+                  }
+                }
               },
-              [_vm._v("Submit")]
+              [_vm._v("\n                        Submit\n                    ")]
+            )
+          ])
+        : _c("div", [
+            _c("textarea", {
+              staticClass: "w-full px-2 placeholder-gray-600 bg-white",
+              attrs: { disabled: "disabled", placeholder: "Posting..." }
+            }),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                class: _vm.submit_button_theme_disabled,
+                attrs: { disabled: "disabled" },
+                on: {
+                  click: function($event) {
+                    return _vm.post_comment()
+                  }
+                }
+              },
+              [_vm._v("\n                        Submit\n                    ")]
             )
           ])
     ])
