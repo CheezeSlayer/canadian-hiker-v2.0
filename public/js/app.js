@@ -2526,6 +2526,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Comment',
   data: function data() {
@@ -2541,7 +2547,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           }
         }
       },
-      post_body: '',
+      post_error: {
+        status: false,
+        body: ''
+      },
       comments: [],
       comment_template: {
         blog: '',
@@ -2549,7 +2558,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         created_at: '',
         id: '',
         updated_at: '',
-        user_id: ''
+        user_id: '',
+        user_name: ''
       },
       comments_state: {
         loading_comments: true,
@@ -2558,7 +2568,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       },
 
       /* Themes */
-      submit_button_theme: 'border-solid bg-blue-600 text-white px-2 my-2 outline-none rounded',
+      submit_button_theme: 'border-solid bg-blue-600 text-white px-2 my-2 outline-none rounded hover:shadow-outline',
       submit_button_theme_disabled: 'border-solid bg-gray-600 text-white px-2 my-2 outline-none rounded'
     };
   },
@@ -2572,6 +2582,16 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
+                if (!(this.post_data.data.attributes.body.trim() === '')) {
+                  _context.next = 6;
+                  break;
+                }
+
+                this.post_error.status = true;
+                this.post_error.body = 'Comment field cannot be blank';
+                return _context.abrupt("return");
+
+              case 6:
                 this.comments_state.posting_comments = true;
                 this.post_data.data.attributes.blog = this.blog_name;
                 axios.post("/api/posts/".concat(this.blog_name, "?api_token=").concat(this.user_info.api_token), this.post_data).then(function (response) {
@@ -2582,19 +2602,23 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   _this.comment_template.id = response.data.data.id;
                   _this.comment_template.updated_at = response.data.data.attributes.posted_at.date;
                   _this.comment_template.user_id = _this.user_info.id;
+                  _this.comment_template.user_name = _this.user_info.name;
 
                   _this.comments.push(_this.comment_template);
 
                   _this.comment_template = {};
-                  _this.post_data.data.attributes.body = null;
+                  _this.post_data.data.attributes.body = '';
                   _this.comments_state.posting_comments = false;
+                  _this.post_error.status = false;
                   return response;
                 })["catch"](function (error) {
+                  _this.post_error.status = true;
+                  _this.post_error.body = error.response.data;
                   _this.comments_state.posting_comments = false;
                   return error;
                 });
 
-              case 3:
+              case 9:
               case "end":
                 return _context.stop();
             }
@@ -22793,12 +22817,15 @@ var render = function() {
                 { staticClass: "w-full m-2 px-2 bg-gray-300 rounded-lg" },
                 [
                   _c("div", { staticClass: "flex justify-between" }, [
-                    _c("div", { staticClass: "text-sm px-4" }, [
-                      _vm._v(
-                        "\n                        " +
-                          _vm._s(comment.created_at) +
-                          "\n                    "
-                      )
+                    _c("div", { staticClass: "flex px-4" }, [
+                      _c("div", { staticClass: "text-sm" }, [
+                        _vm._v(
+                          "\n                            " +
+                            _vm._s(comment.created_at) +
+                            " - "
+                        ),
+                        _c("strong", [_vm._v(_vm._s(comment.user_name))])
+                      ])
                     ]),
                     _vm._v(" "),
                     _vm.user_info && comment.user_id == _vm.user_info.id
@@ -22846,6 +22873,25 @@ var render = function() {
         ),
     _vm._v(" "),
     _c("div", [
+      _vm.post_error.status
+        ? _c("div", { staticClass: "flex justify-center py-2" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "border-solid border-2 border-red-500 bg-red-200 p-2 rounded-lg"
+              },
+              [
+                _vm._v(
+                  "\n                " +
+                    _vm._s(_vm.post_error.body) +
+                    "\n            "
+                )
+              ]
+            )
+          ])
+        : _vm._e(),
+      _vm._v(" "),
       _c("h1", { staticClass: "text-black text-xl" }, [
         _vm._v("Leave a comment: ")
       ]),

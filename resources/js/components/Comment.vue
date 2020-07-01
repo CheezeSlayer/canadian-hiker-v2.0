@@ -7,8 +7,10 @@
             <div v-for="(comment) in comments" :key="comment.id">
                 <div class="w-full m-2 px-2 bg-gray-300 rounded-lg">
                     <div class="flex justify-between">
-                        <div class="text-sm px-4">
-                            {{ comment.created_at }}
+                        <div class="flex px-4">
+                            <div class="text-sm">
+                                {{ comment.created_at }} - <strong>{{ comment.user_name }}</strong>
+                            </div>   
                         </div>
                         <div v-if="user_info && (comment.user_id == user_info.id)" class="flex">
                             <h1 v-if="comment.deleting" class="mx-2">Deleting...</h1>
@@ -22,6 +24,11 @@
             </div>
         </div>
         <div>
+            <div v-if="post_error.status" class="flex justify-center py-2">
+                <div class="border-solid border-2 border-red-500 bg-red-200 p-2 rounded-lg">
+                    {{ post_error.body }}
+                </div>
+            </div>
             <h1 class="text-black text-xl">Leave a comment: </h1>
                     <div v-if="!comments_state.posting_comments && !comments_state.deleting_comments">
                         <textarea v-model="post_data.data.attributes.body" 
@@ -47,7 +54,6 @@
                             Submit
                         </button>
                     </div>
-                    
             </div>
         </div>
 </template>
@@ -69,7 +75,10 @@ export default {
                     }
                 }
             },
-            post_body: '',
+            post_error: {
+                status: false,
+                body: ''
+            },
             comments: [],
             comment_template: {
                 blog: '',
@@ -77,7 +86,8 @@ export default {
                 created_at: '',
                 id: '',
                 updated_at: '',
-                user_id: ''
+                user_id: '',
+                user_name: ''
             },
             comments_state: {
                 loading_comments: true,
@@ -85,7 +95,7 @@ export default {
                 deleting_comments: false,
             },
             /* Themes */
-            submit_button_theme: 'border-solid bg-blue-600 text-white px-2 my-2 outline-none rounded',
+            submit_button_theme: 'border-solid bg-blue-600 text-white px-2 my-2 outline-none rounded hover:shadow-outline',
             submit_button_theme_disabled: 'border-solid bg-gray-600 text-white px-2 my-2 outline-none rounded'
         }
     },
@@ -96,30 +106,41 @@ export default {
 
     methods: {
         post_comment: async function() {
-            this.comments_state.posting_comments = true;
 
-            this.post_data.data.attributes.blog = this.blog_name
-            axios.post(`/api/posts/${this.blog_name}?api_token=${this.user_info.api_token}`, this.post_data)
-                .then(response => {
-                    setTimeout(2000);
-                    this.comment_template.blog = this.blog_name;
-                    this.comment_template.body = response.data.data.attributes.body;
-                    this.comment_template.created_at = response.data.data.attributes.posted_at.date;
-                    this.comment_template.id = response.data.data.id
-                    this.comment_template.updated_at = response.data.data.attributes.posted_at.date;
-                    this.comment_template.user_id = this.user_info.id;
-                    this.comments.push(this.comment_template);
-                    this.comment_template = {};
+            if(this.post_data.data.attributes.body.trim() === '') {
+                this.post_error.status = true;
+                this.post_error.body = 'Comment field cannot be blank'
+                return
+            } else {
+                this.comments_state.posting_comments = true;
+                this.post_data.data.attributes.blog = this.blog_name
 
-                    this.post_data.data.attributes.body = null;
+                axios.post(`/api/posts/${this.blog_name}?api_token=${this.user_info.api_token}`, this.post_data)
+                    .then(response => {
+                        setTimeout(2000);
+                        this.comment_template.blog = this.blog_name;
+                        this.comment_template.body = response.data.data.attributes.body;
+                        this.comment_template.created_at = response.data.data.attributes.posted_at.date;
+                        this.comment_template.id = response.data.data.id
+                        this.comment_template.updated_at = response.data.data.attributes.posted_at.date;
+                        this.comment_template.user_id = this.user_info.id;
+                        this.comment_template.user_name = this.user_info.name;
+                        this.comments.push(this.comment_template);
+                        this.comment_template = {};
+                        this.post_data.data.attributes.body = '';
 
-                    this.comments_state.posting_comments = false;
-                    return response;
-                })
-                .catch(error => {
-                    this.comments_state.posting_comments = false;
-                    return error;
-                })
+                        this.comments_state.posting_comments = false;
+
+                        this.post_error.status = false;
+                        return response;
+                    })
+                    .catch(error => {
+                        this.post_error.status = true;
+                        this.post_error.body = error.response.data;
+                        this.comments_state.posting_comments = false;
+                        return error;
+                    })
+            }  
         },
 
         delete_comment: async function(comment) {
@@ -160,7 +181,6 @@ export default {
         this.user_logged_in = this.$store.getters.isLoggedIn
         this.user_info = this.$store.getters.getUserInfo
         this.get_comments();
-
     }
 }
 </script>

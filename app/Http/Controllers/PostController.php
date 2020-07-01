@@ -13,10 +13,11 @@ class PostController extends Controller
     //
     public function store($blog) {
         $data = request()->validate([
-            'data.attributes.body' => '',
-            'data.attributes.blog' => '',
+            'data.attributes.body' => 'required',
+            'data.attributes.blog' => 'required',
         ]);
-        if( $data['data']['attributes']['body'] && $data['data']['attributes']['blog']) {
+        $data['data']['attributes']['user_name'] = request()->user()->name;
+        if( $data['data']['attributes']['body'] && $data['data']['attributes']['blog'] && $data['data']['attributes']['user_name'] ) {
             $post = request()->user()->post()->create($data['data']['attributes']);
             return response([
                 'data' => [
@@ -26,6 +27,7 @@ class PostController extends Controller
                         'posted_by' => [
                             'name' => request()->user()->name,
                             'user_id' => $post->user_id,
+                            'user_name' => request()->user()->name
                         ],
                         'posted_at' => [
                             'name' => $blog,

@@ -37,6 +37,7 @@ class PostTest extends TestCase
                                 'posted_by' => [
                                     'name' => $user->name,
                                     'user_id' => $post->user_id,
+                                    'user_name' => $user->name,
                                 ],
                                 'posted_at' => [
                                     'name' => 'deeks_lake_2018',
