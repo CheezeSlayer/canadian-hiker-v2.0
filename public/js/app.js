@@ -2068,6 +2068,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2217,6 +2219,23 @@ __webpack_require__.r(__webpack_exports__);
     console.log(this.$store.getters.isLoggedIn);
   }
 });
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Views/Blogs/TriLakes2019.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Views/Blogs/TriLakes2019.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
 
@@ -2434,6 +2453,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
 //
 //
 //
@@ -21909,14 +21930,21 @@ var render = function() {
               1
             ),
             _vm._v(" "),
-            _c("Card", {
-              attrs: {
-                cardImg: "8-2019/20190804_203050.jpg",
-                cardTitle:
-                  "Hitting the Tri-lakes at Chilliwack Lake Provincial Park",
-                cardDate: "August 3-5, 2019"
-              }
-            })
+            _c(
+              "router-link",
+              { attrs: { to: "/blog/tri_lakes_adventure_2019" } },
+              [
+                _c("Card", {
+                  attrs: {
+                    cardImg: "8-2019/20190804_203050.jpg",
+                    cardTitle:
+                      "Hitting the Tri-lakes at Chilliwack Lake Provincial Park",
+                    cardDate: "August 3-5, 2019"
+                  }
+                })
+              ],
+              1
+            )
           ],
           1
         )
@@ -22177,6 +22205,30 @@ var staticRenderFns = [
     ])
   }
 ]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Views/Blogs/TriLakes2019.vue?vue&type=template&id=3626eb9c&scoped=true&":
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Views/Blogs/TriLakes2019.vue?vue&type=template&id=3626eb9c&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("h1", [_vm._v("Hello World")])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -22765,22 +22817,36 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "m-4 p-2 hover:bg-gray-500 rounded-lg" }, [
-    _c("div", { staticClass: "flex flex-col" }, [
-      _c("img", {
-        staticClass: "object-cover h-112 w-112",
-        attrs: { src: "../storage/img/blog/" + _vm.cardImg }
-      }),
-      _vm._v(" "),
-      _c("div", { staticClass: "font-semibold text-lg pt-2" }, [
-        _vm._v("\n            " + _vm._s(_vm.cardTitle) + "\n        ")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "pt-2" }, [
-        _vm._v("\n            " + _vm._s(_vm.cardDate) + "\n        ")
+  return _c(
+    "div",
+    { staticClass: "m-4 p-2 bg-gray-300 hover:bg-gray-500 rounded-lg" },
+    [
+      _c("div", { staticClass: "flex flex-col justify-center" }, [
+        _c("div", { staticClass: "flex" }, [
+          _c(
+            "div",
+            { staticClass: "font-semibold text-lg py-2 w-2/3 text-left" },
+            [
+              _vm._v(
+                "\n                " + _vm._s(_vm.cardTitle) + "\n            "
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "py-2 w-1/3 text-right" }, [
+            _vm._v(
+              "\n                " + _vm._s(_vm.cardDate) + "\n            "
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("img", {
+          staticClass: "object-cover h-112 w-112 rounded-lg",
+          attrs: { src: "../storage/img/blog/" + _vm.cardImg }
+        })
       ])
-    ])
-  ])
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -39617,6 +39683,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/Views/Blogs/TriLakes2019.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/Views/Blogs/TriLakes2019.vue ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _TriLakes2019_vue_vue_type_template_id_3626eb9c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TriLakes2019.vue?vue&type=template&id=3626eb9c&scoped=true& */ "./resources/js/Views/Blogs/TriLakes2019.vue?vue&type=template&id=3626eb9c&scoped=true&");
+/* harmony import */ var _TriLakes2019_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TriLakes2019.vue?vue&type=script&lang=js& */ "./resources/js/Views/Blogs/TriLakes2019.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _TriLakes2019_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _TriLakes2019_vue_vue_type_template_id_3626eb9c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _TriLakes2019_vue_vue_type_template_id_3626eb9c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "3626eb9c",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Views/Blogs/TriLakes2019.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Views/Blogs/TriLakes2019.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/Views/Blogs/TriLakes2019.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TriLakes2019_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./TriLakes2019.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Views/Blogs/TriLakes2019.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TriLakes2019_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Views/Blogs/TriLakes2019.vue?vue&type=template&id=3626eb9c&scoped=true&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/Views/Blogs/TriLakes2019.vue?vue&type=template&id=3626eb9c&scoped=true& ***!
+  \**********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TriLakes2019_vue_vue_type_template_id_3626eb9c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./TriLakes2019.vue?vue&type=template&id=3626eb9c&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Views/Blogs/TriLakes2019.vue?vue&type=template&id=3626eb9c&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TriLakes2019_vue_vue_type_template_id_3626eb9c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TriLakes2019_vue_vue_type_template_id_3626eb9c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/Views/Contact.vue":
 /*!****************************************!*\
   !*** ./resources/js/Views/Contact.vue ***!
@@ -40063,6 +40198,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Views_Contact__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Views/Contact */ "./resources/js/Views/Contact.vue");
 /* harmony import */ var _Views_Blog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Views/Blog */ "./resources/js/Views/Blog.vue");
 /* harmony import */ var _Views_Blogs_DeeksLake2018__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Views/Blogs/DeeksLake2018 */ "./resources/js/Views/Blogs/DeeksLake2018.vue");
+/* harmony import */ var _Views_Blogs_TriLakes2019__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Views/Blogs/TriLakes2019 */ "./resources/js/Views/Blogs/TriLakes2019.vue");
+
 
 
 
@@ -40103,6 +40240,12 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     component: _Views_Blogs_DeeksLake2018__WEBPACK_IMPORTED_MODULE_8__["default"],
     meta: {
       title: 'Howe Sound Adventures - Camping and Fishing at Deeks Lake'
+    }
+  }, {
+    path: '/blog/tri_lakes_adventure_2019',
+    component: _Views_Blogs_TriLakes2019__WEBPACK_IMPORTED_MODULE_9__["default"],
+    meta: {
+      title: 'Hitting the Tri-lakes at Chilliwack Lake Provincial Park'
     }
   }, {
     path: '/logout',

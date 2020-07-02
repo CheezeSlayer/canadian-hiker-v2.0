@@ -9,6 +9,7 @@ import Contact from "./Views/Contact";
 import Blog from "./Views/Blog";
 
 import DeeksLake2018 from "./Views/Blogs/DeeksLake2018";
+import TriLakes2019 from "./Views/Blogs/TriLakes2019";
 
 Vue.use(VueRouter);
 
@@ -33,6 +34,10 @@ export default new VueRouter({
         {
             path: '/blog/deeks_lake_2018', component: DeeksLake2018,
             meta: { title: 'Howe Sound Adventures - Camping and Fishing at Deeks Lake'}
+        },
+        {
+            path: '/blog/tri_lakes_adventure_2019', component: TriLakes2019,
+            meta: { title: 'Hitting the Tri-lakes at Chilliwack Lake Provincial Park'}
         },
         {
             path: '/logout', component: Logout
