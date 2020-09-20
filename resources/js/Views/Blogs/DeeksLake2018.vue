@@ -1,8 +1,8 @@
 <template>
     <div>
         <TopNav navHeader="Howe Sound Adventures:  Camping and Fishing at Deeks Lake" imgSrc="deekslake_2.jpg"></TopNav>
-        <div class="flex justify-center">
-           <div class="flex flex-col p-6 w-full text-lg tracking-wide leading-10">
+        <div class="flex justify-center mx-20">
+           <div class="flex flex-col p-6 w-full text-xl tracking-wider leading-10">
                 <p>
                     The North Shore Mountains has always been a marvel of beauty.  
                     During my lunch breaks I would frequent the waterfront of Coal Harbour 
@@ -105,7 +105,7 @@
                         </div>
                     </div>
                 </div>
-                <Comment blog_name="deeks_lake_2018">
+                <Comment blog_name="tri_lakes_adventure_2019">
                 </Comment>
            </div>
         </div>

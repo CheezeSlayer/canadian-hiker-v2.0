@@ -2,7 +2,7 @@
     <div>
         <div class="h-screen bg-gray-400">
             <div class="flex">
-                <div class="px-6 bg-gray-200 w-56 h-screen border-r-2">
+                <div class="px-6 bg-gray-200 w-56 h-screen border-r-2 border-gray-400 shadow-2xl">
                     <nav class="pt-4">
                         <router-link to="/about">
                             <img :src="'../storage/img/profile.jpg'" class="rounded-full border-solid border-2 border-gray-400">

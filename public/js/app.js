@@ -2231,11 +2231,216 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_TopNav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/TopNav */ "./resources/js/components/TopNav.vue");
+/* harmony import */ var _components_Comment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/Comment */ "./resources/js/components/Comment.vue");
 //
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'TriLakes2019',
+  components: {
+    TopNav: _components_TopNav__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Comment: _components_Comment__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  mounted: function mounted() {
+    console.log(this.$store.getters.isLoggedIn);
+  }
+});
 
 /***/ }),
 
@@ -2740,6 +2945,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
 //
 //
 //
@@ -21986,12 +22195,12 @@ var render = function() {
         }
       }),
       _vm._v(" "),
-      _c("div", { staticClass: "flex justify-center" }, [
+      _c("div", { staticClass: "flex justify-center mx-20" }, [
         _c(
           "div",
           {
             staticClass:
-              "flex flex-col p-6 w-full text-lg tracking-wide leading-10"
+              "flex flex-col p-6 w-full text-xl tracking-wider leading-10"
           },
           [
             _c("p", [
@@ -22074,7 +22283,7 @@ var render = function() {
               _vm._m(6)
             ]),
             _vm._v(" "),
-            _c("Comment", { attrs: { blog_name: "deeks_lake_2018" } })
+            _c("Comment", { attrs: { blog_name: "tri_lakes_adventure_2019" } })
           ],
           1
         )
@@ -22226,9 +22435,332 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h1", [_vm._v("Hello World")])
+  return _c(
+    "div",
+    [
+      _c("TopNav", {
+        attrs: {
+          navHeader: "Hitting the Tri-lakes at Chilliwack Lake Provincial Park",
+          imgSrc: "lindeman_lake_1.jpg"
+        }
+      }),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex justify-center mx-20" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "flex flex-col p-6 w-full text-xl tracking-wider leading-10"
+          },
+          [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex flex-col my-6 w-full" }, [
+              _c("div", { staticClass: "flex justify-between overflow-auto" }, [
+                _c("img", {
+                  staticClass: "object-scale-down m-1 h-112",
+                  attrs: {
+                    src: "../storage/img/blog/8-2019/lindeman_lake_2.jpg"
+                  }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "object-scale-down m-1 h-112",
+                  attrs: {
+                    src: "../storage/img/blog/8-2019/lindeman_lake_4.jpg"
+                  }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "object-scale-down m-1 h-112",
+                  attrs: {
+                    src: "../storage/img/blog/8-2019/lindeman_lake_3.jpg"
+                  }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "object-scale-down m-1 h-112",
+                  attrs: {
+                    src: "../storage/img/blog/8-2019/lindeman_lake_5.jpg"
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _vm._m(1)
+            ]),
+            _vm._v(" "),
+            _c("h1", { staticClass: "text-3xl my-2" }, [
+              _vm._v("Day 1 - August 3, 2019")
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                Jamie and I set out early August on the long weekend of BC day when the summer heat was at an all time high.  \n                Arriving at the Lindeman Lake parking lot just before 10 AM, we immediately set off to Lindeman Lake, the \n                first out of three lakes that we planned to hit.  The lake itself was a short hike from the parking lot; we \n                arrived at Lindeman within 45 minutes of hitting the trail.  Lindeman Lake’s small size in comparison to its \n                neighbor, Chilliwack Lake is by no means a testament to its beauty.  Like many lakes around these parts, \n                Lindeman waters give off a brilliant turquoise colour caused by erosions of the mountains surrounding it.  \n                Glaciers slowly break down rocks into a fine grain called rock flour.  This rock flour is carried along with \n                the meltwater as temperatures warm and deposited into the lake resulting in this enchanting hue on a sunny day.  \n                We didn’t stay at Lindeman Lake for long and only gave enough pause to appreciate its beauty.  Being so close \n                to the parking lot, it was not surprising to see that this lake attracts a lot of crowds.  All campsites were \n                occupied so we moved on towards Greendrop Lake. \n            "
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex flex-col my-6 w-full" }, [
+              _c("img", {
+                staticClass: "flex-1 object-cover overflow-auto h-112 w-full",
+                attrs: {
+                  src: "../storage/img/blog/8-2019/greendrop_lake_1.jpg"
+                }
+              }),
+              _vm._v(" "),
+              _vm._m(2)
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                While Greendrop Lake may look less impressive than Lindeman Lake (in my humble opinion), it’s greater proximity \n                from the parking lot in comparison to Lindeman means that it generally receives fewer traffic and less people \n                diving into its waters for a dip to escape the summer heat.  It’s no surprise that the fish in Greendrop Lake \n                were bolder and less cautious which made for some decent fishing!\n            "
+              )
+            ]),
+            _vm._v(" "),
+            _c("h1", { staticClass: "text-3xl my-2" }, [
+              _vm._v("Day 2 - August 4, 2019")
+            ]),
+            _vm._v(" "),
+            _vm._m(3),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex flex-col my-6 w-full" }, [
+              _c("div", { staticClass: "flex justify-between overflow-auto" }, [
+                _c("img", {
+                  staticClass: "object-scale-down m-1 h-112",
+                  attrs: { src: "../storage/img/blog/8-2019/flora_lake_1.jpg" }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "object-scale-down m-1 h-112",
+                  attrs: { src: "../storage/img/blog/8-2019/flora_lake_2.jpg" }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "object-scale-down m-1 h-112",
+                  attrs: { src: "../storage/img/blog/8-2019/flora_lake_3.jpg" }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "object-scale-down m-1 h-112",
+                  attrs: { src: "../storage/img/blog/8-2019/flora_lake_4.jpg" }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "object-scale-down m-1 h-112",
+                  attrs: { src: "../storage/img/blog/8-2019/flora_lake_5.jpg" }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "object-scale-down m-1 h-112",
+                  attrs: { src: "../storage/img/blog/8-2019/flora_lake_6.jpg" }
+                })
+              ]),
+              _vm._v(" "),
+              _vm._m(4)
+            ]),
+            _vm._v(" "),
+            _c("h1", { staticClass: "text-3xl my-2" }, [
+              _vm._v("Day 3 - August 5, 2019")
+            ]),
+            _vm._v(" "),
+            _vm._m(5),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex flex-col my-6 w-full" }, [
+              _c("div", { staticClass: "flex justify-between overflow-auto" }, [
+                _c("img", {
+                  staticClass: "object-scale-down m-1 h-112",
+                  attrs: { src: "../storage/img/blog/8-2019/flora_peak_1.jpg" }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "object-scale-down m-1 h-112",
+                  attrs: { src: "../storage/img/blog/8-2019/flora_peak_2.jpg" }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "object-scale-down m-1 h-112",
+                  attrs: { src: "../storage/img/blog/8-2019/flora_peak_3.jpg" }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "object-scale-down m-1 h-112",
+                  attrs: { src: "../storage/img/blog/8-2019/flora_peak_4.jpg" }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "object-scale-down m-1 h-112",
+                  attrs: { src: "../storage/img/blog/8-2019/flora_peak_5.jpg" }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "object-scale-down m-1 h-112",
+                  attrs: { src: "../storage/img/blog/8-2019/flora_peak_6.jpg" }
+                })
+              ]),
+              _vm._v(" "),
+              _vm._m(6)
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                With the final goal of our journey met, we began our descent down the mountains.  An ordeal which took about 3.5 hours, I finally began \n                to feel the ache in my knees during that period.  For the last three days, we had hiked a rough total of 18 km with the heat of the \n                summer sun bearing down at our backs.  By the time we arrived at Lindeman Parking lot, I was ready to collapse.  Hitting the three lakes \n                at Chilliwack Lake Provisional Park was probably the most fun I’ve had yet with the perfect balance of hiking and fishing.  Yet it was \n                also probably on of the most physically challenging of experiences ever.  With that being said, I wouldn’t change a thing about this trip \n                if I could start over from the beginning.  The ache on my knees, the blood, sweat and tears we went through are all testament to how \n                nothing in life is free and effort must be made in order to enjoy its pleasures.  \n            "
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "flex flex-col items-center my-6 w-full" },
+              [
+                _c("img", {
+                  staticClass: "flex-1 object-cover overflow-auto h-1/2 w-1/2",
+                  attrs: { src: "../storage/img/blog/8-2019/flora_peak_7.jpg" }
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c("Comment", { attrs: { blog_name: "flora_lake_2019" } })
+          ],
+          1
+        )
+      ])
+    ],
+    1
+  )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _vm._v(
+        "\n                I’ve been to Chilliwack a couple of times, usually as a stopping point to buy whatever foodstuffs and \n                necessities required for hitting the outback of Kamloops or Kelowna further east.  About a 2-hour drive \n                from Vancouver over a roughly 100 km trip, Chilliwack is vastly different from Vancouver.  There are no \n                towering skyscrapers, no complex sky train systems in Chilliwack that define the hilly terrain of the \n                bustling metropolis that is Vancouver.  Chilliwack lies on a mostly flat piece of land with endless \n                fields of farms and agriculture surrounding a network of suburbs.  Yet like Vancouver, Chilliwack offers \n                no shortage of outdoor adventures in this area of the Lower Mainland.  Bordered by the Fraser River \n                to the north and mountains to the south, Chilliwack possesses rich fishing and backpacking opportunities \n                to folks all throughout the Lower Mainland.\n            "
+      ),
+      _c("br"),
+      _c("br"),
+      _vm._v(
+        "\n                One of those opportunities can be found south east of the city, a region of woodland, mountains and \n                lakes called Chilliwack Lake Provincial Park.  My first-time backpacking there can be defined as an \n                exhausting and grueling ordeal that tested the limits of my endurance.  It can also be seen as a \n                marvelous experience of fishing, sightseeing and relaxation.  Both cases hold true as in the end, I \n                came out of that three-day trip with a deeper appreciation and respect of the glorious countryside \n                right here in our own backyard.  \n            "
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex justify-between" }, [
+      _c("table", { staticClass: "text-sm font-semibold w-full" }, [
+        _c("tr", [
+          _c("td", { staticClass: "w-2/3" }, [
+            _c("p", [
+              _vm._v(
+                "\n                                    Like many lakes around these parts, Lindeman waters give off a brilliant turquoise colour caused by \n                                    erosions of the mountains surrounding it. \n                                "
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("td", { staticClass: "w-1/3 text-right right-0" }, [
+            _c("p", [_vm._v("August 3, 2019")])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex justify-between" }, [
+      _c("table", { staticClass: "w-full text-sm font-semibold" }, [
+        _c("tr", [
+          _c("td", { staticClass: "w-2/3" }, [
+            _c("p", [
+              _vm._v(
+                "\n                                    We went along the left hand side of the lake, casting out every so often.  The lake waters are also glacial in \n                                    nature but only in a sunny day can the enchanting crystalline turquoise colours be seen.\n                                "
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("td", { staticClass: "w-1/3 text-right" }, [
+            _c("p", [_vm._v("August 3, 2019")])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _vm._v(
+        "\n                The next morning, we were off.  After a hearty breakfast of apple cinnamon oatmeal with some wild berries, we wasted \n                no time in packing up the tent and making our way to the next destination.  Flora Lake.  It would be remiss of me to \n                say that the trail from Greendrop Lake to Flora Lake didn’t push the limits of my endurance.  Within a few short hours, \n                I had lost track of how many boulder fields we had to cross over a steady ascent under the sweltering heat of the hot \n                summer sun; an ordeal exacerbated by the fact that I was also lugging around 14 cans of beer in addition to my camping gear.  \n            "
+      ),
+      _c("br"),
+      _c("br"),
+      _vm._v(
+        "\n                Four excruciating hours later, we finally arrived at our destination.  Upon first laying eyes on the lake, I knew that \n                it had all been worth it.  It’s a good thing that there isn’t an easy way to access Flora Lake.  Deterring all but the \n                hardiest of folk, those who succeed in making the trek have phenomenal views of crystalline turquoise waters all to \n                themselves.  Similar to Lindeman Lake in terms of general beauty, Flora Lake far outclasses Lindeman in terms of fishing \n                and ruggedness.  Experiencing far less traffic and subsequently free from large crowds to take advantage of its glacial \n                waters has resulted in a relatively undisturbed environment with waters much clearer and crystalline compared to Lindeman.  \n                The fish are expectedly more inquisitive, ready to chomp down bait and hook on the ready.  We caught several cutthroats \n                and rainbows in rapid succession; it was an angler’s dream. \n            "
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex justify-between" }, [
+      _c("table", { staticClass: "text-sm font-semibold w-full" }, [
+        _c("tr", [
+          _c("td", { staticClass: "w-2/3" }, [
+            _c("p", [
+              _vm._v(
+                "\n                                    Experiencing far less traffic and subsequently free from large crowds to take advantage of Flora Lake’s glacial \n                                    waters has resulted in a relatively undisturbed environment with waters much clearer and crystalline compared to Lindeman.\n                                "
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("td", { staticClass: "w-1/3 text-right right-0" }, [
+            _c("p", [_vm._v("August 3, 2019")])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _vm._v(
+        "\n                On the third and final day, we left Flora Lake and began a slow steady ascent up the valley.  The weight of our backpacks was \n                significantly lessened from drinking the last of our beers on the night before which made the hike significantly easier.  \n                In three short hours we finally got out of the valley and arrived at a junction by noon, on a slight depression surrounded by mountain \n                ridgelines.  The area was flat and sparsely populated with trees.  Finding a shaded area away from the scorching sun, we were \n                able to rest for a short while and get our bearings.  There were two trails that lay before us.  The north trail lead to \n                Flora Peak which no doubt held amazing views of the surrounding area and beyond whereas the south trail leads back to the \n                Lindeman parking lot.  We were tired, thirsty and the entire area felt like a sauna; the prospect of taking the south trail back \n                towards home looked very enticing indeed.  We had also come so far in this journey; to skip going to Flora Peak now would leave \n                us with feelings of regret for a long time.  Who knows when we will get another chance to visit this phenomenal area again?  \n                To make the going easier, we hid our backpacks away underneath some brush and trudged off to Flora Peak; the final ascent of \n                our trip.  \n            "
+      ),
+      _c("br"),
+      _c("br"),
+      _vm._v(
+        "\n                With no backpacks to weigh us down, we easily ascended Flora Peak in 45 minutes despite encountering many areas with loose rocks \n                and steep inclines.  The views up there were nothing short of magnificent.  With an elevation of up to 1900 m, Flora Peak rewarded \n                us with an uninterrupted 360-degree panorama of endless mountains extending down to Washington State as far as the eye can see.  \n                It is an enchanting experience; to be awed and humbled when looking out across an endless stretch of mountains, seemingly \n                unfettered by the touch of industry.  Views like this that make it all worth it in the end, it is the price we all pay with pain \n                and sweat for moments that can never be found inside the suburbs or cities down below.  \n            "
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex justify-between" }, [
+      _c("table", { staticClass: "text-sm font-semibold w-full" }, [
+        _c("tr", [
+          _c("td", { staticClass: "w-2/3" }, [
+            _c("p", [
+              _vm._v(
+                "\n                                    With an elevation of up to 1900 m, Flora Peak rewarded us with an uninterrupted 360-degree panorama of \n                                    endless mountains extending down to Washington State as far as the eye can see.\n                                "
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("td", { staticClass: "w-1/3 text-right right-0" }, [
+            _c("p", [_vm._v("August 5, 2019")])
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -22400,7 +22932,10 @@ var render = function() {
       _c("div", { staticClass: "flex" }, [
         _c(
           "div",
-          { staticClass: "px-6 bg-gray-200 w-56 h-screen border-r-2" },
+          {
+            staticClass:
+              "px-6 bg-gray-200 w-56 h-screen border-r-2 border-gray-400 shadow-2xl"
+          },
           [
             _c(
               "nav",
@@ -23055,25 +23590,21 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    {
+  return _c("div", [
+    _c("div", {
       staticClass:
-        "h-96 border-b-2 border-gray-500 flex flex-col items-center justify-center bg-cover bg-center relative",
+        "h-96 flex flex-col items-center justify-center bg-cover bg-center relative",
       style: "background-image: url(../storage/img/banner/" + _vm.imgSrc
-    },
-    [
+    }),
+    _vm._v(" "),
+    _c("div", { staticClass: "bg-gray-300 py-5 shadow-xl" }, [
       _c(
         "h1",
-        { staticClass: "text-6xl font-bold text-white absolute z-20 px-6" },
+        { staticClass: "text-4xl text-center font-bold text-gray-800 mx-20" },
         [_vm._v(_vm._s(_vm.navHeader))]
-      ),
-      _vm._v(" "),
-      _c("div", {
-        staticClass: "bg-black bg-cover opacity-25 h-full w-full z-10"
-      })
-    ]
-  )
+      )
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
