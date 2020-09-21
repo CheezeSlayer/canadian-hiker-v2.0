@@ -1,8 +1,8 @@
 <template>
     <div>
-        <TopNav navHeader="Where to Find Me" imgSrc="stmarks.jpg"></TopNav>
+        <TopNav navHeader="where to find me" imgSrc="stmarks.jpg"></TopNav>
         <div class="flex flex-col items-center">
-            <div class="mx-6 mt-6 p-6 w-1/3 bg-gray-300 rounded-lg">
+            <div class="mx-6 mt-6 p-6 w-1/3 bg-gray-300 border border-double border-gray-500 rounded-lg">
                 <p>
                     For professional inquiries, contact me through LinkedIn.  My personal projects are on Github.  To follow my hiking adventures, visit my Instagram page.  
                 </p>

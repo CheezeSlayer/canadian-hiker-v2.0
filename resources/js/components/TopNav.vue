@@ -1,11 +1,12 @@
 <template>
     <div>
-        <div class="h-96 flex flex-col items-center justify-center bg-cover bg-center relative" 
+        <div class="h-112 flex flex-col items-center justify-center bg-cover bg-center relative shadow-2xl" 
         :style="'background-image: url(../storage/img/banner/' + imgSrc">
-            <!-- <div class="bg-cover opacity-25 h-full w-full z-10"></div> -->
+            <h1 class="absolute top-0 text-6xl font-bold text-white m-20 z-20 tracking-wider">{{ navHeader }}</h1>
+            <div class="absolute bg-cover bg-black opacity-25 h-full w-full z-10"></div>
         </div>
-        <div class="bg-gray-300 py-5 shadow-xl">
-            <h1 class="text-4xl text-center font-bold text-gray-800 mx-20">{{ navHeader }}</h1>
+        <div class="py-5 ">
+            
         </div>
     </div>
 </template>

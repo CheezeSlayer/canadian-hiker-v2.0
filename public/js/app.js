@@ -2574,54 +2574,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "App",
   props: ['user'],
@@ -2658,6 +2610,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2945,6 +2911,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -22024,7 +21991,7 @@ var render = function() {
     "div",
     [
       _c("TopNav", {
-        attrs: { navHeader: "About Me", imgSrc: "grousemtn.jpg" }
+        attrs: { navHeader: "about me", imgSrc: "grousemtn.jpg" }
       }),
       _vm._v(" "),
       _c("div", { staticClass: "flex flex-col items-center" }, [
@@ -22786,7 +22753,7 @@ var render = function() {
     "div",
     [
       _c("TopNav", {
-        attrs: { navHeader: "Where to Find Me", imgSrc: "stmarks.jpg" }
+        attrs: { navHeader: "where to find me", imgSrc: "stmarks.jpg" }
       }),
       _vm._v(" "),
       _c("div", { staticClass: "flex flex-col items-center" }, [
@@ -22847,7 +22814,10 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "mx-6 mt-6 p-6 w-1/3 bg-gray-300 rounded-lg" },
+      {
+        staticClass:
+          "mx-6 mt-6 p-6 w-1/3 bg-gray-300 border border-double border-gray-500 rounded-lg"
+      },
       [
         _c("p", [
           _vm._v(
@@ -22928,404 +22898,139 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "h-screen bg-gray-400" }, [
-      _c("div", { staticClass: "flex" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "px-6 bg-gray-200 w-56 h-screen border-r-2 border-gray-400 shadow-2xl"
-          },
-          [
-            _c(
-              "nav",
-              { staticClass: "pt-4" },
-              [
-                _c("router-link", { attrs: { to: "/about" } }, [
-                  _c("img", {
-                    staticClass:
-                      "rounded-full border-solid border-2 border-gray-400",
-                    attrs: { src: "../storage/img/profile.jpg" }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "h1",
-                    {
-                      staticClass:
-                        "py-3 text-center text-xl text-gray-600 border-dotted border-b-2 border-gray-600"
-                    },
-                    [_vm._v("Henry Chang")]
-                  )
-                ]),
-                _vm._v(" "),
+    _c("div", { staticClass: "h-screen bg-gray-200 overflow-auto" }, [
+      _c("div", { staticClass: "px-10 py-5" }, [
+        _c("div", { staticClass: "flex flex-col flex-1" }, [
+          _c("div", { staticClass: "z-10 pb-5" }, [
+            _c("table", [
+              _c("tr", [
                 _c(
-                  "router-link",
-                  {
-                    staticClass:
-                      "flex items-center py-12 text-gray-600 hover:text-gray-900",
-                    attrs: { to: "/blog" }
-                  },
+                  "td",
                   [
                     _c(
-                      "svg",
-                      {
-                        staticClass: "bi-image b-icon bi h-8 w-8",
-                        attrs: {
-                          "data-v-8892b924": "",
-                          viewBox: "0 0 16 16",
-                          width: "1em",
-                          height: "1em",
-                          focusable: "false",
-                          role: "img",
-                          alt: "icon",
-                          xmlns: "http://www.w3.org/2000/svg",
-                          fill: "currentColor"
-                        }
-                      },
-                      [
-                        _c("g", { attrs: { "data-v-8892b924": "" } }, [
-                          _c("path", {
-                            attrs: {
-                              "fill-rule": "evenodd",
-                              d:
-                                "M14.002 2h-12a1 1 0 00-1 1v10a1 1 0 001 1h12a1 1 0 001-1V3a1 1 0 00-1-1zm-12-1a2 \n                            2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V3a2 2 0 00-2-2h-12z",
-                              "clip-rule": "evenodd"
-                            }
-                          }),
-                          _c("path", {
-                            attrs: {
-                              d:
-                                "M10.648 \n                            7.646a.5.5 0 01.577-.093L15.002 9.5V14h-14v-2l2.646-2.354a.5.5 0 01.63-.062l2.66 1.773 3.71-3.71z"
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("path", {
-                            attrs: {
-                              "fill-rule": "evenodd",
-                              d: "M4.502 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3z",
-                              "clip-rule": "evenodd"
-                            }
-                          })
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("h1", { staticClass: "uppercase font-bold mx-auto" }, [
-                      _vm._v("Blog")
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "router-link",
-                  {
-                    staticClass:
-                      "flex items-center py-12 text-gray-600 hover:text-gray-900",
-                    attrs: { to: "/about" }
-                  },
-                  [
-                    _c(
-                      "svg",
-                      {
-                        staticClass: "bi-person b-icon bi h-8 w-8",
-                        attrs: {
-                          "data-v-8892b924": "",
-                          viewBox: "0 0 16 16",
-                          focusable: "false",
-                          role: "img",
-                          alt: "icon",
-                          xmlns: "http://www.w3.org/2000/svg",
-                          fill: "currentColor"
-                        }
-                      },
-                      [
-                        _c("g", { attrs: { "data-v-8892b924": "" } }, [
-                          _c("path", {
-                            attrs: {
-                              "fill-rule": "evenodd",
-                              d:
-                                "M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 \n                            13h9.956a.274.274 0 00.014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 \n                            10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 00.022.004zm9.974.056v-.002.002zM8 \n                            7a2 2 0 100-4 2 2 0 000 4zm3-2a3 3 0 11-6 0 3 3 0 016 0z",
-                              "clip-rule": "evenodd"
-                            }
-                          })
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("h1", { staticClass: "uppercase font-bold mx-auto" }, [
-                      _vm._v("About Me")
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "router-link",
-                  {
-                    staticClass:
-                      "flex items-center py-12 text-gray-600 hover:text-gray-900",
-                    attrs: { to: "/contact" }
-                  },
-                  [
-                    _c(
-                      "svg",
-                      {
-                        staticClass: "bi-envelope b-icon bi h-8 w-8",
-                        attrs: {
-                          "data-v-8892b924": "",
-                          viewBox: "0 0 16 16",
-                          width: "1em",
-                          height: "1em",
-                          focusable: "false",
-                          role: "img",
-                          alt: "icon",
-                          xmlns: "http://www.w3.org/2000/svg",
-                          fill: "currentColor"
-                        }
-                      },
-                      [
-                        _c("g", { attrs: { "data-v-8892b924": "" } }, [
-                          _c("path", {
-                            attrs: {
-                              "fill-rule": "evenodd",
-                              d:
-                                "M14 3H2a1 1 0 00-1 1v8a1 1 0 001 1h12a1 1 0 001-1V4a1 1 0 00-1-1zM2 2a2 2 0 00-2 \n                            2v8a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2H2z",
-                              "clip-rule": "evenodd"
-                            }
-                          }),
-                          _c("path", {
-                            attrs: {
-                              "fill-rule": "evenodd",
-                              d:
-                                "M.071 \n                            4.243a.5.5 0 01.686-.172L8 8.417l7.243-4.346a.5.5 0 01.514.858L8 9.583.243 4.93a.5.5 0 01-.172-.686z",
-                              "clip-rule": "evenodd"
-                            }
-                          }),
-                          _c("path", {
-                            attrs: {
-                              d:
-                                "M6.752 8.932l.432-.252-.504-.864-.432.252.504.864zm-6 3.5l6-3.5-.504-.864-6 \n                            3.5.504.864zm8.496-3.5l-.432-.252.504-.864.432.252-.504.864zm6 3.5l-6-3.5.504-.864 6 3.5-.504.864z"
-                            }
-                          })
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("h1", { staticClass: "uppercase font-bold mx-auto" }, [
-                      _vm._v("Contact")
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                this.user_logged_in
-                  ? _c(
                       "router-link",
                       {
                         staticClass:
-                          "flex items-center py-12 text-gray-600 hover:text-gray-900",
-                        attrs: { to: "/logout" }
+                          "flex items-center text-gray-600 hover:text-gray-900 pr-5",
+                        attrs: { to: "/blog" }
                       },
                       [
                         _c(
-                          "svg",
-                          {
-                            staticClass: "bi-box-arrow-left b-icon bi h-8 w-8",
-                            attrs: {
-                              "data-v-8892b924": "",
-                              viewBox: "0 0 16 16",
-                              width: "1em",
-                              height: "1em",
-                              focusable: "false",
-                              role: "img",
-                              alt: "icon",
-                              xmlns: "http://www.w3.org/2000/svg",
-                              fill: "currentColor"
-                            }
-                          },
-                          [
-                            _c("g", { attrs: { "data-v-8892b924": "" } }, [
-                              _c("path", {
-                                attrs: {
-                                  "fill-rule": "evenodd",
-                                  d:
-                                    "M4.354 11.354a.5.5 0 000-.708L1.707 8l2.647-2.646a.5.5 0 10-.708-.708l-3 3a.5.5 0 000 \n                            .708l3 3a.5.5 0 00.708 0z",
-                                  "clip-rule": "evenodd"
-                                }
-                              }),
-                              _c("path", {
-                                attrs: {
-                                  "fill-rule": "evenodd",
-                                  d:
-                                    "M11.5 8a.5.5 0 00-.5-.5H2a.5.5 \n                            0 000 1h9a.5.5 0 00.5-.5z",
-                                  "clip-rule": "evenodd"
-                                }
-                              }),
-                              _c("path", {
-                                attrs: {
-                                  "fill-rule": "evenodd",
-                                  d:
-                                    "M14 13.5a1.5 1.5 0 001.5-1.5V4A1.5 \n                            1.5 0 0014 2.5H7A1.5 1.5 0 005.5 4v1.5a.5.5 0 001 0V4a.5.5 0 01.5-.5h7a.5.5 0 01.5.5v8a.5.5 0 01-.5.5H7a.5.5 0 \n                            01-.5-.5v-1.5a.5.5 0 00-1 0V12A1.5 1.5 0 007 13.5h7z",
-                                  "clip-rule": "evenodd"
-                                }
-                              })
-                            ])
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
                           "h1",
                           { staticClass: "uppercase font-bold mx-auto" },
-                          [_vm._v("Logout")]
+                          [_vm._v("Home")]
                         )
                       ]
                     )
-                  : _c(
-                      "div",
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "td",
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass:
+                          "flex items-center text-gray-600 hover:text-gray-900 pr-5",
+                        attrs: { to: "/about" }
+                      },
                       [
                         _c(
-                          "router-link",
-                          {
-                            staticClass:
-                              "flex items-center pt-12 text-gray-600 hover:text-gray-900",
-                            attrs: { to: "/login" }
-                          },
-                          [
-                            _c(
-                              "svg",
-                              {
-                                staticClass:
-                                  "bi-box-arrow-left b-icon bi h-8 w-8",
-                                attrs: {
-                                  "data-v-8892b924": "",
-                                  viewBox: "0 0 16 16",
-                                  width: "1em",
-                                  height: "1em",
-                                  focusable: "false",
-                                  role: "img",
-                                  alt: "icon",
-                                  xmlns: "http://www.w3.org/2000/svg",
-                                  fill: "currentColor"
-                                }
-                              },
-                              [
-                                _c("g", { attrs: { "data-v-8892b924": "" } }, [
-                                  _c("path", {
-                                    attrs: {
-                                      "fill-rule": "evenodd",
-                                      d:
-                                        "M4.354 11.354a.5.5 0 000-.708L1.707 8l2.647-2.646a.5.5 0 10-.708-.708l-3 3a.5.5 0 000 \n                                .708l3 3a.5.5 0 00.708 0z",
-                                      "clip-rule": "evenodd"
-                                    }
-                                  }),
-                                  _c("path", {
-                                    attrs: {
-                                      "fill-rule": "evenodd",
-                                      d:
-                                        "M11.5 8a.5.5 0 00-.5-.5H2a.5.5 \n                                0 000 1h9a.5.5 0 00.5-.5z",
-                                      "clip-rule": "evenodd"
-                                    }
-                                  }),
-                                  _c("path", {
-                                    attrs: {
-                                      "fill-rule": "evenodd",
-                                      d:
-                                        "M14 13.5a1.5 1.5 0 001.5-1.5V4A1.5 \n                                1.5 0 0014 2.5H7A1.5 1.5 0 005.5 4v1.5a.5.5 0 001 0V4a.5.5 0 01.5-.5h7a.5.5 0 01.5.5v8a.5.5 0 01-.5.5H7a.5.5 0 \n                                01-.5-.5v-1.5a.5.5 0 00-1 0V12A1.5 1.5 0 007 13.5h7z",
-                                      "clip-rule": "evenodd"
-                                    }
-                                  })
-                                ])
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "h1",
-                              { staticClass: "uppercase font-bold mx-auto" },
-                              [_vm._v("Login")]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "router-link",
-                          {
-                            staticClass:
-                              "flex items-center pt-6 text-gray-600 hover:text-gray-900",
-                            attrs: { to: "/signup" }
-                          },
-                          [
-                            _c(
-                              "svg",
-                              {
-                                staticClass: "bi-person-plus b-icon bi h-8 w-8",
-                                attrs: {
-                                  "data-v-8892b924": "",
-                                  viewBox: "0 0 16 16",
-                                  width: "1em",
-                                  height: "1em",
-                                  focusable: "false",
-                                  role: "img",
-                                  alt: "icon",
-                                  xmlns: "http://www.w3.org/2000/svg",
-                                  fill: "currentColor"
-                                }
-                              },
-                              [
-                                _c("g", { attrs: { "data-v-8892b924": "" } }, [
-                                  _c("path", {
-                                    attrs: {
-                                      "fill-rule": "evenodd",
-                                      d:
-                                        "M11 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM1.022 13h9.956a.274.274 \n                                0 00.014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 \n                                1.418-.832 1.664a1.05 1.05 0 00.022.004zm9.974.056v-.002.002zM6 7a2 2 0 100-4 2 2 0 000 4zm3-2a3 3 0 11-6 0 3 3 0 016 \n                                0zm4.5 0a.5.5 0 01.5.5v2a.5.5 0 01-.5.5h-2a.5.5 0 010-1H13V5.5a.5.5 0 01.5-.5z",
-                                      "clip-rule": "evenodd"
-                                    }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("path", {
-                                    attrs: {
-                                      "fill-rule": "evenodd",
-                                      d:
-                                        "M13 7.5a.5.5 0 01.5-.5h2a.5.5 0 010 1H14v1.5a.5.5 0 01-1 0v-2z",
-                                      "clip-rule": "evenodd"
-                                    }
-                                  })
-                                ])
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "h1",
-                              { staticClass: "uppercase font-bold mx-auto" },
-                              [_vm._v("Sign Up")]
-                            )
-                          ]
+                          "h1",
+                          { staticClass: "uppercase font-bold mx-auto" },
+                          [_vm._v("About")]
                         )
-                      ],
-                      1
+                      ]
                     )
-              ],
-              1
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "flex flex-col flex-1 h-screen overflow-y-hidden" },
-          [
-            _c(
-              "div",
-              { staticClass: "flex flex-col overflow-y-hidden flex-1" },
-              [
+                  ],
+                  1
+                ),
+                _vm._v(" "),
                 _c(
-                  "transition",
-                  { attrs: { name: "fade" } },
-                  [_c("router-view", { staticClass: "overflow-x-hidden" })],
+                  "td",
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass:
+                          "flex items-center text-gray-600 hover:text-gray-900 pr-5",
+                        attrs: { to: "/contact" }
+                      },
+                      [
+                        _c(
+                          "h1",
+                          { staticClass: "uppercase font-bold mx-auto" },
+                          [_vm._v("Contact")]
+                        )
+                      ]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "td",
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass:
+                          "flex items-center text-gray-600 hover:text-gray-900 pr-5",
+                        attrs: { to: "/login" }
+                      },
+                      [
+                        _c(
+                          "h1",
+                          { staticClass: "uppercase font-bold mx-auto" },
+                          [_vm._v("Login")]
+                        )
+                      ]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "td",
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass:
+                          "flex items-center text-gray-600 hover:text-gray-900",
+                        attrs: { to: "/signup" }
+                      },
+                      [
+                        _c(
+                          "h1",
+                          { staticClass: "uppercase font-bold mx-auto" },
+                          [_vm._v("Sign Up")]
+                        )
+                      ]
+                    )
+                  ],
                   1
                 )
-              ],
-              1
-            )
-          ]
-        )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "flex flex-col flex-1" },
+            [
+              _c(
+                "transition",
+                { attrs: { name: "fade" } },
+                [_c("router-view")],
+                1
+              )
+            ],
+            1
+          )
+        ])
       ])
     ])
   ])
@@ -23354,31 +23059,27 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "m-4 p-2 bg-gray-300 hover:bg-gray-500 rounded-lg" },
+    {
+      staticClass:
+        "max-w-sm rounded overflow-hidden shadow-2xl m-4 bg-gray-300 hover:bg-gray-500 border border-double border-gray-500"
+    },
     [
-      _c("div", { staticClass: "flex flex-col justify-center" }, [
-        _c("div", { staticClass: "flex" }, [
-          _c(
-            "div",
-            { staticClass: "font-semibold text-lg py-2 w-2/3 text-left" },
-            [
-              _vm._v(
-                "\n                " + _vm._s(_vm.cardTitle) + "\n            "
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "py-2 w-1/3 text-right" }, [
-            _vm._v(
-              "\n                " + _vm._s(_vm.cardDate) + "\n            "
-            )
-          ])
+      _c("img", {
+        staticClass: "object-cover h-96 w-96",
+        attrs: {
+          src: "../storage/img/blog/" + _vm.cardImg,
+          alt: "Sunset in the mountains"
+        }
+      }),
+      _vm._v(" "),
+      _c("div", { staticClass: "px-6 py-4" }, [
+        _c("div", { staticClass: "font-bold text-xl mb-2" }, [
+          _vm._v(_vm._s(_vm.cardTitle))
         ]),
         _vm._v(" "),
-        _c("img", {
-          staticClass: "object-cover h-112 w-112 rounded-lg",
-          attrs: { src: "../storage/img/blog/" + _vm.cardImg }
-        })
+        _c("p", { staticClass: "text-gray-700 text-base" }, [
+          _vm._v("\n            " + _vm._s(_vm.cardDate) + "\n        ")
+        ])
       ])
     ]
   )
@@ -23591,19 +23292,31 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", {
-      staticClass:
-        "h-96 flex flex-col items-center justify-center bg-cover bg-center relative",
-      style: "background-image: url(../storage/img/banner/" + _vm.imgSrc
-    }),
+    _c(
+      "div",
+      {
+        staticClass:
+          "h-112 flex flex-col items-center justify-center bg-cover bg-center relative shadow-2xl",
+        style: "background-image: url(../storage/img/banner/" + _vm.imgSrc
+      },
+      [
+        _c(
+          "h1",
+          {
+            staticClass:
+              "absolute top-0 text-6xl font-bold text-white m-20 z-20 tracking-wider"
+          },
+          [_vm._v(_vm._s(_vm.navHeader))]
+        ),
+        _vm._v(" "),
+        _c("div", {
+          staticClass:
+            "absolute bg-cover bg-black opacity-25 h-full w-full z-10"
+        })
+      ]
+    ),
     _vm._v(" "),
-    _c("div", { staticClass: "bg-gray-300 py-5 shadow-xl" }, [
-      _c(
-        "h1",
-        { staticClass: "text-4xl text-center font-bold text-gray-800 mx-20" },
-        [_vm._v(_vm._s(_vm.navHeader))]
-      )
-    ])
+    _c("div", { staticClass: "py-5 " })
   ])
 }
 var staticRenderFns = []

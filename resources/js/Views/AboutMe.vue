@@ -1,6 +1,6 @@
 <template>
     <div>
-        <TopNav navHeader="About Me" imgSrc="grousemtn.jpg"></TopNav>
+        <TopNav navHeader="about me" imgSrc="grousemtn.jpg"></TopNav>
         <div class="flex flex-col items-center">
             <div class="m-6 p-6 flex content-center rounded-lg items-center">
                 <img :src="'../storage/img/about-me.jpg'" class="m-2 object-contain h-96 rounded-lg">
