@@ -2,8 +2,8 @@
     <div>
         <TopNav navHeader="about me" imgSrc="grousemtn.jpg"></TopNav>
         <div class="flex flex-col items-center">
-            <div class="m-6 p-6 flex content-center rounded-lg items-center">
-                <img :src="'../storage/img/about-me.jpg'" class="m-2 object-contain h-96 rounded-lg">
+            <div class="m-6 p-6 sm:flex bg-gray-300 items-center border border-double border-gray-500 rounded-lg">
+                <img :src="'../storage/img/about-me.jpg'" class="sm:m-2 object-contain sm:h-96 rounded-lg border border-double border-gray-500">
                 <p class="text-lg m-2">My name is Henry Chang and I am a computer programmer with experience in web development and testing.  
                     I am based in Vancouver, British Columbia and have lived in Canada all my life.
                      When I am not sitting infront of a computer, I can hopefully be found trekking the outback, hiking ontop one 

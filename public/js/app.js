@@ -2429,6 +2429,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2610,24 +2624,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -2911,9 +2907,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
 //
 //
 //
@@ -21998,11 +21991,13 @@ var render = function() {
         _c(
           "div",
           {
-            staticClass: "m-6 p-6 flex content-center rounded-lg items-center"
+            staticClass:
+              "m-6 p-6 sm:flex bg-gray-300 items-center border border-double border-gray-500 rounded-lg"
           },
           [
             _c("img", {
-              staticClass: "m-2 object-contain h-96 rounded-lg",
+              staticClass:
+                "sm:m-2 object-contain sm:h-96 rounded-lg border border-double border-gray-500",
               attrs: { src: "../storage/img/about-me.jpg" }
             }),
             _vm._v(" "),
@@ -22088,7 +22083,7 @@ var render = function() {
       _c("div", { staticClass: "flex justify-center" }, [
         _c(
           "div",
-          { staticClass: "flex" },
+          { staticClass: "sm:flex" },
           [
             _c(
               "router-link",
@@ -22162,12 +22157,12 @@ var render = function() {
         }
       }),
       _vm._v(" "),
-      _c("div", { staticClass: "flex justify-center mx-20" }, [
+      _c("div", { staticClass: "flex justify-center mx-5 sm:mx-20" }, [
         _c(
           "div",
           {
             staticClass:
-              "flex flex-col p-6 w-full text-xl tracking-wider leading-10"
+              "flex flex-col p-3 sm:p-6 w-full text-sm sm:text-xl tracking-wider leading-relaxed sm:leading-10"
           },
           [
             _c("p", [
@@ -22178,7 +22173,7 @@ var render = function() {
             _vm._v(" "),
             _c("div", { staticClass: "flex flex-col my-6" }, [
               _c("img", {
-                staticClass: "object-cover h-112 w-full",
+                staticClass: "flex-1 object-cover overflow-auto h-112 w-full",
                 attrs: { src: "../storage/img/blog/9-2018/coal_harbour.jpg" }
               }),
               _vm._v(" "),
@@ -22189,7 +22184,7 @@ var render = function() {
             _vm._v(" "),
             _c("div", { staticClass: "flex flex-col my-6" }, [
               _c("img", {
-                staticClass: "object-cover h-112 w-full",
+                staticClass: "flex-1 object-cover overflow-auto h-112 w-full",
                 attrs: {
                   src: "../storage/img/blog/9-2018/trailblazer_lookout.jpg"
                 }
@@ -22214,33 +22209,33 @@ var render = function() {
             _c("div", { staticClass: "my-6" }, [
               _c("div", { staticClass: "flex justify-between overflow-auto" }, [
                 _c("img", {
-                  staticClass: "object-scale-down h-112",
+                  staticClass: "flex-1 object-scale-down h-112",
                   attrs: {
                     src: "../storage/img/blog/9-2018/deeks_lake_fishing_1.jpg"
                   }
                 }),
                 _vm._v(" "),
                 _c("img", {
-                  staticClass: "object-scale-down h-112",
+                  staticClass: "flex-1 object-scale-down h-112",
                   attrs: {
                     src: "../storage/img/blog/9-2018/deeks_lake_fishing_2.jpg"
                   }
                 }),
                 _vm._v(" "),
                 _c("img", {
-                  staticClass: "object-scale-down h-112",
+                  staticClass: "flex-1 object-scale-down h-112",
                   attrs: { src: "../storage/img/blog/9-2018/deeks_lake_3.jpg" }
                 }),
                 _vm._v(" "),
                 _c("img", {
-                  staticClass: "object-scale-down h-112",
+                  staticClass: "flex-1 object-scale-down h-112",
                   attrs: {
                     src: "../storage/img/blog/9-2018/deeks_lake_fishing_3.jpg"
                   }
                 }),
                 _vm._v(" "),
                 _c("img", {
-                  staticClass: "object-scale-down h-112",
+                  staticClass: "flex-1 object-scale-down h-112",
                   attrs: {
                     src: "../storage/img/blog/9-2018/deeks_lake_fishing_4.jpg"
                   }
@@ -22578,9 +22573,11 @@ var render = function() {
               { staticClass: "flex flex-col items-center my-6 w-full" },
               [
                 _c("img", {
-                  staticClass: "flex-1 object-cover overflow-auto h-1/2 w-1/2",
+                  staticClass: "flex-1 object-cover overflow-auto w-1/2 h-1/2",
                   attrs: { src: "../storage/img/blog/8-2019/flora_peak_7.jpg" }
-                })
+                }),
+                _vm._v(" "),
+                _vm._m(7)
               ]
             ),
             _vm._v(" "),
@@ -22722,6 +22719,28 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("td", { staticClass: "w-1/3 text-right right-0" }, [
             _c("p", [_vm._v("August 5, 2019")])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex w-full justify-between" }, [
+      _c("table", { staticClass: "w-full text-sm font-semibold" }, [
+        _c("tr", [
+          _c("td", {}, [
+            _c("p", [
+              _vm._v(
+                "\n                                    A celebratory selfie in conquering Flora Peak.\n                                "
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("td", { staticClass: "text-right" }, [
+            _c("p", [_vm._v("August 6, 2019")])
           ])
         ])
       ])
@@ -22898,124 +22917,84 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "h-screen bg-gray-200 overflow-auto" }, [
-      _c("div", { staticClass: "px-10 py-5" }, [
+    _c("div", { staticClass: "bg-gray-200" }, [
+      _c("div", { staticClass: "py-5" }, [
         _c("div", { staticClass: "flex flex-col flex-1" }, [
-          _c("div", { staticClass: "z-10 pb-5" }, [
-            _c("table", [
-              _c("tr", [
-                _c(
-                  "td",
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass:
-                          "flex items-center text-gray-600 hover:text-gray-900 pr-5",
-                        attrs: { to: "/blog" }
-                      },
-                      [
-                        _c(
-                          "h1",
-                          { staticClass: "uppercase font-bold mx-auto" },
-                          [_vm._v("Home")]
-                        )
-                      ]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "td",
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass:
-                          "flex items-center text-gray-600 hover:text-gray-900 pr-5",
-                        attrs: { to: "/about" }
-                      },
-                      [
-                        _c(
-                          "h1",
-                          { staticClass: "uppercase font-bold mx-auto" },
-                          [_vm._v("About")]
-                        )
-                      ]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "td",
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass:
-                          "flex items-center text-gray-600 hover:text-gray-900 pr-5",
-                        attrs: { to: "/contact" }
-                      },
-                      [
-                        _c(
-                          "h1",
-                          { staticClass: "uppercase font-bold mx-auto" },
-                          [_vm._v("Contact")]
-                        )
-                      ]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "td",
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass:
-                          "flex items-center text-gray-600 hover:text-gray-900 pr-5",
-                        attrs: { to: "/login" }
-                      },
-                      [
-                        _c(
-                          "h1",
-                          { staticClass: "uppercase font-bold mx-auto" },
-                          [_vm._v("Login")]
-                        )
-                      ]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "td",
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass:
-                          "flex items-center text-gray-600 hover:text-gray-900",
-                        attrs: { to: "/signup" }
-                      },
-                      [
-                        _c(
-                          "h1",
-                          { staticClass: "uppercase font-bold mx-auto" },
-                          [_vm._v("Sign Up")]
-                        )
-                      ]
-                    )
-                  ],
-                  1
-                )
+          _c(
+            "div",
+            {
+              staticClass: "pb-5 flex justify-center",
+              attrs: { id: "navbar" }
+            },
+            [
+              _c("table", [
+                _c("tr", [
+                  _c(
+                    "td",
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass:
+                            "flex text-gray-600 hover:text-gray-900 pr-5",
+                          attrs: { to: "/blog" }
+                        },
+                        [
+                          _c("h1", { staticClass: "uppercase font-medium" }, [
+                            _vm._v("Home")
+                          ])
+                        ]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "td",
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass:
+                            "flex text-gray-600 hover:text-gray-900 pr-5",
+                          attrs: { to: "/about" }
+                        },
+                        [
+                          _c(
+                            "h1",
+                            { staticClass: "uppercase font-medium mx-auto" },
+                            [_vm._v("About")]
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "td",
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "flex text-gray-600 hover:text-gray-900",
+                          attrs: { to: "/contact" }
+                        },
+                        [
+                          _c(
+                            "h1",
+                            { staticClass: "uppercase font-medium mx-auto" },
+                            [_vm._v("Contact")]
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  )
+                ])
               ])
-            ])
-          ]),
+            ]
+          ),
           _vm._v(" "),
           _c(
             "div",
@@ -23066,14 +23045,11 @@ var render = function() {
     [
       _c("img", {
         staticClass: "object-cover h-96 w-96",
-        attrs: {
-          src: "../storage/img/blog/" + _vm.cardImg,
-          alt: "Sunset in the mountains"
-        }
+        attrs: { src: "../storage/img/blog/" + _vm.cardImg }
       }),
       _vm._v(" "),
       _c("div", { staticClass: "px-6 py-4" }, [
-        _c("div", { staticClass: "font-bold text-xl mb-2" }, [
+        _c("div", { staticClass: "font-bold text-lg sm:text-xl mb-2" }, [
           _vm._v(_vm._s(_vm.cardTitle))
         ]),
         _vm._v(" "),
@@ -23296,7 +23272,7 @@ var render = function() {
       "div",
       {
         staticClass:
-          "h-112 flex flex-col items-center justify-center bg-cover bg-center relative shadow-2xl",
+          "h-64 sm:h-112 flex flex-col items-center justify-center bg-cover bg-center relative shadow-2xl",
         style: "background-image: url(../storage/img/banner/" + _vm.imgSrc
       },
       [
@@ -23304,7 +23280,7 @@ var render = function() {
           "h1",
           {
             staticClass:
-              "absolute top-0 text-6xl font-bold text-white m-20 z-20 tracking-wider"
+              "absolute sm:top-0 text-white text-xl sm:text-6xl sm:m-20 px-5 pb-20 z-20 tracking-wider"
           },
           [_vm._v(_vm._s(_vm.navHeader))]
         ),
@@ -23314,9 +23290,7 @@ var render = function() {
             "absolute bg-cover bg-black opacity-25 h-full w-full z-10"
         })
       ]
-    ),
-    _vm._v(" "),
-    _c("div", { staticClass: "py-5 " })
+    )
   ])
 }
 var staticRenderFns = []

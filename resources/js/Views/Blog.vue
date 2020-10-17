@@ -2,7 +2,7 @@
     <div>
         <TopNav navHeader="Canadian Hiker" imgSrc="mysterylake.jpg"></TopNav>
         <div class="flex justify-center">
-            <div class="flex">
+            <div class="sm:flex">
                 <router-link to="/blog/deeks_lake_2018">
                     <Card 
                     cardImg="9-2018/20180903_082248.jpg" 

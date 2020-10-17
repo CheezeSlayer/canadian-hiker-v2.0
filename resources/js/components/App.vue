@@ -1,36 +1,36 @@
 <template>
     <div>
-        <div class="h-screen bg-gray-200 overflow-auto">
-            <div class="px-10 py-5">
+        <div class="bg-gray-200">
+            <div class="py-5">
                 <div class="flex flex-col flex-1">
-                    <div class="z-10 pb-5">
+                    <div class="pb-5 flex justify-center" id="navbar">
                         <table>
                             <tr>
                                 <td>
-                                    <router-link to="/blog" class="flex items-center text-gray-600 hover:text-gray-900 pr-5">
-                                        <h1 class="uppercase font-bold mx-auto">Home</h1>
+                                    <router-link to="/blog" class="flex text-gray-600 hover:text-gray-900 pr-5">
+                                        <h1 class="uppercase font-medium">Home</h1>
                                     </router-link>
                                 </td>
                                 <td>
-                                    <router-link to="/about" class="flex items-center text-gray-600 hover:text-gray-900 pr-5">
-                                        <h1 class="uppercase font-bold mx-auto">About</h1>
+                                    <router-link to="/about" class="flex text-gray-600 hover:text-gray-900 pr-5">
+                                        <h1 class="uppercase font-medium mx-auto">About</h1>
                                     </router-link>
                                 </td>
                                 <td>
-                                    <router-link to="/contact" class="flex items-center text-gray-600 hover:text-gray-900 pr-5">
-                                        <h1 class="uppercase font-bold mx-auto">Contact</h1>
+                                    <router-link to="/contact" class="flex text-gray-600 hover:text-gray-900">
+                                        <h1 class="uppercase font-medium mx-auto">Contact</h1>
+                                    </router-link>
+                                </td>
+                                <!-- <td>
+                                    <router-link to="/login" class="flex text-gray-600 hover:text-gray-900 pr-5">
+                                        <h1 class="uppercase font-medium mx-auto">Login</h1>
                                     </router-link>
                                 </td>
                                 <td>
-                                    <router-link to="/login" class="flex items-center text-gray-600 hover:text-gray-900 pr-5">
-                                        <h1 class="uppercase font-bold mx-auto">Login</h1>
+                                    <router-link to="/signup" class="flex text-gray-600 hover:text-gray-900">
+                                        <h1 class="uppercase font-medium mx-auto">Sign Up</h1>
                                     </router-link>
-                                </td>
-                                <td>
-                                    <router-link to="/signup" class="flex items-center text-gray-600 hover:text-gray-900">
-                                        <h1 class="uppercase font-bold mx-auto">Sign Up</h1>
-                                    </router-link>
-                                </td>
+                                </td> -->
                             </tr>
                         </table>
                     </div>

@@ -185,7 +185,21 @@
                     nothing in life is free and effort must be made in order to enjoy its pleasures.  
                 </p>
                 <div class="flex flex-col items-center my-6 w-full">
-                    <img :src="'../storage/img/blog/8-2019/flora_peak_7.jpg'"  class="flex-1 object-cover overflow-auto h-1/2 w-1/2">
+                    <img :src="'../storage/img/blog/8-2019/flora_peak_7.jpg'"  class="flex-1 object-cover overflow-auto w-1/2 h-1/2">
+                    <div class="flex w-full justify-between">
+                        <table class="w-full text-sm font-semibold">
+                            <tr>
+                                <td class="">
+                                    <p>
+                                        A celebratory selfie in conquering Flora Peak.
+                                    </p>
+                                </td>
+                                <td class="text-right">
+                                    <p>August 6, 2019</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
                 <Comment blog_name="flora_lake_2019">
                 </Comment>

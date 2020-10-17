@@ -1,8 +1,8 @@
 <template>
     <div>
         <TopNav navHeader="Howe Sound Adventures:  Camping and Fishing at Deeks Lake" imgSrc="deekslake_2.jpg"></TopNav>
-        <div class="flex justify-center mx-20">
-           <div class="flex flex-col p-6 w-full text-xl tracking-wider leading-10">
+        <div class="flex justify-center mx-5 sm:mx-20">
+           <div class="flex flex-col p-3 sm:p-6 w-full text-sm sm:text-xl tracking-wider leading-relaxed sm:leading-10">
                 <p>
                     The North Shore Mountains has always been a marvel of beauty.  
                     During my lunch breaks I would frequent the waterfront of Coal Harbour 
@@ -14,7 +14,7 @@
                     forms fish, birds, animals, insects and plants alike, secluded away from the noise and fumes of the city.  
                 </p>
                 <div class="flex flex-col my-6">
-                    <img :src="'../storage/img/blog/9-2018/coal_harbour.jpg'"  class="object-cover h-112 w-full">
+                    <img :src="'../storage/img/blog/9-2018/coal_harbour.jpg'"  class="flex-1 object-cover overflow-auto h-112 w-full">
                     <div class="flex justify-between text-sm font-semibold">
                         <p>The North Shore Mountains as seen from Coal Harbour</p>
                         <p>May 7, 2019</p>
@@ -38,7 +38,7 @@
                     offering magnificent views of the Howe Sound.  It would be another 3 hours before we finally reached the banks of Deeks Lake. 
                 </p>
                 <div class="flex flex-col my-6">
-                    <img :src="'../storage/img/blog/9-2018/trailblazer_lookout.jpg'"  class="object-cover h-112 w-full">
+                    <img :src="'../storage/img/blog/9-2018/trailblazer_lookout.jpg'"  class="flex-1 object-cover overflow-auto h-112 w-full">
                     <div class="flex justify-between text-sm font-semibold">
                         <p>Trailblazer Lookout.  Located on the Howe Sound Crest Trail just a short ways down from the Deeks Creek Trail turn off</p>
                         <p>September 2, 2018</p>
@@ -89,11 +89,11 @@
                 </p>
                 <div class="my-6">
                     <div class="flex justify-between overflow-auto">
-                        <img :src="'../storage/img/blog/9-2018/deeks_lake_fishing_1.jpg'"  class="object-scale-down h-112">
-                        <img :src="'../storage/img/blog/9-2018/deeks_lake_fishing_2.jpg'"  class="object-scale-down h-112">
-                        <img :src="'../storage/img/blog/9-2018/deeks_lake_3.jpg'"  class="object-scale-down h-112">
-                        <img :src="'../storage/img/blog/9-2018/deeks_lake_fishing_3.jpg'"  class="object-scale-down h-112">
-                        <img :src="'../storage/img/blog/9-2018/deeks_lake_fishing_4.jpg'"  class="object-scale-down h-112">
+                        <img :src="'../storage/img/blog/9-2018/deeks_lake_fishing_1.jpg'"  class="flex-1 object-scale-down h-112">
+                        <img :src="'../storage/img/blog/9-2018/deeks_lake_fishing_2.jpg'"  class="flex-1 object-scale-down h-112">
+                        <img :src="'../storage/img/blog/9-2018/deeks_lake_3.jpg'"  class="flex-1 object-scale-down h-112">
+                        <img :src="'../storage/img/blog/9-2018/deeks_lake_fishing_3.jpg'"  class="flex-1 object-scale-down h-112">
+                        <img :src="'../storage/img/blog/9-2018/deeks_lake_fishing_4.jpg'"  class="flex-1 object-scale-down h-112">
                     </div>
                     <div class="flex justify-between">
                         <div class="text-sm font-semibold">
