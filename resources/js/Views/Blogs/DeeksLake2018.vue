@@ -13,13 +13,11 @@
                     lakes, creeks, waterfalls, and peaks of unparalleled beauty.  A sanctuary diverse in various 
                     forms fish, birds, animals, insects and plants alike, secluded away from the noise and fumes of the city.  
                 </p>
-                <div class="flex flex-col my-6">
-                    <img :src="'../storage/img/blog/9-2018/coal_harbour.jpg'"  class="flex-1 object-cover overflow-auto h-112 w-full">
-                    <div class="flex justify-between text-sm font-semibold">
-                        <p>The North Shore Mountains as seen from Coal Harbour</p>
-                        <p>May 7, 2019</p>
-                    </div>
-                </div>
+                <Photo 
+                    imgSrc="../storage/img/blog/9-2018/coal_harbour.jpg"
+                    imgCaption="The North Shore Mountains as seen from Coal Harbour"
+                    imgDate="May 7, 2019"
+                />
                 <p>
                     One of these trails is the Howe Sound Crest Trail.  Boasting a length of roughly 29 km, 
                     this trail stretches northwards from Cypress Bowl to Porteau Cove along the Sea-to-Sky 
@@ -37,13 +35,11 @@
                     Despite the grueling trial, we encountered various viewpoints for a worthwhile stop and breather 
                     offering magnificent views of the Howe Sound.  It would be another 3 hours before we finally reached the banks of Deeks Lake. 
                 </p>
-                <div class="flex flex-col my-6">
-                    <img :src="'../storage/img/blog/9-2018/trailblazer_lookout.jpg'"  class="flex-1 object-cover overflow-auto h-112 w-full">
-                    <div class="flex justify-between text-sm font-semibold">
-                        <p>Trailblazer Lookout.  Located on the Howe Sound Crest Trail just a short ways down from the Deeks Creek Trail turn off</p>
-                        <p>September 2, 2018</p>
-                    </div>
-                </div>
+                <Photo 
+                    imgSrc="../storage/img/blog/9-2018/trailblazer_lookout.jpg"
+                    imgCaption="Trailblazer Lookout.  Located on the Howe Sound Crest Trail just a short ways down from the Deeks Creek Trail turn off"
+                    imgDate="September 2, 2018"
+                />
                 <p>
                     The lake itself is a small but charming area; a view that is nothing short of magnificent surrounded by mountains and tall trees of pine and evergreen, 
                     some of which had long since fallen and their dry sunbaked trunks lay floating along the banks forming 
@@ -57,14 +53,11 @@
                     and subspecies, mature cutthroats can grow up to 40 inches long.  However, the largest ones seen at Deeks Lake were only 
                     about 8 to 14 inches which all things considered is still pretty sizable given that it is a small lake.  
                 </p>
-                <div class="flex flex-col my-6 w-full">
-                    <img :src="'../storage/img/blog/9-2018/deeks_lake_1.jpg'"  class="flex-1 object-cover overflow-auto h-112 w-full">
-                    <div class="flex justify-between text-sm font-semibold">
-                        <p>Deeks Lake.  This photo was taken in the evening at around 6 PM.  
-                            By then the sunlight had all but left with only the peaks and mountains catching its last rays</p>
-                        <p>September 2, 2018</p>
-                    </div>
-                </div>
+                <Photo 
+                    imgSrc="../storage/img/blog/9-2018/deeks_lake_1.jpg"
+                    imgCaption="Deeks Lake.  This photo was taken in the evening at around 6 PM.  By then the sunlight had all but left with only the peaks and mountains catching its last rays"
+                    imgDate="September 2, 2018"
+                />
                 <p>
                     There is a wonderful feeling that I can’t really put into words or find anywhere else outside of fishing.  
                     Beginning with that initial tug of the line from a curious nibble to a hard pull as a fish sinks down on 
@@ -87,24 +80,19 @@
                     cameras, or any modern condiments to survive on.  In a way it certainly makes me appreciate the great outback 
                     even more, for in all the bounties it can offer, the North Shore Mountains can easily be a harsh and unforgiving place.  
                 </p>
-                <div class="my-6">
-                    <div class="flex justify-between overflow-auto">
-                        <img :src="'../storage/img/blog/9-2018/deeks_lake_fishing_1.jpg'"  class="flex-1 object-scale-down h-112">
-                        <img :src="'../storage/img/blog/9-2018/deeks_lake_fishing_2.jpg'"  class="flex-1 object-scale-down h-112">
-                        <img :src="'../storage/img/blog/9-2018/deeks_lake_3.jpg'"  class="flex-1 object-scale-down h-112">
-                        <img :src="'../storage/img/blog/9-2018/deeks_lake_fishing_3.jpg'"  class="flex-1 object-scale-down h-112">
-                        <img :src="'../storage/img/blog/9-2018/deeks_lake_fishing_4.jpg'"  class="flex-1 object-scale-down h-112">
-                    </div>
-                    <div class="flex justify-between">
-                        <div class="text-sm font-semibold">
-                            The fish were biting hard that day.  Eventually we fried one up with a bit of oil, drizzle of lemon juice and some onions.  
-                            It doesn't get any fresher than this. 
-                        </div>
-                        <div class="text-sm font-semibold">
-                            September 2-3, 2018
-                        </div>
-                    </div>
-                </div>
+
+                <PhotoAlbum 
+                    v-bind:albumSrc="[
+                        '../storage/img/blog/9-2018/deeks_lake_fishing_1.jpg',
+                        '../storage/img/blog/9-2018/deeks_lake_fishing_2.jpg',
+                        '../storage/img/blog/9-2018/deeks_lake_3.jpg',
+                        '../storage/img/blog/9-2018/deeks_lake_fishing_3.jpg',
+                        '../storage/img/blog/9-2018/deeks_lake_fishing_4.jpg'
+                    ]"
+                    albumCaption="The fish were biting hard that day.  Eventually we fried one up with a bit of oil, drizzle of lemon juice and some onions.  It honestly doesn't get any fresher than this."
+                    albumDate="September 2-3, 2018"
+                />
+
                 <Comment blog_name="tri_lakes_adventure_2019">
                 </Comment>
            </div>
@@ -115,20 +103,25 @@
 <script>
 import TopNav from '../../components/TopNav';
 import Comment from '../../components/Comment';
+import Photo from  '../../components/Photo';
+import PhotoAlbum from '../../components/PhotoAlbum';
+
 export default {
     name: 'DeeksLake2018',
 
     components: {
         TopNav,
-        Comment
+        Comment,
+        Photo,
+        PhotoAlbum
     }, 
 
     mounted() {
         console.log(this.$store.getters.isLoggedIn);
-    }
+    },
 }
 </script>
 
 <style scoped>
-
+    
 </style>

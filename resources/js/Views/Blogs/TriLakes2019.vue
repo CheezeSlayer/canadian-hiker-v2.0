@@ -22,29 +22,16 @@
                     right here in our own backyard.  
                 </p>
 
-                <div class="flex flex-col my-6 w-full">
-                    <div class="flex justify-between overflow-auto">
-                        <img :src="'../storage/img/blog/8-2019/lindeman_lake_2.jpg'"  class="object-scale-down m-1 h-112">
-                        <img :src="'../storage/img/blog/8-2019/lindeman_lake_4.jpg'"  class="object-scale-down m-1 h-112">
-                        <img :src="'../storage/img/blog/8-2019/lindeman_lake_3.jpg'"  class="object-scale-down m-1 h-112">
-                        <img :src="'../storage/img/blog/8-2019/lindeman_lake_5.jpg'"  class="object-scale-down m-1 h-112">
-                    </div>
-                    <div class="flex justify-between">
-                        <table class="text-sm font-semibold w-full">
-                            <tr>
-                                <td class="w-2/3">
-                                    <p>
-                                        Like many lakes around these parts, Lindeman waters give off a brilliant turquoise colour caused by 
-                                        erosions of the mountains surrounding it. 
-                                    </p>
-                                </td>
-                                <td class="w-1/3 text-right right-0">
-                                    <p>August 3, 2019</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
+                <PhotoAlbum 
+                    v-bind:albumSrc="[
+                        '../storage/img/blog/8-2019/lindeman_lake_2.jpg',
+                        '../storage/img/blog/8-2019/lindeman_lake_4.jpg',
+                        '../storage/img/blog/8-2019/lindeman_lake_3.jpg',
+                        '../storage/img/blog/8-2019/lindeman_lake_5.jpg'
+                    ]"
+                    albumCaption="Like many lakes around these parts, Lindeman waters give off a brilliant turquoise colour caused by erosions of the mountains surrounding it."
+                    albumDate="August 3, 2019"
+                />
 
                 <h1 class="text-3xl my-2">Day 1 - August 3, 2019</h1>
                 <p>
@@ -61,24 +48,13 @@
                     occupied so we moved on towards Greendrop Lake. 
                 </p>
 
-                <div class="flex flex-col my-6 w-full">
-                    <img :src="'../storage/img/blog/8-2019/greendrop_lake_1.jpg'"  class="flex-1 object-cover overflow-auto h-112 w-full">
-                    <div class="flex justify-between">
-                        <table class="w-full text-sm font-semibold">
-                            <tr>
-                                <td class="w-2/3">
-                                    <p>
-                                        We went along the left hand side of the lake, casting out every so often.  The lake waters are also glacial in 
-                                        nature but only in a sunny day can the enchanting crystalline turquoise colours be seen.
-                                    </p>
-                                </td>
-                                <td class="w-1/3 text-right">
-                                    <p>August 3, 2019</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
+                <Photo 
+                    imgSrc="../storage/img/blog/8-2019/greendrop_lake_1.jpg"
+                    imgCaption="We went along the left hand side of the lake, casting out every so often.  The lake waters are also glacial in 
+                                nature but only in a sunny day can the enchanting crystalline turquoise colours be seen."
+                    imgDate="August 3, 2019"
+                />
+                
                 <p>
                     While Greendrop Lake may look less impressive than Lindeman Lake (in my humble opinion), it’s greater proximity 
                     from the parking lot in comparison to Lindeman means that it generally receives fewer traffic and less people 
@@ -103,31 +79,19 @@
                     and rainbows in rapid succession; it was an angler’s dream. 
                 </p>
 
-                <div class="flex flex-col my-6 w-full">
-                    <div class="flex justify-between overflow-auto">
-                        <img :src="'../storage/img/blog/8-2019/flora_lake_1.jpg'"  class="object-scale-down m-1 h-112">
-                        <img :src="'../storage/img/blog/8-2019/flora_lake_2.jpg'"  class="object-scale-down m-1 h-112">
-                        <img :src="'../storage/img/blog/8-2019/flora_lake_3.jpg'"  class="object-scale-down m-1 h-112">
-                        <img :src="'../storage/img/blog/8-2019/flora_lake_4.jpg'"  class="object-scale-down m-1 h-112">
-                        <img :src="'../storage/img/blog/8-2019/flora_lake_5.jpg'"  class="object-scale-down m-1 h-112">
-                        <img :src="'../storage/img/blog/8-2019/flora_lake_6.jpg'"  class="object-scale-down m-1 h-112">
-                    </div>
-                    <div class="flex justify-between">
-                        <table class="text-sm font-semibold w-full">
-                            <tr>
-                                <td class="w-2/3">
-                                    <p>
-                                        Experiencing far less traffic and subsequently free from large crowds to take advantage of Flora Lake’s glacial 
-                                        waters has resulted in a relatively undisturbed environment with waters much clearer and crystalline compared to Lindeman.
-                                    </p>
-                                </td>
-                                <td class="w-1/3 text-right right-0">
-                                    <p>August 3, 2019</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
+                <PhotoAlbum 
+                    v-bind:albumSrc="[
+                        '../storage/img/blog/8-2019/flora_lake_1.jpg',
+                        '../storage/img/blog/8-2019/flora_lake_2.jpg',
+                        '../storage/img/blog/8-2019/flora_lake_3.jpg',
+                        '../storage/img/blog/8-2019/flora_lake_4.jpg',
+                        '../storage/img/blog/8-2019/flora_lake_5.jpg',
+                        '../storage/img/blog/8-2019/flora_lake_6.jpg'
+                    ]"
+                    albumCaption="Experiencing far less traffic and subsequently free from large crowds to take advantage of Flora Lake’s glacial waters has resulted in a relatively undisturbed environment with waters much clearer and crystalline compared to Lindeman."
+                    albumDate="August 4, 2019"
+                />
+
                 <h1 class="text-3xl my-2">Day 3 - August 5, 2019</h1>
                 <p>
                     On the third and final day, we left Flora Lake and began a slow steady ascent up the valley.  The weight of our backpacks was 
@@ -150,7 +114,7 @@
                     and sweat for moments that can never be found inside the suburbs or cities down below.  
                 </p>
 
-                <div class="flex flex-col my-6 w-full">
+                <!-- <div class="flex flex-col my-6 w-full">
                     <div class="flex justify-between overflow-auto">
                         <img :src="'../storage/img/blog/8-2019/flora_peak_1.jpg'"  class="object-scale-down m-1 h-112">
                         <img :src="'../storage/img/blog/8-2019/flora_peak_2.jpg'"  class="object-scale-down m-1 h-112">
@@ -174,7 +138,22 @@
                             </tr>
                         </table>
                     </div>
-                </div>
+                </div> -->
+
+                <PhotoAlbum 
+                    v-bind:albumSrc="[
+                        '../storage/img/blog/8-2019/flora_peak_1.jpg',
+                        '../storage/img/blog/8-2019/flora_peak_2.jpg',
+                        '../storage/img/blog/8-2019/flora_peak_3.jpg',
+                        '../storage/img/blog/8-2019/flora_peak_4.jpg',
+                        '../storage/img/blog/8-2019/flora_peak_5.jpg',
+                        '../storage/img/blog/8-2019/flora_peak_6.jpg',
+                        '../storage/img/blog/8-2019/flora_peak_7.jpg'
+                    ]"
+                    albumCaption="With an elevation of up to 1900 m, Flora Peak rewarded us with an uninterrupted 360-degree panorama of endless mountains extending down to Washington State as far as the eye can see."
+                    albumDate="August 5, 2019"
+                />
+
                 <p>
                     With the final goal of our journey met, we began our descent down the mountains.  An ordeal which took about 3.5 hours, I finally began 
                     to feel the ache in my knees during that period.  For the last three days, we had hiked a rough total of 18 km with the heat of the 
@@ -184,23 +163,7 @@
                     if I could start over from the beginning.  The ache on my knees, the blood, sweat and tears we went through are all testament to how 
                     nothing in life is free and effort must be made in order to enjoy its pleasures.  
                 </p>
-                <div class="flex flex-col items-center my-6 w-full">
-                    <img :src="'../storage/img/blog/8-2019/flora_peak_7.jpg'"  class="flex-1 object-cover overflow-auto w-1/2 h-1/2">
-                    <div class="flex w-full justify-between">
-                        <table class="w-full text-sm font-semibold">
-                            <tr>
-                                <td class="">
-                                    <p>
-                                        A celebratory selfie in conquering Flora Peak.
-                                    </p>
-                                </td>
-                                <td class="text-right">
-                                    <p>August 6, 2019</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
+
                 <Comment blog_name="flora_lake_2019">
                 </Comment>
             </div>
@@ -211,12 +174,16 @@
 <script>
 import TopNav from '../../components/TopNav';
 import Comment from '../../components/Comment';
+import Photo from  '../../components/Photo'
+import PhotoAlbum from '../../components/PhotoAlbum'
 export default {
     name: 'TriLakes2019',
 
     components: {
         TopNav,
-        Comment
+        Comment,
+        Photo,
+        PhotoAlbum
     }, 
 
     mounted() {
