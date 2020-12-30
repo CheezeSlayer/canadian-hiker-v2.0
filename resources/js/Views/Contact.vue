@@ -2,35 +2,35 @@
     <div>
         <TopNav navHeader="where to find me" imgSrc="stmarks.jpg"></TopNav>
         <div class="flex flex-col items-center">
-            <div class="mx-6 mt-6 p-6 w-1/3 bg-gray-300 border border-double border-gray-500 rounded-lg">
+            <div class="lg:w-2/3 mx-6 mt-6 p-6 bg-gray-300 border border-double border-gray-500 rounded-lg">
                 <p>
                     For professional inquiries, contact me through LinkedIn.  My personal projects are on Github.  To follow my hiking adventures, visit my Instagram page.  
                 </p>
             </div>
-            <div class="flex m-6 p-6 w-2/3 content-center rounded-lg justify-between">
-                <div class="flex flex-col items-center m-2">
+            <div class="flex m-6 p-6 rounded-lg">
+                <div class="mx-2 lg:mx-6">
                     <a :href="profile.linkedin">
-                        <img :src="'../storage/img/icons/linkedin.png'" class="m-2 object-contain h-48 rounded-lg">
-                        <div class="flex flex-col items-center">
-                            <h2 class="text-lg font-bold">LinkedIn</h2>
+                        <img :src="'../storage/img/icons/linkedin.png'" class="w-12 lg:w-48 rounded-lg">
+                        <div class="flex flex-col items-center my-6">
+                            <h2 class="text-xs lg:text-lg font-bold">LinkedIn</h2>
                         </div>
                     </a>
                 </div>
 
-                <div class="flex flex-col items-center m-2">
+                <div class="mx-2 lg:mx-6">
                     <a :href="profile.github">
-                        <img :src="'../storage/img/icons/github-image.png'" class="m-2 object-contain h-48 rounded-lg">
-                        <div class="flex flex-col items-center">
-                            <h2 class="text-lg font-bold">Github</h2>
+                        <img :src="'../storage/img/icons/github-image.png'" class="w-12 lg:w-48 rounded-lg">
+                        <div class="flex flex-col items-center my-6">
+                            <h2 class="text-xs lg:text-lg font-bold">Github</h2>
                         </div>
                     </a>
                 </div>
 
-                <div class="flex flex-col items-center m-2">
+                <div class="mx-2 lg:mx-6">
                     <a :href="profile.instagram">
-                        <img :src="'../storage/img/icons/instagram.png'" class="m-2 object-contain h-48 rounded-lg">
-                        <div class="flex flex-col items-center">
-                            <h2 class="text-lg font-bold">Instagram</h2>
+                        <img :src="'../storage/img/icons/instagram.png'" class="w-12 lg:w-48 rounded-lg">
+                        <div class="flex flex-col items-center my-6">
+                            <h2 class="text-xs lg:text-lg font-bold">Instagram</h2>
                         </div>
                     </a>
                 </div>

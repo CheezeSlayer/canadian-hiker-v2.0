@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     "env": {
         "browser": true,
         "es2021": true
@@ -15,5 +15,7 @@ module.exports = {
         "vue"
     ],
     "rules": {
+        "at-rule-no-unknown": null,
+        "scss/at-rule-no-unknown": true
     }
 };

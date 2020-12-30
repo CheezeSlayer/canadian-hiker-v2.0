@@ -7,6 +7,7 @@ import LazyLoadImg from './Directives/LazyLoadDirective'
 import App from './components/App';
 
 require('./bootstrap');
+window.$ = window.jQuery = require('jquery');
 
 Vue.directive('lazyloadImg', LazyLoadImg)
 
