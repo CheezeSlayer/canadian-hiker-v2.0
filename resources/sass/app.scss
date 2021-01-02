@@ -1,9 +1,16 @@
-
 @tailwind base;
 
 @tailwind components;
 
 @tailwind utilities;
+
+@import url('https://fonts.gstatic.com');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,700;1,900&display=swap');
+
+html, body {
+    font-family: 'Mukta', serif;
+}
 
 .fade-enter-active {
     transition: opacity 0.5s;

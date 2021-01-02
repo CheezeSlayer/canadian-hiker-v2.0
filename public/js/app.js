@@ -2380,6 +2380,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -2527,8 +2534,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "App",
   props: ['user'],
@@ -2550,7 +2555,6 @@ __webpack_require__.r(__webpack_exports__);
     this.title = this.$route.meta.title;
     this.$store.commit('setAuthUser', window.auth_user);
     this.user_logged_in = this.$store.getters.isLoggedIn;
-    console.log(this.user_logged_in);
   }
 });
 
@@ -2888,26 +2892,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "PhotoAlbum",
   props: {
@@ -2915,42 +2899,6 @@ __webpack_require__.r(__webpack_exports__);
     albumCaption: String,
     albumDate: String,
     album_name: String
-  },
-  methods: {
-    scroll_left: function scroll_left() {
-      var content = document.querySelector("#".concat(this.album_name));
-      var imgs = Array.from(content.childNodes);
-      var scroll_position = content.scrollLeft / (content.scrollWidth - content.clientWidth);
-
-      if (scroll_position > 0) {
-        for (var i = imgs.length - 1; i > 0; i--) {
-          if (imgs[i].getBoundingClientRect().x <= content.clientWidth) {
-            var slideWidth = content.scrollLeft - imgs[i].width;
-            $(content).animate({
-              scrollLeft: slideWidth
-            }, 500);
-            return;
-          }
-        }
-      }
-    },
-    scroll_right: function scroll_right() {
-      var content = document.querySelector("#".concat(this.album_name));
-      var imgs = Array.from(content.childNodes);
-      var scroll_position = content.scrollLeft / (content.scrollWidth - content.clientWidth);
-
-      if (scroll_position < 1) {
-        for (var i = 0; i < imgs.length; i++) {
-          if (imgs[i].getBoundingClientRect().x > 0) {
-            var slideWidth = content.scrollLeft + imgs[i].width;
-            $(content).animate({
-              scrollLeft: slideWidth
-            }, 500);
-            return;
-          }
-        }
-      }
-    }
   }
 });
 
@@ -2982,10 +2930,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/App.vue?vue&type=style&index=0&id=332fccf4&scoped=true&lang=css&":
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/App.vue?vue&type=style&index=0&id=332fccf4&scoped=true&lang=css& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Card.vue?vue&type=style&index=0&id=b9bc2c0a&scoped=true&lang=css&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Card.vue?vue&type=style&index=0&id=b9bc2c0a&scoped=true&lang=css& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2994,17 +2942,17 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".body[data-v-332fccf4] {\n  margin: 0;\n  padding: 0;\n}\n", ""]);
+exports.push([module.i, ".card-title[data-v-b9bc2c0a] {\n  font-family: 'Playfaire Display'\n}\r\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PhotoAlbum.vue?vue&type=style&index=0&id=fc95d4f0&scoped=true&lang=css&":
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PhotoAlbum.vue?vue&type=style&index=0&id=fc95d4f0&scoped=true&lang=css& ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Photo.vue?vue&type=style&index=0&id=c0696452&scoped=true&lang=css&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Photo.vue?vue&type=style&index=0&id=c0696452&scoped=true&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3013,7 +2961,26 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#leftBtn[data-v-fc95d4f0], #rightBtn[data-v-fc95d4f0] {\n  background-color: rgba(0,0,0,0.5);\n  transition: 0.6s ease;\n}\n#leftBtn[data-v-fc95d4f0]:hover, #rightBtn[data-v-fc95d4f0]:hover {\n  background-color: rgba(0,0,0,0.8);\n  transition: 0.6s ease;\n}\r\n", ""]);
+exports.push([module.i, ".image-caption[data-v-c0696452], .image-date[data-v-c0696452] {\n  padding: 0;\n  margin: 0;\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/TopNav.vue?vue&type=style&index=0&id=9b6caa8e&scoped=true&lang=css&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/TopNav.vue?vue&type=style&index=0&id=9b6caa8e&scoped=true&lang=css& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "h1[data-v-9b6caa8e] {\n  font-family: 'Playfair Display';\n}\r\n", ""]);
 
 // exports
 
@@ -31966,15 +31933,15 @@ try {
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/App.vue?vue&type=style&index=0&id=332fccf4&scoped=true&lang=css&":
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/App.vue?vue&type=style&index=0&id=332fccf4&scoped=true&lang=css& ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Card.vue?vue&type=style&index=0&id=b9bc2c0a&scoped=true&lang=css&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Card.vue?vue&type=style&index=0&id=b9bc2c0a&scoped=true&lang=css& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./App.vue?vue&type=style&index=0&id=332fccf4&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/App.vue?vue&type=style&index=0&id=332fccf4&scoped=true&lang=css&");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Card.vue?vue&type=style&index=0&id=b9bc2c0a&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Card.vue?vue&type=style&index=0&id=b9bc2c0a&scoped=true&lang=css&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -31996,15 +31963,45 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PhotoAlbum.vue?vue&type=style&index=0&id=fc95d4f0&scoped=true&lang=css&":
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PhotoAlbum.vue?vue&type=style&index=0&id=fc95d4f0&scoped=true&lang=css& ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Photo.vue?vue&type=style&index=0&id=c0696452&scoped=true&lang=css&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Photo.vue?vue&type=style&index=0&id=c0696452&scoped=true&lang=css& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./PhotoAlbum.vue?vue&type=style&index=0&id=fc95d4f0&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PhotoAlbum.vue?vue&type=style&index=0&id=fc95d4f0&scoped=true&lang=css&");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Photo.vue?vue&type=style&index=0&id=c0696452&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Photo.vue?vue&type=style&index=0&id=c0696452&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/TopNav.vue?vue&type=style&index=0&id=9b6caa8e&scoped=true&lang=css&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/TopNav.vue?vue&type=style&index=0&id=9b6caa8e&scoped=true&lang=css& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./TopNav.vue?vue&type=style&index=0&id=9b6caa8e&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/TopNav.vue?vue&type=style&index=0&id=9b6caa8e&scoped=true&lang=css&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -32848,10 +32845,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=template&id=0b92271a&scoped=true&":
-/*!*****************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=template&id=0b92271a&scoped=true& ***!
-  \*****************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=template&id=0b92271a&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=template&id=0b92271a& ***!
+  \*****************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -32874,15 +32871,15 @@ var render = function() {
         }
       }),
       _vm._v(" "),
-      _c("div", { staticClass: "flex justify-center mx-5 sm:mx-20" }, [
+      _c("div", { staticClass: "flex justify-center mx-10 lg:mx-64" }, [
         _c(
           "div",
           {
             staticClass:
-              "flex flex-col p-3 sm:p-6 w-full text-sm sm:text-xl tracking-wider leading-relaxed sm:leading-10"
+              "flex flex-col sm:p-6 w-full tracking-wider leading-loose"
           },
           [
-            _c("p", [
+            _c("p", { staticClass: "my-10" }, [
               _vm._v(
                 "\n                The North Shore Mountains has always been a marvel of beauty.  \n                During my lunch breaks I would frequent the waterfront of Coal Harbour \n                and gaze upon the humbling majesty of those rocky giants overlooking Greater Vancouver; \n                an experience surpassed only by exploring every trail, summit,\n                nook and cranny that these mountains offered to folks of adventurous spirit.  \n                For within the glorious outback hides a sprawl of trails old and new, leading to treasures of \n                lakes, creeks, waterfalls, and peaks of unparalleled beauty.  A sanctuary diverse in various \n                forms fish, birds, animals, insects and plants alike, secluded away from the noise and fumes of the city.  \n            "
               )
@@ -32927,12 +32924,12 @@ var render = function() {
                   "../storage/img/blog/9-2018/deeks_lake_fishing_1.jpg",
                   "../storage/img/blog/9-2018/deeks_lake_fishing_2.jpg",
                   "../storage/img/blog/9-2018/deeks_lake_3.jpg",
-                  "../storage/img/blog/9-2018/deeks_lake_fishing_3.jpg",
-                  "../storage/img/blog/9-2018/deeks_lake_fishing_4.jpg"
+                  "../storage/img/blog/9-2018/deeks_lake_fishing_3.jpg"
                 ],
                 albumCaption:
                   "The fish were biting hard that day.  Eventually we fried one up with a bit of oil, drizzle of lemon juice and some onions.  It honestly doesn't get any fresher than this.",
-                albumDate: "September 2-3, 2018"
+                albumDate: "September 2-3, 2018",
+                album_name: "deeks_lake"
               }
             }),
             _vm._v(" "),
@@ -32950,7 +32947,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("p", [
+    return _c("p", { staticClass: "my-10" }, [
       _vm._v(
         "\n                One of these trails is the Howe Sound Crest Trail.  Boasting a length of roughly 29 km, \n                this trail stretches northwards from Cypress Bowl to Porteau Cove along the Sea-to-Sky \n                Highway and passes through various notable landmarks such as the iconic Lions and Brunswick Mountain, \n                the highest of the North Shore Mountains.  Just a little due south of the Porteau Cove trailhead is \n                Deeks Lake, the site of my first backpacking trip ever in British Columbia's glorious outback.  \n            "
       ),
@@ -32965,7 +32962,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("p", [
+    return _c("p", { staticClass: "my-10" }, [
       _vm._v(
         "\n                The lake itself is a small but charming area; a view that is nothing short of magnificent surrounded by mountains and tall trees of pine and evergreen, \n                some of which had long since fallen and their dry sunbaked trunks lay floating along the banks forming \n                a natural pier of sorts.  By now it was roughly 1 PM and the sun at its zenith.  Its rays shining bright upon the \n                lake's glistening surface emitting dancing sparkles of light, completing the enchanting scenery of the area.  Drenched \n                in sweat, we threw off our heavy packs and proceeded along the pier of logs to dip our weary feet into its refreshing cold.    \n            "
       ),
@@ -32980,7 +32977,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("p", [
+    return _c("p", { staticClass: "my-10" }, [
       _vm._v(
         "\n                There is a wonderful feeling that I can’t really put into words or find anywhere else outside of fishing.  \n                Beginning with that initial tug of the line from a curious nibble to a hard pull as a fish sinks down on \n                your bait evokes a sensation of tense excitement every time, followed by a joyous shout of “I got one!” \n                and reeling it in as the hook is set.  It not only is a unique experience, but it certainly does make my \n                buddies and I greatly appreciate the glorious bounty offered by nature right in our backyard.  The fish \n                bit hard that day and we caught plenty.  Most were no more than 10 to 12 inches, but it felt amazing every \n                time to reel them in and let them go. \n            "
       ),
@@ -33028,12 +33025,12 @@ var render = function() {
         }
       }),
       _vm._v(" "),
-      _c("div", { staticClass: "flex justify-center mx-20" }, [
+      _c("div", { staticClass: "flex justify-center mx-10 lg:mx-64" }, [
         _c(
           "div",
           {
             staticClass:
-              "flex flex-col p-6 w-full text-xl tracking-wider leading-10"
+              "flex flex-col sm:p-6 w-full tracking-wider leading-relaxed sm:leading-10"
           },
           [
             _vm._m(0),
@@ -33053,15 +33050,7 @@ var render = function() {
               }
             }),
             _vm._v(" "),
-            _c("h1", { staticClass: "text-3xl my-2" }, [
-              _vm._v("Day 1 - August 3, 2019")
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "\n                Jamie and I set out early August on the long weekend of BC day when the summer heat was at an all time high.  \n                Arriving at the Lindeman Lake parking lot just before 10 AM, we immediately set off to Lindeman Lake, the \n                first out of three lakes that we planned to hit.  The lake itself was a short hike from the parking lot; we \n                arrived at Lindeman within 45 minutes of hitting the trail.  Lindeman Lake’s small size in comparison to its \n                neighbor, Chilliwack Lake is by no means a testament to its beauty.  Like many lakes around these parts, \n                Lindeman waters give off a brilliant turquoise colour caused by erosions of the mountains surrounding it.  \n                Glaciers slowly break down rocks into a fine grain called rock flour.  This rock flour is carried along with \n                the meltwater as temperatures warm and deposited into the lake resulting in this enchanting hue on a sunny day.  \n                We didn’t stay at Lindeman Lake for long and only gave enough pause to appreciate its beauty.  Being so close \n                to the parking lot, it was not surprising to see that this lake attracts a lot of crowds.  All campsites were \n                occupied so we moved on towards Greendrop Lake. \n            "
-              )
-            ]),
+            _vm._m(1),
             _vm._v(" "),
             _c("Photo", {
               attrs: {
@@ -33073,17 +33062,7 @@ var render = function() {
               }
             }),
             _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "\n                While Greendrop Lake may look less impressive than Lindeman Lake (in my humble opinion), it’s greater proximity \n                from the parking lot in comparison to Lindeman means that it generally receives fewer traffic and less people \n                diving into its waters for a dip to escape the summer heat.  It’s no surprise that the fish in Greendrop Lake \n                were bolder and less cautious which made for some decent fishing!\n            "
-              )
-            ]),
-            _vm._v(" "),
-            _c("h1", { staticClass: "text-3xl my-2" }, [
-              _vm._v("Day 2 - August 4, 2019")
-            ]),
-            _vm._v(" "),
-            _vm._m(1),
+            _vm._m(2),
             _vm._v(" "),
             _c("PhotoAlbum", {
               attrs: {
@@ -33102,22 +33081,15 @@ var render = function() {
               }
             }),
             _vm._v(" "),
-            _c("h1", { staticClass: "text-3xl my-2" }, [
-              _vm._v("Day 3 - August 5, 2019")
-            ]),
-            _vm._v(" "),
-            _vm._m(2),
+            _vm._m(3),
             _vm._v(" "),
             _c("PhotoAlbum", {
               attrs: {
                 albumSrc: [
-                  "../storage/img/blog/8-2019/flora_peak_1.jpg",
                   "../storage/img/blog/8-2019/flora_peak_2.jpg",
-                  "../storage/img/blog/8-2019/flora_peak_3.jpg",
                   "../storage/img/blog/8-2019/flora_peak_4.jpg",
                   "../storage/img/blog/8-2019/flora_peak_5.jpg",
-                  "../storage/img/blog/8-2019/flora_peak_6.jpg",
-                  "../storage/img/blog/8-2019/flora_peak_7.jpg"
+                  "../storage/img/blog/8-2019/flora_peak_6.jpg"
                 ],
                 albumCaption:
                   "With an elevation of up to 1900 m, Flora Peak rewarded us with an uninterrupted 360-degree panorama of endless mountains extending down to Washington State as far as the eye can see.",
@@ -33126,11 +33098,7 @@ var render = function() {
               }
             }),
             _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "\n                With the final goal of our journey met, we began our descent down the mountains.  An ordeal which took about 3.5 hours, I finally began \n                to feel the ache in my knees during that period.  For the last three days, we had hiked a rough total of 18 km with the heat of the \n                summer sun bearing down at our backs.  By the time we arrived at Lindeman Parking lot, I was ready to collapse.  Hitting the three lakes \n                at Chilliwack Lake Provisional Park was probably the most fun I’ve had yet with the perfect balance of hiking and fishing.  Yet it was \n                also probably on of the most physically challenging of experiences ever.  With that being said, I wouldn’t change a thing about this trip \n                if I could start over from the beginning.  The ache on my knees, the blood, sweat and tears we went through are all testament to how \n                nothing in life is free and effort must be made in order to enjoy its pleasures.  \n            "
-              )
-            ]),
+            _vm._m(4),
             _vm._v(" "),
             _c("Comment", { attrs: { blog_name: "flora_lake_2019" } })
           ],
@@ -33146,45 +33114,93 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("p", [
-      _vm._v(
-        "\n                I’ve been to Chilliwack a couple of times, usually as a stopping point to buy whatever foodstuffs and \n                necessities required for hitting the outback of Kamloops or Kelowna further east.  About a 2-hour drive \n                from Vancouver over a roughly 100 km trip, Chilliwack is vastly different from Vancouver.  There are no \n                towering skyscrapers, no complex sky train systems in Chilliwack that define the hilly terrain of the \n                bustling metropolis that is Vancouver.  Chilliwack lies on a mostly flat piece of land with endless \n                fields of farms and agriculture surrounding a network of suburbs.  Yet like Vancouver, Chilliwack offers \n                no shortage of outdoor adventures in this area of the Lower Mainland.  Bordered by the Fraser River \n                to the north and mountains to the south, Chilliwack possesses rich fishing and backpacking opportunities \n                to folks all throughout the Lower Mainland.\n            "
-      ),
-      _c("br"),
-      _c("br"),
-      _vm._v(
-        "\n                One of those opportunities can be found south east of the city, a region of woodland, mountains and \n                lakes called Chilliwack Lake Provincial Park.  My first-time backpacking there can be defined as an \n                exhausting and grueling ordeal that tested the limits of my endurance.  It can also be seen as a \n                marvelous experience of fishing, sightseeing and relaxation.  Both cases hold true as in the end, I \n                came out of that three-day trip with a deeper appreciation and respect of the glorious countryside \n                right here in our own backyard.  \n            "
-      )
+    return _c("div", { staticClass: "my-10" }, [
+      _c("p", [
+        _vm._v(
+          "\n                    I’ve been to Chilliwack a couple of times, usually as a stopping point to buy whatever foodstuffs and \n                    necessities required for hitting the outback of Kamloops or Kelowna further east.  About a 2-hour drive \n                    from Vancouver over a roughly 100 km trip, Chilliwack is vastly different from Vancouver.  There are no \n                    towering skyscrapers, no complex sky train systems in Chilliwack that define the hilly terrain of the \n                    bustling metropolis that is Vancouver.  Chilliwack lies on a mostly flat piece of land with endless \n                    fields of farms and agriculture surrounding a network of suburbs.  Yet like Vancouver, Chilliwack offers \n                    no shortage of outdoor adventures in this area of the Lower Mainland.  Bordered by the Fraser River \n                    to the north and mountains to the south, Chilliwack possesses rich fishing and backpacking opportunities \n                    to folks all throughout the Lower Mainland.\n                "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(
+          "\n                    One of those opportunities can be found south east of the city, a region of woodland, mountains and \n                    lakes called Chilliwack Lake Provincial Park.  My first-time backpacking there can be defined as an \n                    exhausting and grueling ordeal that tested the limits of my endurance.  It can also be seen as a \n                    marvelous experience of fishing, sightseeing and relaxation.  Both cases hold true as in the end, I \n                    came out of that three-day trip with a deeper appreciation and respect of the glorious countryside \n                    right here in our own backyard.  \n                "
+        )
+      ])
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("p", [
-      _vm._v(
-        "\n                The next morning, we were off.  After a hearty breakfast of apple cinnamon oatmeal with some wild berries, we wasted \n                no time in packing up the tent and making our way to the next destination.  Flora Lake.  It would be remiss of me to \n                say that the trail from Greendrop Lake to Flora Lake didn’t push the limits of my endurance.  Within a few short hours, \n                I had lost track of how many boulder fields we had to cross over a steady ascent under the sweltering heat of the hot \n                summer sun; an ordeal exacerbated by the fact that I was also lugging around 14 cans of beer in addition to my camping gear.  \n            "
-      ),
-      _c("br"),
-      _c("br"),
-      _vm._v(
-        "\n                Four excruciating hours later, we finally arrived at our destination.  Upon first laying eyes on the lake, I knew that \n                it had all been worth it.  It’s a good thing that there isn’t an easy way to access Flora Lake.  Deterring all but the \n                hardiest of folk, those who succeed in making the trek have phenomenal views of crystalline turquoise waters all to \n                themselves.  Similar to Lindeman Lake in terms of general beauty, Flora Lake far outclasses Lindeman in terms of fishing \n                and ruggedness.  Experiencing far less traffic and subsequently free from large crowds to take advantage of its glacial \n                waters has resulted in a relatively undisturbed environment with waters much clearer and crystalline compared to Lindeman.  \n                The fish are expectedly more inquisitive, ready to chomp down bait and hook on the ready.  We caught several cutthroats \n                and rainbows in rapid succession; it was an angler’s dream. \n            "
-      )
+    return _c("div", { staticClass: "my-10" }, [
+      _c("h1", { staticClass: "lg:text-3xl text-xl mb-10" }, [
+        _vm._v("Day 1 - August 3, 2019")
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n                    Jamie and I set out early August on the long weekend of BC day when the summer heat was at an all time high.  \n                    Arriving at the Lindeman Lake parking lot just before 10 AM, we immediately set off to Lindeman Lake, the \n                    first out of three lakes that we planned to hit.  The lake itself was a short hike from the parking lot; we \n                    arrived at Lindeman within 45 minutes of hitting the trail.  Lindeman Lake’s small size in comparison to its \n                    neighbor, Chilliwack Lake is by no means a testament to its beauty.  Like many lakes around these parts, \n                    Lindeman waters give off a brilliant turquoise colour caused by erosions of the mountains surrounding it.  \n                    Glaciers slowly break down rocks into a fine grain called rock flour.  This rock flour is carried along with \n                    the meltwater as temperatures warm and deposited into the lake resulting in this enchanting hue on a sunny day.  \n                    We didn’t stay at Lindeman Lake for long and only gave enough pause to appreciate its beauty.  Being so close \n                    to the parking lot, it was not surprising to see that this lake attracts a lot of crowds.  All campsites were \n                    occupied so we moved on towards Greendrop Lake. \n                "
+        )
+      ])
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("p", [
-      _vm._v(
-        "\n                On the third and final day, we left Flora Lake and began a slow steady ascent up the valley.  The weight of our backpacks was \n                significantly lessened from drinking the last of our beers on the night before which made the hike significantly easier.  \n                In three short hours we finally got out of the valley and arrived at a junction by noon, on a slight depression surrounded by mountain \n                ridgelines.  The area was flat and sparsely populated with trees.  Finding a shaded area away from the scorching sun, we were \n                able to rest for a short while and get our bearings.  There were two trails that lay before us.  The north trail lead to \n                Flora Peak which no doubt held amazing views of the surrounding area and beyond whereas the south trail leads back to the \n                Lindeman parking lot.  We were tired, thirsty and the entire area felt like a sauna; the prospect of taking the south trail back \n                towards home looked very enticing indeed.  We had also come so far in this journey; to skip going to Flora Peak now would leave \n                us with feelings of regret for a long time.  Who knows when we will get another chance to visit this phenomenal area again?  \n                To make the going easier, we hid our backpacks away underneath some brush and trudged off to Flora Peak; the final ascent of \n                our trip.  \n            "
-      ),
-      _c("br"),
-      _c("br"),
-      _vm._v(
-        "\n                With no backpacks to weigh us down, we easily ascended Flora Peak in 45 minutes despite encountering many areas with loose rocks \n                and steep inclines.  The views up there were nothing short of magnificent.  With an elevation of up to 1900 m, Flora Peak rewarded \n                us with an uninterrupted 360-degree panorama of endless mountains extending down to Washington State as far as the eye can see.  \n                It is an enchanting experience; to be awed and humbled when looking out across an endless stretch of mountains, seemingly \n                unfettered by the touch of industry.  Views like this that make it all worth it in the end, it is the price we all pay with pain \n                and sweat for moments that can never be found inside the suburbs or cities down below.  \n            "
-      )
+    return _c("div", { staticClass: "my-10" }, [
+      _c("p", [
+        _vm._v(
+          "\n                    While Greendrop Lake may look less impressive than Lindeman Lake (in my humble opinion), it’s greater proximity \n                    from the parking lot in comparison to Lindeman means that it generally receives fewer traffic and less people \n                    diving into its waters for a dip to escape the summer heat.  It’s no surprise that the fish in Greendrop Lake \n                    were bolder and less cautious which made for some decent fishing!\n                "
+        )
+      ]),
+      _vm._v(" "),
+      _c("h1", { staticClass: "lg:text-3xl text-xl my-10" }, [
+        _vm._v("Day 2 - August 4, 2019")
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n                    The next morning, we were off.  After a hearty breakfast of apple cinnamon oatmeal with some wild berries, we wasted \n                    no time in packing up the tent and making our way to the next destination.  Flora Lake.  It would be remiss of me to \n                    say that the trail from Greendrop Lake to Flora Lake didn’t push the limits of my endurance.  Within a few short hours, \n                    I had lost track of how many boulder fields we had to cross over a steady ascent under the sweltering heat of the hot \n                    summer sun; an ordeal exacerbated by the fact that I was also lugging around 14 cans of beer in addition to my camping gear.  \n                "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(
+          "\n                    Four excruciating hours later, we finally arrived at our destination.  Upon first laying eyes on the lake, I knew that \n                    it had all been worth it.  It’s a good thing that there isn’t an easy way to access Flora Lake.  Deterring all but the \n                    hardiest of folk, those who succeed in making the trek have phenomenal views of crystalline turquoise waters all to \n                    themselves.  Similar to Lindeman Lake in terms of general beauty, Flora Lake far outclasses Lindeman in terms of fishing \n                    and ruggedness.  Experiencing far less traffic and subsequently free from large crowds to take advantage of its glacial \n                    waters has resulted in a relatively undisturbed environment with waters much clearer and crystalline compared to Lindeman.  \n                    The fish are expectedly more inquisitive, ready to chomp down bait and hook on the ready.  We caught several cutthroats \n                    and rainbows in rapid succession; it was an angler’s dream. \n                "
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "my-10" }, [
+      _c("h1", { staticClass: "lg:text-3xl text-xl mb-10" }, [
+        _vm._v("Day 3 - August 5, 2019")
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n                    On the third and final day, we left Flora Lake and began a slow steady ascent up the valley.  The weight of our backpacks was \n                    significantly lessened from drinking the last of our beers on the night before which made the hike significantly easier.  \n                    In three short hours we finally got out of the valley and arrived at a junction by noon, on a slight depression surrounded by mountain \n                    ridgelines.  The area was flat and sparsely populated with trees.  Finding a shaded area away from the scorching sun, we were \n                    able to rest for a short while and get our bearings.  There were two trails that lay before us.  The north trail lead to \n                    Flora Peak which no doubt held amazing views of the surrounding area and beyond whereas the south trail leads back to the \n                    Lindeman parking lot.  We were tired, thirsty and the entire area felt like a sauna; the prospect of taking the south trail back \n                    towards home looked very enticing indeed.  We had also come so far in this journey; to skip going to Flora Peak now would leave \n                    us with feelings of regret for a long time.  Who knows when we will get another chance to visit this phenomenal area again?  \n                    To make the going easier, we hid our backpacks away underneath some brush and trudged off to Flora Peak; the final ascent of \n                    our trip.  \n                "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(
+          "\n                    With no backpacks to weigh us down, we easily ascended Flora Peak in 45 minutes despite encountering many areas with loose rocks \n                    and steep inclines.  The views up there were nothing short of magnificent.  With an elevation of up to 1900 m, Flora Peak rewarded \n                    us with an uninterrupted 360-degree panorama of endless mountains extending down to Washington State as far as the eye can see.  \n                    It is an enchanting experience; to be awed and humbled when looking out across an endless stretch of mountains, seemingly \n                    unfettered by the touch of industry.  Views like this that make it all worth it in the end, it is the price we all pay with pain \n                    and sweat for moments that can never be found inside the suburbs or cities down below.  \n                "
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "my-10" }, [
+      _c("p", [
+        _vm._v(
+          "\n                    With the final goal of our journey met, we began our descent down the mountains.  An ordeal which took about 3.5 hours, I finally began \n                    to feel the ache in my knees during that period.  For the last three days, we had hiked a rough total of 18 km with the heat of the \n                    summer sun bearing down at our backs.  By the time we arrived at Lindeman Parking lot, I was ready to collapse.  Hitting the three lakes \n                    at Chilliwack Lake Provisional Park was probably the most fun I’ve had yet with the perfect balance of hiking and fishing.  Yet it was \n                    also probably on of the most physically challenging of experiences ever.  With that being said, I wouldn’t change a thing about this trip \n                    if I could start over from the beginning.  The ache on my knees, the blood, sweat and tears we went through are all testament to how \n                    nothing in life is free and effort must be made in order to enjoy its pleasures.  \n                "
+        )
+      ])
     ])
   }
 ]
@@ -33341,10 +33357,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/App.vue?vue&type=template&id=332fccf4&scoped=true&":
-/*!******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/App.vue?vue&type=template&id=332fccf4&scoped=true& ***!
-  \******************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/App.vue?vue&type=template&id=332fccf4&":
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/App.vue?vue&type=template&id=332fccf4& ***!
+  \******************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -33356,100 +33372,95 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "bg-gray-200" }, [
-      _c("div", { staticClass: "py-5" }, [
-        _c("div", { staticClass: "flex flex-col flex-1" }, [
-          _c(
-            "div",
-            {
-              staticClass: "pb-5 flex justify-center",
-              attrs: { id: "navbar" }
-            },
-            [
-              _c("table", [
-                _c("tr", [
-                  _c(
-                    "td",
-                    [
-                      _c(
-                        "router-link",
-                        {
-                          staticClass:
-                            "flex text-gray-600 hover:text-gray-900 pr-5",
-                          attrs: { to: "/blog" }
-                        },
-                        [
-                          _c("h1", { staticClass: "uppercase font-medium" }, [
-                            _vm._v("Home")
-                          ])
-                        ]
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    [
-                      _c(
-                        "router-link",
-                        {
-                          staticClass:
-                            "flex text-gray-600 hover:text-gray-900 pr-5",
-                          attrs: { to: "/about" }
-                        },
-                        [
-                          _c(
-                            "h1",
-                            { staticClass: "uppercase font-medium mx-auto" },
-                            [_vm._v("About")]
-                          )
-                        ]
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    [
-                      _c(
-                        "router-link",
-                        {
-                          staticClass: "flex text-gray-600 hover:text-gray-900",
-                          attrs: { to: "/contact" }
-                        },
-                        [
-                          _c(
-                            "h1",
-                            { staticClass: "uppercase font-medium mx-auto" },
-                            [_vm._v("Contact")]
-                          )
-                        ]
-                      )
-                    ],
-                    1
-                  )
-                ])
+  return _c("div", { staticClass: "bg-gray-200" }, [
+    _c("div", { staticClass: "py-5" }, [
+      _c("div", { staticClass: "flex flex-col flex-1" }, [
+        _c(
+          "div",
+          { staticClass: "pb-5 flex justify-center", attrs: { id: "navbar" } },
+          [
+            _c("table", [
+              _c("tr", [
+                _c(
+                  "td",
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass:
+                          "flex text-gray-600 hover:text-gray-900 pr-5",
+                        attrs: { to: "/blog" }
+                      },
+                      [
+                        _c("h1", { staticClass: "uppercase font-medium" }, [
+                          _vm._v("Home")
+                        ])
+                      ]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "td",
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass:
+                          "flex text-gray-600 hover:text-gray-900 pr-5",
+                        attrs: { to: "/about" }
+                      },
+                      [
+                        _c(
+                          "h1",
+                          { staticClass: "uppercase font-medium mx-auto" },
+                          [_vm._v("About")]
+                        )
+                      ]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "td",
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "flex text-gray-600 hover:text-gray-900",
+                        attrs: { to: "/contact" }
+                      },
+                      [
+                        _c(
+                          "h1",
+                          { staticClass: "uppercase font-medium mx-auto" },
+                          [_vm._v("Contact")]
+                        )
+                      ]
+                    )
+                  ],
+                  1
+                )
               ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "flex flex-col flex-1" },
-            [
-              _c(
-                "transition",
-                { attrs: { name: "fade" } },
-                [_c("router-view")],
-                1
-              )
-            ],
-            1
-          )
-        ])
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "flex flex-col flex-1" },
+          [
+            _c(
+              "transition",
+              { attrs: { name: "fade" } },
+              [_c("router-view")],
+              1
+            )
+          ],
+          1
+        )
       ])
     ])
   ])
@@ -33489,7 +33500,7 @@ var render = function() {
       }),
       _vm._v(" "),
       _c("div", { staticClass: "px-6 py-4" }, [
-        _c("div", { staticClass: "font-bold text-lg sm:text-xl mb-2" }, [
+        _c("div", { staticClass: "text-lg sm:text-xl mb-2 card-title" }, [
           _vm._v(_vm._s(_vm.cardTitle))
         ]),
         _vm._v(" "),
@@ -33692,10 +33703,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Photo.vue?vue&type=template&id=c0696452&":
-/*!********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Photo.vue?vue&type=template&id=c0696452& ***!
-  \********************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Photo.vue?vue&type=template&id=c0696452&scoped=true&":
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Photo.vue?vue&type=template&id=c0696452&scoped=true& ***!
+  \********************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -33711,7 +33722,7 @@ var render = function() {
     "div",
     {
       directives: [{ name: "lazyloadImg", rawName: "v-lazyloadImg" }],
-      staticClass: "flex flex-col my-6"
+      staticClass: "flex flex-col"
     },
     [
       _c("img", {
@@ -33722,11 +33733,15 @@ var render = function() {
       _c("table", { staticClass: "table-fixed" }, [
         _c("tr", { staticClass: "text-sm font-semibold" }, [
           _c("td", { staticClass: "w-2/3 text-left" }, [
-            _c("p", [_vm._v(_vm._s(_vm.imgCaption))])
+            _c("p", { staticClass: "image-caption text-xs" }, [
+              _vm._v(_vm._s(_vm.imgCaption))
+            ])
           ]),
           _vm._v(" "),
           _c("td", { staticClass: "w-1/3 text-right" }, [
-            _c("p", [_vm._v(_vm._s(_vm.imgDate))])
+            _c("p", { staticClass: "image-date text-xs" }, [
+              _vm._v(_vm._s(_vm.imgDate))
+            ])
           ])
         ])
       ])
@@ -33755,69 +33770,22 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "flex flex-col my-6 w-full" }, [
-    _c("div", { staticClass: "relative flex items-center justify-center" }, [
-      _c("div", { staticClass: "flex absolute w-full justify-between" }, [
-        _c(
-          "a",
-          {
-            staticClass: "text-5xl p-10 font-bold text-white cursor-pointer",
-            attrs: { id: "leftBtn" },
-            on: {
-              click: function($event) {
-                return _vm.scroll_left()
-              }
-            }
-          },
-          [_vm._v("\n                ❮\n            ")]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "text-5xl p-10 font-bold text-white cursor-pointer",
-            attrs: { id: "rightBtn" },
-            on: {
-              click: function($event) {
-                return _vm.scroll_right()
-              }
-            }
-          },
-          [_vm._v("\n                ❯\n            ")]
-        )
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          directives: [{ name: "lazyloadImg", rawName: "v-lazyloadImg" }],
-          staticClass: "flex justify-between overflow-hidden",
-          attrs: { id: _vm.album_name }
-        },
-        _vm._l(_vm.albumSrc, function(image) {
-          return _c("img", {
-            key: image,
-            staticClass: "object-scale-down mr-1 h-112",
-            attrs: { "data-src": image }
-          })
-        }),
-        0
-      )
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "flex justify-between" }, [
-      _c("table", { staticClass: "text-sm font-semibold w-full" }, [
-        _c("tr", [
-          _c("td", { staticClass: "w-2/3" }, [
-            _c("p", [_vm._v(_vm._s(_vm.albumCaption))])
-          ]),
-          _vm._v(" "),
-          _c("td", { staticClass: "w-1/3 text-right right-0" }, [
-            _c("p", [_vm._v(_vm._s(_vm.albumDate))])
-          ])
-        ])
-      ])
-    ])
+  return _c("div", {}, [
+    _c(
+      "div",
+      {
+        directives: [{ name: "lazyloadImg", rawName: "v-lazyloadImg" }],
+        staticClass: "grid gap-4 lg:grid-cols-4"
+      },
+      _vm._l(_vm.albumSrc, function(image, index) {
+        return _c("img", {
+          key: index,
+          staticClass: "place-self-center border-gray-300",
+          attrs: { "data-src": image, "data-img": _vm.album_name + index }
+        })
+      }),
+      0
+    )
   ])
 }
 var staticRenderFns = []
@@ -33847,7 +33815,7 @@ var render = function() {
       "div",
       {
         staticClass:
-          "h-64 sm:h-112 flex flex-col items-center justify-center bg-cover bg-center relative shadow-2xl",
+          "mx-0 lg:mx-20 bg-fixed h-64 sm:h-112 flex flex-col items-center justify-center bg-cover bg-center relative shadow-2xl",
         style: "background-image: url(../storage/img/banner/" + _vm.imgSrc
       },
       [
@@ -50477,7 +50445,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _DeeksLake2018_vue_vue_type_template_id_0b92271a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DeeksLake2018.vue?vue&type=template&id=0b92271a&scoped=true& */ "./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=template&id=0b92271a&scoped=true&");
+/* harmony import */ var _DeeksLake2018_vue_vue_type_template_id_0b92271a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DeeksLake2018.vue?vue&type=template&id=0b92271a& */ "./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=template&id=0b92271a&");
 /* harmony import */ var _DeeksLake2018_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DeeksLake2018.vue?vue&type=script&lang=js& */ "./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
@@ -50489,11 +50457,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
   _DeeksLake2018_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _DeeksLake2018_vue_vue_type_template_id_0b92271a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _DeeksLake2018_vue_vue_type_template_id_0b92271a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _DeeksLake2018_vue_vue_type_template_id_0b92271a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _DeeksLake2018_vue_vue_type_template_id_0b92271a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  "0b92271a",
+  null,
   null
   
 )
@@ -50519,19 +50487,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=template&id=0b92271a&scoped=true&":
-/*!***********************************************************************************************!*\
-  !*** ./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=template&id=0b92271a&scoped=true& ***!
-  \***********************************************************************************************/
+/***/ "./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=template&id=0b92271a&":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=template&id=0b92271a& ***!
+  \***********************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DeeksLake2018_vue_vue_type_template_id_0b92271a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./DeeksLake2018.vue?vue&type=template&id=0b92271a&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=template&id=0b92271a&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DeeksLake2018_vue_vue_type_template_id_0b92271a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DeeksLake2018_vue_vue_type_template_id_0b92271a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./DeeksLake2018.vue?vue&type=template&id=0b92271a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Views/Blogs/DeeksLake2018.vue?vue&type=template&id=0b92271a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DeeksLake2018_vue_vue_type_template_id_0b92271a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DeeksLake2018_vue_vue_type_template_id_0b92271a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DeeksLake2018_vue_vue_type_template_id_0b92271a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -50752,11 +50720,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _App_vue_vue_type_template_id_332fccf4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.vue?vue&type=template&id=332fccf4&scoped=true& */ "./resources/js/components/App.vue?vue&type=template&id=332fccf4&scoped=true&");
+/* harmony import */ var _App_vue_vue_type_template_id_332fccf4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.vue?vue&type=template&id=332fccf4& */ "./resources/js/components/App.vue?vue&type=template&id=332fccf4&");
 /* harmony import */ var _App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.vue?vue&type=script&lang=js& */ "./resources/js/components/App.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _App_vue_vue_type_style_index_0_id_332fccf4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App.vue?vue&type=style&index=0&id=332fccf4&scoped=true&lang=css& */ "./resources/js/components/App.vue?vue&type=style&index=0&id=332fccf4&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -50764,13 +50730,13 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
   _App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _App_vue_vue_type_template_id_332fccf4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _App_vue_vue_type_template_id_332fccf4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _App_vue_vue_type_template_id_332fccf4___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _App_vue_vue_type_template_id_332fccf4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  "332fccf4",
+  null,
   null
   
 )
@@ -50796,35 +50762,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/App.vue?vue&type=style&index=0&id=332fccf4&scoped=true&lang=css&":
-/*!**************************************************************************************************!*\
-  !*** ./resources/js/components/App.vue?vue&type=style&index=0&id=332fccf4&scoped=true&lang=css& ***!
-  \**************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_style_index_0_id_332fccf4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./App.vue?vue&type=style&index=0&id=332fccf4&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/App.vue?vue&type=style&index=0&id=332fccf4&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_style_index_0_id_332fccf4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_style_index_0_id_332fccf4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_style_index_0_id_332fccf4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_style_index_0_id_332fccf4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_style_index_0_id_332fccf4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-
-/***/ "./resources/js/components/App.vue?vue&type=template&id=332fccf4&scoped=true&":
-/*!************************************************************************************!*\
-  !*** ./resources/js/components/App.vue?vue&type=template&id=332fccf4&scoped=true& ***!
-  \************************************************************************************/
+/***/ "./resources/js/components/App.vue?vue&type=template&id=332fccf4&":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/App.vue?vue&type=template&id=332fccf4& ***!
+  \************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_332fccf4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./App.vue?vue&type=template&id=332fccf4&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/App.vue?vue&type=template&id=332fccf4&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_332fccf4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_332fccf4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./App.vue?vue&type=template&id=332fccf4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/App.vue?vue&type=template&id=332fccf4&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_332fccf4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_332fccf4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_332fccf4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -50841,7 +50791,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Card_vue_vue_type_template_id_b9bc2c0a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Card.vue?vue&type=template&id=b9bc2c0a&scoped=true& */ "./resources/js/components/Card.vue?vue&type=template&id=b9bc2c0a&scoped=true&");
 /* harmony import */ var _Card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Card.vue?vue&type=script&lang=js& */ "./resources/js/components/Card.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _Card_vue_vue_type_style_index_0_id_b9bc2c0a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Card.vue?vue&type=style&index=0&id=b9bc2c0a&scoped=true&lang=css& */ "./resources/js/components/Card.vue?vue&type=style&index=0&id=b9bc2c0a&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -50849,7 +50801,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _Card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _Card_vue_vue_type_template_id_b9bc2c0a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
   _Card_vue_vue_type_template_id_b9bc2c0a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -50878,6 +50830,22 @@ component.options.__file = "resources/js/components/Card.vue"
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Card.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Card.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Card.vue?vue&type=style&index=0&id=b9bc2c0a&scoped=true&lang=css&":
+/*!***************************************************************************************************!*\
+  !*** ./resources/js/components/Card.vue?vue&type=style&index=0&id=b9bc2c0a&scoped=true&lang=css& ***!
+  \***************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Card_vue_vue_type_style_index_0_id_b9bc2c0a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Card.vue?vue&type=style&index=0&id=b9bc2c0a&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Card.vue?vue&type=style&index=0&id=b9bc2c0a&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Card_vue_vue_type_style_index_0_id_b9bc2c0a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Card_vue_vue_type_style_index_0_id_b9bc2c0a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Card_vue_vue_type_style_index_0_id_b9bc2c0a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Card_vue_vue_type_style_index_0_id_b9bc2c0a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Card_vue_vue_type_style_index_0_id_b9bc2c0a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -50977,9 +50945,11 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Photo_vue_vue_type_template_id_c0696452___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Photo.vue?vue&type=template&id=c0696452& */ "./resources/js/components/Photo.vue?vue&type=template&id=c0696452&");
+/* harmony import */ var _Photo_vue_vue_type_template_id_c0696452_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Photo.vue?vue&type=template&id=c0696452&scoped=true& */ "./resources/js/components/Photo.vue?vue&type=template&id=c0696452&scoped=true&");
 /* harmony import */ var _Photo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Photo.vue?vue&type=script&lang=js& */ "./resources/js/components/Photo.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _Photo_vue_vue_type_style_index_0_id_c0696452_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Photo.vue?vue&type=style&index=0&id=c0696452&scoped=true&lang=css& */ "./resources/js/components/Photo.vue?vue&type=style&index=0&id=c0696452&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -50987,13 +50957,13 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _Photo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Photo_vue_vue_type_template_id_c0696452___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Photo_vue_vue_type_template_id_c0696452___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Photo_vue_vue_type_template_id_c0696452_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Photo_vue_vue_type_template_id_c0696452_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  null,
+  "c0696452",
   null
   
 )
@@ -51019,19 +50989,35 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/Photo.vue?vue&type=template&id=c0696452&":
-/*!**************************************************************************!*\
-  !*** ./resources/js/components/Photo.vue?vue&type=template&id=c0696452& ***!
-  \**************************************************************************/
+/***/ "./resources/js/components/Photo.vue?vue&type=style&index=0&id=c0696452&scoped=true&lang=css&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/components/Photo.vue?vue&type=style&index=0&id=c0696452&scoped=true&lang=css& ***!
+  \****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Photo_vue_vue_type_style_index_0_id_c0696452_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Photo.vue?vue&type=style&index=0&id=c0696452&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Photo.vue?vue&type=style&index=0&id=c0696452&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Photo_vue_vue_type_style_index_0_id_c0696452_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Photo_vue_vue_type_style_index_0_id_c0696452_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Photo_vue_vue_type_style_index_0_id_c0696452_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Photo_vue_vue_type_style_index_0_id_c0696452_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Photo_vue_vue_type_style_index_0_id_c0696452_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Photo.vue?vue&type=template&id=c0696452&scoped=true&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/Photo.vue?vue&type=template&id=c0696452&scoped=true& ***!
+  \**************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Photo_vue_vue_type_template_id_c0696452___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Photo.vue?vue&type=template&id=c0696452& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Photo.vue?vue&type=template&id=c0696452&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Photo_vue_vue_type_template_id_c0696452___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Photo_vue_vue_type_template_id_c0696452_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Photo.vue?vue&type=template&id=c0696452&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Photo.vue?vue&type=template&id=c0696452&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Photo_vue_vue_type_template_id_c0696452_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Photo_vue_vue_type_template_id_c0696452___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Photo_vue_vue_type_template_id_c0696452_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -51048,9 +51034,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _PhotoAlbum_vue_vue_type_template_id_fc95d4f0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PhotoAlbum.vue?vue&type=template&id=fc95d4f0&scoped=true& */ "./resources/js/components/PhotoAlbum.vue?vue&type=template&id=fc95d4f0&scoped=true&");
 /* harmony import */ var _PhotoAlbum_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PhotoAlbum.vue?vue&type=script&lang=js& */ "./resources/js/components/PhotoAlbum.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _PhotoAlbum_vue_vue_type_style_index_0_id_fc95d4f0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PhotoAlbum.vue?vue&type=style&index=0&id=fc95d4f0&scoped=true&lang=css& */ "./resources/js/components/PhotoAlbum.vue?vue&type=style&index=0&id=fc95d4f0&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -51058,7 +51042,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
   _PhotoAlbum_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _PhotoAlbum_vue_vue_type_template_id_fc95d4f0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
   _PhotoAlbum_vue_vue_type_template_id_fc95d4f0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -51087,22 +51071,6 @@ component.options.__file = "resources/js/components/PhotoAlbum.vue"
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PhotoAlbum_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./PhotoAlbum.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PhotoAlbum.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PhotoAlbum_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/PhotoAlbum.vue?vue&type=style&index=0&id=fc95d4f0&scoped=true&lang=css&":
-/*!*********************************************************************************************************!*\
-  !*** ./resources/js/components/PhotoAlbum.vue?vue&type=style&index=0&id=fc95d4f0&scoped=true&lang=css& ***!
-  \*********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PhotoAlbum_vue_vue_type_style_index_0_id_fc95d4f0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./PhotoAlbum.vue?vue&type=style&index=0&id=fc95d4f0&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PhotoAlbum.vue?vue&type=style&index=0&id=fc95d4f0&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PhotoAlbum_vue_vue_type_style_index_0_id_fc95d4f0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PhotoAlbum_vue_vue_type_style_index_0_id_fc95d4f0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PhotoAlbum_vue_vue_type_style_index_0_id_fc95d4f0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PhotoAlbum_vue_vue_type_style_index_0_id_fc95d4f0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PhotoAlbum_vue_vue_type_style_index_0_id_fc95d4f0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -51135,7 +51103,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _TopNav_vue_vue_type_template_id_9b6caa8e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TopNav.vue?vue&type=template&id=9b6caa8e&scoped=true& */ "./resources/js/components/TopNav.vue?vue&type=template&id=9b6caa8e&scoped=true&");
 /* harmony import */ var _TopNav_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TopNav.vue?vue&type=script&lang=js& */ "./resources/js/components/TopNav.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _TopNav_vue_vue_type_style_index_0_id_9b6caa8e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TopNav.vue?vue&type=style&index=0&id=9b6caa8e&scoped=true&lang=css& */ "./resources/js/components/TopNav.vue?vue&type=style&index=0&id=9b6caa8e&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -51143,7 +51113,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _TopNav_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _TopNav_vue_vue_type_template_id_9b6caa8e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
   _TopNav_vue_vue_type_template_id_9b6caa8e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -51172,6 +51142,22 @@ component.options.__file = "resources/js/components/TopNav.vue"
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TopNav_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./TopNav.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/TopNav.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TopNav_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/TopNav.vue?vue&type=style&index=0&id=9b6caa8e&scoped=true&lang=css&":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/components/TopNav.vue?vue&type=style&index=0&id=9b6caa8e&scoped=true&lang=css& ***!
+  \*****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_TopNav_vue_vue_type_style_index_0_id_9b6caa8e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./TopNav.vue?vue&type=style&index=0&id=9b6caa8e&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/TopNav.vue?vue&type=style&index=0&id=9b6caa8e&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_TopNav_vue_vue_type_style_index_0_id_9b6caa8e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_TopNav_vue_vue_type_style_index_0_id_9b6caa8e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_TopNav_vue_vue_type_style_index_0_id_9b6caa8e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_TopNav_vue_vue_type_style_index_0_id_9b6caa8e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_TopNav_vue_vue_type_style_index_0_id_9b6caa8e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 

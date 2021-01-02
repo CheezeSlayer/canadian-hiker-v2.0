@@ -1,9 +1,9 @@
 <template>
     <div>
         <TopNav navHeader="Howe Sound Adventures:  Camping and Fishing at Deeks Lake" imgSrc="deekslake_2.jpg"></TopNav>
-        <div class="flex justify-center mx-5 sm:mx-20">
-           <div class="flex flex-col p-3 sm:p-6 w-full text-sm sm:text-xl tracking-wider leading-relaxed sm:leading-10">
-                <p>
+        <div class="flex justify-center mx-10 lg:mx-64">
+            <div class="flex flex-col sm:p-6 w-full tracking-wider leading-loose">
+                <p class="my-10">
                     The North Shore Mountains has always been a marvel of beauty.  
                     During my lunch breaks I would frequent the waterfront of Coal Harbour 
                     and gaze upon the humbling majesty of those rocky giants overlooking Greater Vancouver; 
@@ -18,7 +18,7 @@
                     imgCaption="The North Shore Mountains as seen from Coal Harbour"
                     imgDate="May 7, 2019"
                 />
-                <p>
+                <p class="my-10">
                     One of these trails is the Howe Sound Crest Trail.  Boasting a length of roughly 29 km, 
                     this trail stretches northwards from Cypress Bowl to Porteau Cove along the Sea-to-Sky 
                     Highway and passes through various notable landmarks such as the iconic Lions and Brunswick Mountain, 
@@ -40,7 +40,7 @@
                     imgCaption="Trailblazer Lookout.  Located on the Howe Sound Crest Trail just a short ways down from the Deeks Creek Trail turn off"
                     imgDate="September 2, 2018"
                 />
-                <p>
+                <p class="my-10">
                     The lake itself is a small but charming area; a view that is nothing short of magnificent surrounded by mountains and tall trees of pine and evergreen, 
                     some of which had long since fallen and their dry sunbaked trunks lay floating along the banks forming 
                     a natural pier of sorts.  By now it was roughly 1 PM and the sun at its zenith.  Its rays shining bright upon the 
@@ -58,7 +58,7 @@
                     imgCaption="Deeks Lake.  This photo was taken in the evening at around 6 PM.  By then the sunlight had all but left with only the peaks and mountains catching its last rays"
                     imgDate="September 2, 2018"
                 />
-                <p>
+                <p class="my-10">
                     There is a wonderful feeling that I can’t really put into words or find anywhere else outside of fishing.  
                     Beginning with that initial tug of the line from a curious nibble to a hard pull as a fish sinks down on 
                     your bait evokes a sensation of tense excitement every time, followed by a joyous shout of “I got one!” 
@@ -86,11 +86,11 @@
                         '../storage/img/blog/9-2018/deeks_lake_fishing_1.jpg',
                         '../storage/img/blog/9-2018/deeks_lake_fishing_2.jpg',
                         '../storage/img/blog/9-2018/deeks_lake_3.jpg',
-                        '../storage/img/blog/9-2018/deeks_lake_fishing_3.jpg',
-                        '../storage/img/blog/9-2018/deeks_lake_fishing_4.jpg'
+                        '../storage/img/blog/9-2018/deeks_lake_fishing_3.jpg'
                     ]"
                     albumCaption="The fish were biting hard that day.  Eventually we fried one up with a bit of oil, drizzle of lemon juice and some onions.  It honestly doesn't get any fresher than this."
                     albumDate="September 2-3, 2018"
+                    album_name="deeks_lake"
                 />
 
                 <Comment blog_name="tri_lakes_adventure_2019">
@@ -113,7 +113,7 @@ export default {
         TopNav,
         Comment,
         Photo,
-        PhotoAlbum
+        PhotoAlbum,
     }, 
 
     mounted() {
@@ -121,7 +121,3 @@ export default {
     },
 }
 </script>
-
-<style scoped>
-    
-</style>
